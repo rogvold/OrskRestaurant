@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://elemisdesign.com/demos/delphic/index.html -->
+<html xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!--        <meta charset="UTF-8">-->
+        <title>Orsk Restaurants</title>
+        <link rel="stylesheet" type="text/css" href="./files/style.css" media="all"/>
+        <script type="text/javascript" src="./files/jquery-1.5.min.js"></script>
+        <script type="text/javascript" src="./files/jquery.cycle.all.min.js"></script>
+        <script type="text/javascript" src="./files/ddsmoothmenu.js"></script>
+        <script type="text/javascript" src="./files/scripts.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                if ($('#sliderholder-cycle').length) {
+                    // timeouts per slide (in seconds) 
+                    var timeouts = [15000,39000,25000]; 
+                    function calculateTimeout(currElement, nextElement, opts, isForward) { 
+                        var index = opts.currSlide; 
+                        return timeouts[index] * 1000;
+                    }
+                    jQuery('#sliderholder-cycle').cycle({
+                        fx: 'scrollHorz',
+                        
+                        // fx: 'fade',
+                        //                        fx: 'scrollDown',
+                        pager: '.slidernav',
+
+                        next:    '.slidernext1',
+
+                        prev:    '.sliderprev1',
+
+                        
+                        speed: 1000,
+                        timeoutFn: calculateTimeout,
+                        pagerEvent: 'click',
+                        pauseOnPagerHover: true,
+                        cleartype: 1
+                    });
+                    jQuery('#sliderholder-cycle').css("display", "block");
+                    jQuery('.slidernav').css("display", "block");
+			
+                }
+            }); 
+        </script>
+        <!--    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>-->
+    </head>
+    <body >
+        <div id="container"> 
+            <!-- Begin Header Wrapper -->
+            <div id="page-top">
+
+                <div id="header-wrapper"> 
+                    <!-- Begin Header -->
+                    <div id="header">
+                        <!--                        <h1>
+                                                    Не знаешь куда пойти ?
+                                                </h1>-->
+                        <div id="logo">
+                            <!--                            <a href="#">
+                                                            <img src="./files/logo.png"  />
+                                                        </a>-->
+                        </div>
+                        <!-- Logo --> 
+                        <!-- Begin Menu -->
+                        <div id="menu-wrapper">
+                            <div id="smoothmenu1" class="ddsmoothmenu">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Menu --> 
+                    </div>
+                    <!-- End Header --> 
+                </div>
+            </div>
+            <!-- End Header Wrapper --> 
+
+            <!-- Begin Slider -->
+            <div id="cycle-wrapper">
+                <form method="get" action="#{request.contextPath}/faces/list.xhtml">
+                    <div id="sliderholder-cycle" style="position: relative; display: block; ">
+                        <!--                    <img src="./Delphic   Creative Portfolio Template_files/slider-1.jpg" width="960" height="380" style="position: absolute; top: 0px; left: 0px; opacity: 1; display: block; z-index: 4; ">-->
+
+                        <div style="top: 0px; left: 0px; z-index: 2; position: absolute; opacity: 0; display: none; ">
+
+                            <h:panelGroup style="display:inline-block; ">
+                                <span style="text-align:center; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                    Что вы хотите?
+                                </span><br />
+                                <span style="text-align:center; width: 950px; margin-bottom: 50px; display: block; margin: 0 auto;font: italic 15px Georgia,serif; ">
+                                    Не думайте — чувствуйте! Можно выбрать несколько.
+                                </span>
+                                <h:panelGrid columns="4"  style="border-width: 0px; margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
+                                    <c:forEach items="#{featureBean.customFeatures(1)}" var="feature" >
+                                        <input type="checkbox" name="decision[]" value="#{feature.id}"/>
+                                        #{feature.name}
+                                    </c:forEach>
+                                </h:panelGrid>
+                            </h:panelGroup>
+
+                            <span style="top: 330px; position: absolute; display: block; width: 960px; ">
+                                <span style="display: inline-block; width: 470px;" >
+                                </span>
+
+                                <span style="display: inline-block; width: 470px;" >
+                                    <span class="slidernext1" style="margin-left:350px;" >
+                                        <a href="#" class="mybutton"  >
+                                            Далее
+                                        </a>
+                                    </span>
+                                </span>
+                            </span>
+
+
+
+                        </div>
+
+
+                        <div style="top: 0px; left: 0px; z-index: 2; position: absolute; opacity: 0; display: none; ">
+
+                            <h:panelGroup style="display:inline-block; ">
+                                <span style="text-align:center; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                    Что важно?
+                                </span><br />
+                                <span style="text-align:center; width: 950px; display: inline-block; margin: 0 auto;font: italic 15px Georgia,serif; ">
+                                    Здесь тоже можно выбрать несколько.
+                                </span>
+                                <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
+                                    <c:forEach items="#{featureBean.customFeatures(2)}" var="feature" >
+                                        <input type="checkbox" name="decision[]" value="#{feature.id}"/>
+                                        #{feature.name}
+                                    </c:forEach>
+                                </h:panelGrid>
+                            </h:panelGroup>
+
+                            <span style="top: 330px; position: absolute; display: block; width: 960px; ">
+                                <span style="display: inline-block; width: 470px;" >
+                                    <span class="sliderprev1" >
+                                        <a href="#" class="mybutton" style="margin-left: 50px;"  >
+                                            Назад
+                                        </a>
+                                    </span>
+                                </span>
+
+                                <span style="display: inline-block; width: 470px;" >
+                                    <span class="slidernext1" style="margin-left:350px;" >
+                                        <a href="#" class="mybutton"  >
+                                            Далее
+                                        </a>
+                                    </span>
+                                </span>
+                            </span>
+                            <div style="position: absolute; top: 363px; right: 10px; width: 130px; display: block;font: italic 12px Georgia,serif; ">
+                                Остался еще 1 вопрос
+                            </div>
+
+                        </div>
+
+                        <div style="top: 0px; left: 0px; z-index: 2; position: absolute; opacity: 0; display: none;">
+                            <h:panelGroup style="display:inline-block; ">
+                                <span style="text-align:center; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                    В каком районе?
+                                </span><br />
+                                <span style="text-align:center; width: 950px; display: inline-block; margin: 0 auto;font: italic 15px Georgia,serif; ">
+                                    Ну вы поняли — выбирайте, сколько хотите :)
+                                </span>
+                                <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
+                                    <c:forEach items="#{featureBean.customFeatures(3)}" var="feature" >
+                                        <input type="checkbox" name="decision[]" value="#{feature.id}"/>
+                                        #{feature.name}
+                                    </c:forEach>
+                                </h:panelGrid>
+                            </h:panelGroup>
+
+                            <span style="top: 330px; position: absolute; display: block; width: 960px; ">
+                                <span style="display: inline-block; width: 470px;" >
+                                    <span class="sliderprev1" >
+                                        <a href="#" class="mybutton" style="margin-left: 50px;"  >
+                                            Назад
+                                        </a>
+                                    </span>
+                                </span>
+
+                                <span style="display: inline-block; width: 470px;" >
+                                    <a style="cursor: pointer;">
+                                        <span  style="margin-left:350px;" >
+                                            <input type="submit" class="fbutton" value="Готово!" style="padding: 0px;" />
+
+                                            <!--                                            <span class="fbutton"  >
+                                                                                            Готово!
+                                                                                        </span>-->
+                                        </span>
+                                    </a>
+                                </span>
+                            </span>
+                            <input type="hidden" name="page" value="1" />
+                            <div style="position: absolute; top: 363px; right: 8px; width: 130px; display: block;font: italic 12px Georgia,serif; ">
+                                Узнать результат!
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="slidernav" style="display: block; ">
+
+                    </ul>
+
+                    <!--                <div class="sliderdir">
+                                        <a href="#">
+                                            <span class="sliderprev">Prev</span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="slidernext">Next</span>
+                                        </a> 
+                                    </div>-->
+                </form>
+            </div>
+            <!-- End Slider --> 
+
+            <!-- Begin Wrapper -->
+            <div id="wrapper"> 
+
+                <!-- Begin Intro -->
+                <div class="intro">
+                    <h1>Все рестораны, бары, кафе и клубы Орска </h1>
+                </div>
+                <!-- End Intro --> 
+
+                <!-- Begin About -->
+                <div id="about">
+                    <div class="one-fourth"> 
+
+                        <h4>Тип:</h4>
+                        <li><a href="/places/restorany" title="все рестораны Уфы">Ресторан</a></li>
+                        <li><a href="/places/bar" title="все бары Уфы">Бар</a></li>
+                        <li><a href="/places/kafe" title="все кафе Уфы">Кафе</a></li>
+                        <li><a href="/places/kluby" title="все клубы Уфы">Клуб</a></li>
+                    </div>
+                    <div class="one-fourth">
+                        <h4>Особенности</h4>
+                        <p><li><a href="/osobennosti/letnyaya_veranda" title="рестораны с летней верандой">Летняя веранда</a></li>
+                        <li><a href="/osobennosti/wi-fi" title="рестораны с Wi-Fi">Wi-Fi</a></li>
+                        <li><a href="/osobennosti/kalyan" title="рестораны с кальяном">Кальян</a></li>
+                        <li><a href="/osobennosti/biznes_lanchi" title="бизнес-ланчи в ресторанах Уфы">Бизнес-ланчи</a></li>
+                        <li><a href="/osobennosti/karaoke" title="караоке-залы Уфы">Караоке</a></li>
+                        <li><a href="/osobennosti/tancpol" title="заведения с танцполом">Танцпол</a></li>
+                        <li><a href="/osobennosti/bilyard" title="бильярдные клубы Уфы">Бильярд</a></li></p>
+                    </div>
+                    <div class="one-fourth">
+                        <h4>Район:</h4>
+                        <p>
+                        <li><a href="/check/300-500">Старый город</a></li>
+                        <li><a href="/check/500-1000">к-тр МИР</a></li>
+                        <li><a href="/check/1000-1500">ОЗТП</a></li>
+                        <!--                        <li><a href="/check/1500-2000">1500—2000 р.</a></li>-->
+                        <!--                        <li><a href="/check/2000-3000">2000—3000 р.</a></li>-->
+
+                        </p>
+                    </div>
+                    <div class="one-fourth last">
+                        <h4>Средний чек:</h4>
+                        <p><li><a href="/check/do_300">до 300 р.</a></li>
+                        <li><a href="/check/300-500">300—500 р.</a></li>
+                        <li><a href="/check/500-1000">500—1000 р.</a></li>
+                        <li><a href="/check/1000-1500">1000—1500 р.</a></li>
+                        <li><a href="/check/1500-2000">1500—2000 р.</a></li>
+                        <li><a href="/check/2000-3000">2000—3000 р.</a></li>
+                        <li><a href="/check/ot_3000">от 3000 р.</a></li></p>
+                    </div>
+                </div>
+                <!-- End About --> 
+
+            </div>
+
+            <!-- End Wrapper -->
+            <div class="clearfix"></div>
+            <div class="push"></div>
+        </div>
+
+        <!-- Begin Footer -->
+        <div id="footer-wrapper">
+            <div id="footer">
+                <div id="footer-content"> 
+
+                    <!-- Begin Copyright -->
+                    <div id="copyright">
+                        <p>© Copyright 2011 Delphic | Creative Portfolio Template</p>
+                    </div>
+                    <!-- End Copyright --> 
+
+                    <!-- Begin Social Icons -->
+                    <div id="socials">
+                        <ul>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-rss.png" alt=""/></a></li>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-twitter.png" alt=""/></a></li>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-dribble.png" alt=""/></a></li>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-tumblr.png" alt=""/></a></li>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-flickr.png" alt=""/></a></li>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-facebook.png" alt=""/></a></li>
+                        </ul>
+                    </div>
+                    <!-- End Social Icons --> 
+
+                </div>
+            </div>
+        </div>
+        <!-- End Footer -->
+
+    </body>
+</html>

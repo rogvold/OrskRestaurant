@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ppctu="http://primefaces.prime.com.tr/ui">
+    <h:head>
+        <!--        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />-->
+        <title>Free CSS template by ChocoTemplates.com</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+        <!--[if lte IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]-->
+
+        <script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
+        <script src="js/jquery-func.js" type="text/javascript"></script>
+    </h:head>
+    <body>
+
+        <!-- Header -->
+        <div id="header">
+            <div class="shell">
+
+                <!-- Logo -->
+                <!--                <h1 id="logo">
+                                    <a href="#">Не знаешь куда пойти ? </a>
+                                </h1>-->
+                <h1 style="font:normal normal normal 100%/normal 'Lucida Grande',Geneva,Helvetica,Arial,serif; font-style: oblique; font-weight: normal;
+                    text-align: center;
+                    text-shadow: #D5D5D5 0 1px 0;
+                    white-space: nowrap;
+                    font-size: 3em;
+                    ">
+                    <span style=" margin-top: 45px;">
+                        Добавление новой фичи
+                    </span>
+                </h1>
+
+                <!-- End Logo -->
+
+                <!-- Navigation -->
+                <div id="navigation">
+                    <ul>
+                        <!--			    <li><a href="#">Home</a></li>
+                                                    <li><a href="#">About</a></li>
+                                                    <li><a href="#">Services</a></li>
+                                                    <li><a href="#">Contact</a></li>-->
+                    </ul>
+                </div>
+                <!-- End Navigation -->
+
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Slider -->
+
+        <!-- End Slider -->
+
+        <!-- Main -->
+        <div id="main">
+
+            <h:form>
+                <h:outputText value="Name" /> <h:inputText value="#{featureBean.newFeature.name}" /> <br/>
+                <h:outputText value="Description" /> <h:inputText value="#{featureBean.newFeature.description}" /><br/>
+                <h:outputText value="Type" /> <h:inputText value="#{featureBean.newFeature.type}" /><br/>
+                <ppctu:commandButton value="add" actionListener="#{featureBean.addNewFeature()}" />
+                <br/>
+                Все фичи: <br/>
+                <c:forEach items="#{featureBean.allFeatures}" var="fea" >
+                    #{fea.name}
+                </c:forEach>
+                <hr/><br/>
+                <br/>
+            </h:form>
+
+            <h:form>
+                Добаление нового типа заведения  <br/> <br/>
+                <h:outputText value="Name" /> <h:inputText value="#{featureBean.newFacilityType.name}" /> <br/>
+                <h:outputText value="Description" /> <h:inputText value="#{featureBean.newFacilityType.description}" /><br/>
+                <ppctu:commandButton value="add" actionListener="#{featureBean.addNewFacilityType()}" />
+                <br/>
+                Все типы заведений: <br/>
+                <c:forEach items="#{featureBean.allFacilityTypes}" var="fac" >
+                    #{fac.name}
+                </c:forEach>
+                <hr/>
+            </h:form>
+
+            <div class="shell">
+
+                <!-- Cols -->
+                <div class="three-cols">
+                    <div class="cl"> </div>
+
+
+                    <div class="cl"></div>
+
+
+                </div>
+                <!-- End Cols -->
+
+            </div>
+        </div>
+        <!-- End Main -->
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="shell">
+                <p class="left">
+                    <a href="featuresManager.xhtml">Feature Manager</a>
+                    <span>|</span>
+                    <a href="facilityManager.xhtml">Facility Manager</a>
+                    <span>|</span>
+                    <a href="#">Services</a>
+                    <span>|</span>
+                    <a href="#">Contact</a>
+                </p>
+                <p class="right"> 2010 Company Name. 
+                    Design by <a href="http://chocotemplates.com" target="_blank" title="The Sweetest CSS Templates WorldWide">Chocotemplates.com</a></p>
+            </div>
+        </div>
+        <!-- End Footer -->
+
+    </body>
+</html>

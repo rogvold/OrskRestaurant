@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://elemisdesign.com/demos/delphic/index.html -->
+<html xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!--        <meta charset="UTF-8">-->
+        <title>Orsk Restaurants</title>
+        <link rel="stylesheet" type="text/css" href="./files/style.css" media="all"/>
+        <script type="text/javascript" src="./files/jquery-1.5.min.js"></script>
+        <script type="text/javascript" src="./files/jquery.cycle.all.min.js"></script>
+        <script type="text/javascript" src="./files/ddsmoothmenu.js"></script>
+        <script type="text/javascript" src="./files/scripts.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                if ($('#sliderholder-cycle').length) {
+                    // timeouts per slide (in seconds) 
+                    var timeouts = [15000,39000,25000]; 
+                    function calculateTimeout(currElement, nextElement, opts, isForward) { 
+                        var index = opts.currSlide; 
+                        return timeouts[index] * 1000;
+                    }
+                    jQuery('#sliderholder-cycle').cycle({
+                        fx: 'scrollHorz',
+                        
+                        // fx: 'fade',
+                        //                        fx: 'scrollDown',
+                        pager: '.slidernav',
+
+                        next:    '.slidernext1',
+
+                        prev:    '.sliderprev1',
+
+                        
+                        speed: 1000,
+                        timeoutFn: calculateTimeout,
+                        pagerEvent: 'click',
+                        pauseOnPagerHover: true,
+                        cleartype: 1
+                    });
+                    jQuery('#sliderholder-cycle').css("display", "block");
+                    jQuery('.slidernav').css("display", "block");
+			
+                }
+            }); 
+        </script>
+        <!--    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>-->
+    </head>
+    <body >
+        <div id="container"> 
+            <!-- Begin Header Wrapper -->
+            <div id="page-top">
+
+                <div id="header-wrapper"> 
+                    <!-- Begin Header -->
+                    <div id="header">
+                        <!--                        <h1>
+                                                    Не знаешь куда пойти ?
+                                                </h1>-->
+                        <div id="logo">
+                            <!--                            <a href="#">
+                                                            <img src="./files/logo.png"  />
+                                                        </a>-->
+                        </div>
+                        <!-- Logo --> 
+                        <!-- Begin Menu -->
+                        <div id="menu-wrapper">
+                            <div id="smoothmenu1" class="ddsmoothmenu">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Menu --> 
+                    </div>
+                    <!-- End Header --> 
+                </div>
+            </div>
+            <!-- End Header Wrapper --> 
+
+            <!-- Begin Slider -->
+
+            <!-- End Slider --> 
+
+            <!-- Begin Wrapper -->
+            <div id="wrapper"> 
+                <div id="news"> 
+
+                    <!-- Begin News Navigation -->
+                    <div id="newslist" class="jcarousel-container jcarousel-container-vertical" style="position: relative; display: block; ">
+                        <div class="jcarousel-clip jcarousel-clip-vertical" style="overflow-x: hidden; overflow-y: hidden; position: relative; "><ul class="jcarousel-list jcarousel-list-vertical" style="overflow-x: hidden; overflow-y: hidden; position: relative; left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; height: 1100px; top: 0px; ">
+                                <!-- Begin Entry Heading 1 -->
+                                <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-1 jcarousel-item-1-vertical" style="float: left; list-style-type: none; list-style-position: initial; list-style-image: initial; " jcarouselindex="1"> <a href="blog-single.html"><img src="style/images/art/blog-th1.jpg" alt="" class="left" /></a>
+                                    <h4 class="title"><a href="blog-single.html">1 - My First Journal Entry</a><span>- January 29, 2011</span></h4>
+                                    <p>Suspendisse malesuada diam quis enim dictum nec gravida nisl gravida. Quisque lobortis gravida elit ac dapibus. Ut felis lorem, tris tique ac cursus vitae, pretium ac est. Cras nisl orci, luctus ullamcorper laoreet eget, cursus at lacus. <a href="blog-single.html" class="more">Continue Reading »</a> </p>
+                                </li>
+                                <!-- End Entry Heading 1 --> 
+
+
+                                <!-- End Entry Heading 10 -->
+
+                            </ul></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div id="scroll"> <a href="#" id="newslist-prev" class="jbutton jcarousel-prev-disabled jcarousel-prev-disabled-vertical" disabled="true"></a> <a href="#" id="newslist-next" class="jbutton"></a> </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End News Navigation --> 
+
+            </div>
+
+            <!-- End Wrapper -->
+            <div class="clearfix"></div>
+            <div class="push"></div>
+        </div>
+
+        <!-- Begin Footer -->
+        <div id="footer-wrapper">
+            <div id="footer">
+                <div id="footer-content"> 
+
+                    <!-- Begin Copyright -->
+                    <div id="copyright">
+                        <p>© Copyright 2011 Delphic | Creative Portfolio Template</p>
+                    </div>
+                    <!-- End Copyright --> 
+
+                    <!-- Begin Social Icons -->
+                    <div id="socials">
+                        <ul>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-rss.png" alt=""/></a></li>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-twitter.png" alt=""/></a></li>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-dribble.png" alt=""/></a></li>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-tumblr.png" alt=""/></a></li>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-flickr.png" alt=""/></a></li>
+                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-facebook.png" alt=""/></a></li>
+                        </ul>
+                    </div>
+                    <!-- End Social Icons --> 
+
+                </div>
+            </div>
+        </div>
+        <!-- End Footer -->
+
+    </body>
+</html>
