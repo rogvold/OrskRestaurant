@@ -94,7 +94,7 @@
                                 </span>
                                 <h:panelGrid columns="4"  style="border-width: 0px; margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
                                     <c:forEach items="#{featureBean.customFeatures(1)}" var="feature" >
-                                        <input type="checkbox" name="decision[]" value="#{feature.id}"/>
+                                        <input type="checkbox" name="#{feature.id}" value="d"/>
                                         #{feature.name}
                                     </c:forEach>
                                 </h:panelGrid>
@@ -129,7 +129,7 @@
                                 </span>
                                 <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
                                     <c:forEach items="#{featureBean.customFeatures(2)}" var="feature" >
-                                        <input type="checkbox" name="decision[]" value="#{feature.id}"/>
+                                        <input type="checkbox" name="#{feature.id}" value="d"/>
                                         #{feature.name}
                                     </c:forEach>
                                 </h:panelGrid>
@@ -168,7 +168,7 @@
                                 </span>
                                 <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
                                     <c:forEach items="#{featureBean.customFeatures(3)}" var="feature" >
-                                        <input type="checkbox" name="decision[]" value="#{feature.id}"/>
+                                        <input type="checkbox" name="#{feature.id}" value="d"/>
                                         #{feature.name}
                                     </c:forEach>
                                 </h:panelGrid>

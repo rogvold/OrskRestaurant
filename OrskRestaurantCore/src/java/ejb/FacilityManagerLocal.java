@@ -43,5 +43,19 @@ public interface FacilityManagerLocal {
 
     public void cheat();
 
+    public String getAvatarSrc(Long facId);
+
     public List<Facility> getAllFacilities();
+
+    public List<Long> getFilteredFacilitiesId(List<Long> featuresId);
+
+    public List<Facility> getFilteredFacilities(List<Long> featuresId);
+
+    public List<FacilityType> getFailityTypes(Long facId);
+
+    public String getDescription(Long facId);
+
+    public String getAddressById(Long facId);
+    
+    public Facility getFacilityById(Long facId);
 }

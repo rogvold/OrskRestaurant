@@ -368,7 +368,7 @@ table {
 
 table td {
     padding: 8px 10px;
-/*    border-right:1px solid #c1c1c1;*/
+    /*    border-right:1px solid #c1c1c1;*/
 }
 
 table td:hover {
@@ -1098,6 +1098,7 @@ ul#tab-menu li:last-child {
     width: 650px;
     float:left;
     padding: 20px 20px 0 20px;
+    margin-bottom: 15px;
 }
 
 .tab-content div.tab {
@@ -1674,11 +1675,11 @@ for IE8
 
 .jcarousel-container-vertical {
     width:  962px;
-    height: 535px;
+    /*    height: 1600px;*/
 }
 
 .jcarousel-clip-vertical {
-    height: 535px;
+    /*    height: 1600px;*/
 }
 
 .jcarousel-item {
@@ -1816,6 +1817,28 @@ for IE8
         text-decoration: none;
         color: fff;
 }*/
+
+.venuepic {
+    width: 200px;
+    height: 200px;
+/*    margin-right: 15px;*/
+    border-radius: 120px;
+    -webkit-border-radius: 120px;
+    -moz-border-radius: 120px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+.venuepic:hover {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
 
 .fbutton:hover {
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b1432a), to(#d46d45));

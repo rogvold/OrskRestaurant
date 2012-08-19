@@ -14,7 +14,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table
-public class Facility implements Serializable {
+public class Facility implements Serializable, Comparable<Facility> {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -32,6 +32,8 @@ public class Facility implements Serializable {
     private String site;
     @Column
     private String schedule;
+    @Column
+    private int status;
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "Facility_FacilityType", joinColumns = {
         @JoinColumn(name = "facility_id")
@@ -109,6 +111,14 @@ public class Facility implements Serializable {
         this.site = site;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
     public Long getId() {
         return id;
     }
@@ -140,5 +150,19 @@ public class Facility implements Serializable {
     @Override
     public String toString() {
         return "entity.Facility[ id=" + id + " ]";
+    }
+
+    @Override
+    public int compareTo(Facility n) {
+//        throw new UnsupportedOperationException("Not supported yet.");
+//        int lastCmp = status.compareTo(n.status);
+//        return (lastCmp != 0 ? lastCmp : firstName.compareTo(n.firstName));
+        if (n.status < status) {
+            return -1;
+        }
+        if (n.status > status) {
+            return 1;
+        }
+        return 0;
     }
 }

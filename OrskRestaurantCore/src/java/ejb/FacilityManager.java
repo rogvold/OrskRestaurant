@@ -6,7 +6,9 @@ package ejb;
 
 import entity.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -21,6 +23,8 @@ public class FacilityManager implements FacilityManagerLocal {
 
     @PersistenceContext(unitName = "OrskRestaurantCorePU")
     EntityManager em;
+    @EJB
+    FeatureManagerLocal featMan;
 
     @Override
     public List<Image> getImages(Long facId) {
@@ -175,5 +179,119 @@ public class FacilityManager implements FacilityManagerLocal {
     public List<Facility> getAllFacilities() {
         Query q = em.createQuery("select f from Facility f");
         return q.getResultList();
+    }
+
+    // if there is no compliance in location then fuck this facility (it means that result is -1)
+    private int calculateСompatibility(List<Long> featuresId, Long facId) {
+        List<ExtendedFeature> list = getExtendedFeaturesByFacilityId(facId);
+        int result = 0;
+        // check location
+        boolean flag = false;
+        for (ExtendedFeature ef : list) {
+            if (featMan.getTypeByFeatureId(ef.getFeatureId()) != Feature.TYPE_LOCATION) {
+                result += ef.getRating(); //sum not location features
+                continue;
+            }
+            for (Long l : featuresId) {
+                if (l.equals(ef.getFeatureId())) {
+                    flag = true;
+                }
+            }
+        }
+        if (flag == false) {
+            return -1; // location does not matches
+        }
+        return result;
+    }
+
+    @Override
+    public List<Long> getFilteredFacilitiesId(List<Long> featuresId) {
+        List<Long> list = new ArrayList();
+        List<Facility> flist = new ArrayList();
+
+        List<Facility> allFacilities = getAllFacilities();
+
+        for (Facility f : allFacilities) {
+            int t = calculateСompatibility(featuresId, f.getId());
+            if (t < 0) {
+                continue;
+            }
+            f.setStatus(-t);
+            flist.add(f);
+        }
+        Collections.sort(flist);
+        for (Facility f : flist) {
+            list.add(f.getId());
+        }
+        return list;
+    }
+
+    @Override
+    public String getAvatarSrc(Long facId) {
+//        Facility fac = em.find(Facility.class, facId);
+        try {
+            List<String> imgs = em.createQuery("select i.src from Image i where i.ownerFacilityId = " + facId).getResultList();
+            return imgs.get(0);
+        } catch (Exception e) {
+            return null;
+        }
+
+
+
+    }
+
+    @Override
+    public List<FacilityType> getFailityTypes(Long facId) {
+        try {
+            Facility fac = em.find(Facility.class, facId);
+            return fac.getFacilityTypes();
+
+        } catch (Exception e) {
+            return null;
+        }
+
+    }
+
+    @Override
+    public String getDescription(Long facId) {
+        try {
+            Facility fac = em.find(Facility.class, facId);
+            return fac.getDescription();
+
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    @Override
+    public String getAddressById(Long facId) {
+        try {
+            Facility fac = em.find(Facility.class, facId);
+            return fac.getAddress();
+
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    @Override
+    public List<Facility> getFilteredFacilities(List<Long> featuresId) {
+        try {
+            List<Long> lolist = getFilteredFacilitiesId(featuresId);
+            List<Facility> list = new ArrayList();
+            for (Long l : lolist) {
+                list.add(getFacilityById(l));
+            }
+            return list;
+        } catch (Exception e) {
+            return null;
+        }
+
+    }
+
+    @Override
+    public Facility getFacilityById(Long facId) {
+        Facility f = em.find(Facility.class, facId);
+        return f;
     }
 }

@@ -89,7 +89,6 @@ public class FacilityBean implements Serializable {
         this.selectedTypesId = selectedTypesId;
     }
 
-    
     public List<FacilityType> getSelectedTypes() {
         return selectedTypes;
     }
@@ -131,5 +130,11 @@ public class FacilityBean implements Serializable {
             list.add(img);
         }
         return list;
+    }
+    
+
+
+    public List<Facility> getAllFacilities() {
+        return facMan.getAllFacilities();
     }
 }

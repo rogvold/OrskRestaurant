@@ -11,39 +11,7 @@
         <script type="text/javascript" src="./files/jquery.cycle.all.min.js"></script>
         <script type="text/javascript" src="./files/ddsmoothmenu.js"></script>
         <script type="text/javascript" src="./files/scripts.js"></script>
-        <script type="text/javascript">
-            $(function() {
-                if ($('#sliderholder-cycle').length) {
-                    // timeouts per slide (in seconds) 
-                    var timeouts = [15000,39000,25000]; 
-                    function calculateTimeout(currElement, nextElement, opts, isForward) { 
-                        var index = opts.currSlide; 
-                        return timeouts[index] * 1000;
-                    }
-                    jQuery('#sliderholder-cycle').cycle({
-                        fx: 'scrollHorz',
-                        
-                        // fx: 'fade',
-                        //                        fx: 'scrollDown',
-                        pager: '.slidernav',
 
-                        next:    '.slidernext1',
-
-                        prev:    '.sliderprev1',
-
-                        
-                        speed: 1000,
-                        timeoutFn: calculateTimeout,
-                        pagerEvent: 'click',
-                        pauseOnPagerHover: true,
-                        cleartype: 1
-                    });
-                    jQuery('#sliderholder-cycle').css("display", "block");
-                    jQuery('.slidernav').css("display", "block");
-			
-                }
-            }); 
-        </script>
         <!--    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>-->
     </head>
     <body >
@@ -77,34 +45,61 @@
             </div>
             <!-- End Header Wrapper --> 
 
-            <!-- Begin Slider -->
 
-            <!-- End Slider --> 
 
             <!-- Begin Wrapper -->
             <div id="wrapper"> 
-                <div id="news"> 
+                <c:forEach items="#{facilityViewBean.allFacilities}" var="facility">
 
-                    <!-- Begin News Navigation -->
-                    <div id="newslist" class="jcarousel-container jcarousel-container-vertical" style="position: relative; display: block; ">
-                        <div class="jcarousel-clip jcarousel-clip-vertical" style="overflow-x: hidden; overflow-y: hidden; position: relative; "><ul class="jcarousel-list jcarousel-list-vertical" style="overflow-x: hidden; overflow-y: hidden; position: relative; left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; height: 1100px; top: 0px; ">
-                                <!-- Begin Entry Heading 1 -->
-                                <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-1 jcarousel-item-1-vertical" style="float: left; list-style-type: none; list-style-position: initial; list-style-image: initial; " jcarouselindex="1"> <a href="blog-single.html"><img src="style/images/art/blog-th1.jpg" alt="" class="left" /></a>
-                                    <h4 class="title"><a href="blog-single.html">1 - My First Journal Entry</a><span>- January 29, 2011</span></h4>
-                                    <p>Suspendisse malesuada diam quis enim dictum nec gravida nisl gravida. Quisque lobortis gravida elit ac dapibus. Ut felis lorem, tris tique ac cursus vitae, pretium ac est. Cras nisl orci, luctus ullamcorper laoreet eget, cursus at lacus. <a href="blog-single.html" class="more">Continue Reading »</a> </p>
-                                </li>
-                                <!-- End Entry Heading 1 --> 
+                    <div class="tab-wrapper">
+                        <div class="tab-content">
+                            <div class="tab" style="display: block; ">
+                                <h3><a style="cursor: pointer;" href="#{request.contextPath}/faces/info.xhtml?id=#{facility.id}" >#{facility.name}</a><span style="font-style: italic;
+                                                                                          font-family: Georgia, 'Times New Roman', Times, serif;
+                                                                                          font-size: 12px;
+                                                                                          color: #565656;
+                                                                                          padding-left: 5px;"> #{facilityViewBean.stringOfFacilityTypes(facility.id)}</span></h3>
+                                <p>
+                                    <span style="float:right; width: 200px; height: 150px; display: block; margin-left:20px;">
+                                        <span style="display: inline-block; height: 150px; margin: 0 auto; float: right; background-color: yellow;">
+                                            <img src="#{facilityViewBean.avatar(facility.id)}"  style="height: 150px; "  alt=""  />
+                                        </span>
+                                    </span>
+
+                                    <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
+                                        <img src="http://www.restosapiens.ru/img/icons/home.gif" style="width:16px; height:16px; " />
+                                        #{facility.address}
+                                    </span>
+
+                                    <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
+                                        <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />
+                                        #{facility.phone}
+                                    </span>
+
+                                    <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
+                                        <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
+                                        Работает ещё mm минуты, до HH:MM
+                                    </span><br/>
+
+                                    <span style="width:400px; display: block; color: black; font-size: 14px; ">
+                                        #{facilityViewBean.shortDescription(facility.id)}
+                                    </span>
+
+                                    <span style="width:400px; display: block; color: black; font-size: 14px; text-align:  right;">
+                                        <a style="cursor: pointer;" href="#{request.contextPath}/faces/info.xhtml?id=#{facility.id}">Подробнее</a>
+                                    </span>
+                                </p>
+                            </div>
 
 
-                                <!-- End Entry Heading 10 -->
 
-                            </ul></div>
+
+                        </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div id="scroll"> <a href="#" id="newslist-prev" class="jbutton jcarousel-prev-disabled jcarousel-prev-disabled-vertical" disabled="true"></a> <a href="#" id="newslist-next" class="jbutton"></a> </div>
-                    <div class="clearfix"></div>
-                </div>
-                <!-- End News Navigation --> 
+
+                </c:forEach>
+
+                <div class="clear"></div>
 
             </div>
 

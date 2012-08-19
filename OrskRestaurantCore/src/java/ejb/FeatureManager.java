@@ -69,4 +69,10 @@ public class FeatureManager implements FeatureManagerLocal {
         Query q = em.createQuery("select f from Feature f where f.name = '" + name + "'");
         return (Feature) q.getSingleResult();
     }
+
+    @Override
+    public int getTypeByFeatureId(Long featureId) {
+        Feature f = em.find(Feature.class, featureId);
+        return f.getType();
+    }
 }
