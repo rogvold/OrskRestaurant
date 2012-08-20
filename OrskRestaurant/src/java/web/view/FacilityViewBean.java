@@ -32,18 +32,22 @@ public class FacilityViewBean {
 
     @PostConstruct
     private void init() {
-        Map<String, String> map = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-        System.out.println("map = " + map);
-        Set<String> keys = map.keySet();
-        selectedFeatures = new ArrayList();
-        for (String s : keys) {
-            try {
-                Long l = Long.parseLong(s);
-                selectedFeatures.add(l);
-            } catch (Exception e) {
+        try {
+            Map<String, String> map = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+            System.out.println("map = " + map);
+            Set<String> keys = map.keySet();
+            selectedFeatures = new ArrayList();
+            for (String s : keys) {
+                try {
+                    Long l = Long.parseLong(s);
+                    selectedFeatures.add(l);
+                } catch (Exception e) {
+                }
             }
+            System.out.println("selectedList = " + selectedFeatures);
+        } catch (Exception e) {
         }
-        System.out.println("selectedList = " + selectedFeatures);
+
     }
 
     public List<Facility> getAllFacilities() {
@@ -63,7 +67,7 @@ public class FacilityViewBean {
     }
 
     public String stringOfFacilityTypes(Long facId) {
-        List<FacilityType> list = facMan.getFailityTypes(facId);
+        List<FacilityType> list = facMan.getFaсilityTypes(facId);
         String s = "";
         int last = list.size() - 1;
         if (last < 0) {

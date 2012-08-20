@@ -241,7 +241,7 @@ public class FacilityManager implements FacilityManagerLocal {
     }
 
     @Override
-    public List<FacilityType> getFailityTypes(Long facId) {
+    public List<FacilityType> getFaсilityTypes(Long facId) {
         try {
             Facility fac = em.find(Facility.class, facId);
             return fac.getFacilityTypes();
@@ -293,5 +293,19 @@ public class FacilityManager implements FacilityManagerLocal {
     public Facility getFacilityById(Long facId) {
         Facility f = em.find(Facility.class, facId);
         return f;
+    }
+
+    @Override
+    public List<Feature> getFeaturesByFacilityIdAndType(Long facId, int type) {
+//        throw new UnsupportedOperationException("Not supported yet.");
+        List<ExtendedFeature> elist = getExtendedFeaturesByFacilityId(facId);
+        List<Feature> list = new ArrayList();
+        for (ExtendedFeature ef : elist) {
+            Feature f = em.find(Feature.class, ef.getFeatureId());
+            if (f.getType() == type) {
+                list.add(f);
+            }
+        }
+        return list;
     }
 }

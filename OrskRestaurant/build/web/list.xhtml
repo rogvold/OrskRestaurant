@@ -14,7 +14,7 @@
 
         <!--    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>-->
     </head>
-    <body >
+    <body style="background: url(http://micons.me/images/wood_bg.jpg)  repeat top left #62523A"  >
         <div id="container"> 
             <!-- Begin Header Wrapper -->
             <div id="page-top">
@@ -22,13 +22,11 @@
                 <div id="header-wrapper"> 
                     <!-- Begin Header -->
                     <div id="header">
-                        <!--                        <h1>
-                                                    Не знаешь куда пойти ?
-                                                </h1>-->
                         <div id="logo">
-                            <!--                            <a href="#">
-                                                            <img src="./files/logo.png"  />
-                                                        </a>-->
+                            <a href="#{request.contextPath}/faces/index.xhtml">
+                                <img src="#{request.contextPath}/faces/files/logo2.png" alt="Restorsk" />
+                                <img src="#{request.contextPath}/faces/files/slogan3.png" alt="Restorsk" style="margin-left: 50px;" />
+                            </a>
                         </div>
                         <!-- Logo --> 
                         <!-- Begin Menu -->
@@ -49,55 +47,94 @@
 
             <!-- Begin Wrapper -->
             <div id="wrapper"> 
-                <c:forEach items="#{facilityViewBean.allFacilities}" var="facility">
+                <div class="tab-wrapper">
 
-                    <div class="tab-wrapper">
-                        <div class="tab-content">
-                            <div class="tab" style="display: block; ">
-                                <h3><a style="cursor: pointer;" href="#{request.contextPath}/faces/info.xhtml?id=#{facility.id}" >#{facility.name}</a><span style="font-style: italic;
-                                                                                          font-family: Georgia, 'Times New Roman', Times, serif;
-                                                                                          font-size: 12px;
-                                                                                          color: #565656;
-                                                                                          padding-left: 5px;"> #{facilityViewBean.stringOfFacilityTypes(facility.id)}</span></h3>
-                                <p>
-                                    <span style="float:right; width: 200px; height: 150px; display: block; margin-left:20px;">
-                                        <span style="display: inline-block; height: 150px; margin: 0 auto; float: right; background-color: yellow;">
-                                            <img src="#{facilityViewBean.avatar(facility.id)}"  style="height: 150px; "  alt=""  />
-                                        </span>
-                                    </span>
+                    <!--                    <ul id="tab-menu" style="margin-top: 0px; ">
+                                            <li class="selected mouseout"><img src="style/images/icon-palette.png" alt="" /> Graphic Design</li>
+                                            <li class="mouseout"><img src="style/images/icon-art.png" alt="" /> Illustration</li>
+                                            <li class="mouseout"><img src="style/images/icon-laptop.png" alt="" /> Web Design</li>
+                                            <li class="mouseout"><img src="style/images/icon-camera.png" alt="" /> Photography</li>
+                                        </ul>-->
+                    <div id="post-wrapper" >
+                        <c:forEach items="#{facilityViewBean.allFacilities}" var="facility">
+                            <div class="tab-wrapper">
+                                <div class="tab-content">
+                                    <div class="tab" style="display: block; ">
+                                        <h3><a style="cursor: pointer;" href="#{request.contextPath}/faces/info.xhtml?id=#{facility.id}" >#{facility.name}</a><span style="font-style: italic;
+                                                                                                                                                                    font-family: Georgia, 'Times New Roman', Times, serif;
+                                                                                                                                                                    font-size: 12px;
+                                                                                                                                                                    color: #565656;
+                                                                                                                                                                    padding-left: 5px;"> #{facilityViewBean.stringOfFacilityTypes(facility.id)}</span></h3>
+                                        <p>
+                                            <span style="float:right; width: 200px; height: 150px; display: block; margin-left:20px;">
+                                                <span style="display: inline-block; height: 150px; margin: 0 auto; float: right; background-color: yellow;">
+                                                    <a style="cursor: pointer;" href="#{request.contextPath}/faces/info.xhtml?id=#{facility.id}">
+                                                        <img src="#{facilityViewBean.avatar(facility.id)}"  style="height: 150px; "  alt=""  />
+                                                    </a>
+                                                </span>
+                                            </span>
 
-                                    <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
-                                        <img src="http://www.restosapiens.ru/img/icons/home.gif" style="width:16px; height:16px; " />
-                                        #{facility.address}
-                                    </span>
+                                            <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
+                                                <img src="http://www.restosapiens.ru/img/icons/home.gif" style="width:16px; height:16px; " />
+                                                #{facility.address}
+                                            </span>
 
-                                    <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
-                                        <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />
-                                        #{facility.phone}
-                                    </span>
+                                            <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
+                                                <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />
+                                                #{facility.phone}
+                                            </span>
 
-                                    <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
-                                        <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
-                                        Работает ещё mm минуты, до HH:MM
-                                    </span><br/>
+                                            <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
+                                                <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
+                                                Работает ещё mm минуты, до HH:MM
+                                            </span><br/>
 
-                                    <span style="width:400px; display: block; color: black; font-size: 14px; ">
-                                        #{facilityViewBean.shortDescription(facility.id)}
-                                    </span>
+                                            <span style="width:400px; display: block; color: black; font-size: 14px; ">
+                                                #{facilityViewBean.shortDescription(facility.id)}
+                                            </span>
 
-                                    <span style="width:400px; display: block; color: black; font-size: 14px; text-align:  right;">
-                                        <a style="cursor: pointer;" href="#{request.contextPath}/faces/info.xhtml?id=#{facility.id}">Подробнее</a>
-                                    </span>
-                                </p>
+                                            <span style="width:400px; display: block; color: black; font-size: 14px; text-align:  right;">
+                                                <a style="cursor: pointer;" href="#{request.contextPath}/faces/info.xhtml?id=#{facility.id}">Подробнее</a>
+                                            </span>
+                                        </p>
+                                    </div>
+
+
+
+
+                                </div>
                             </div>
 
 
+                        </c:forEach>
+                    </div>
+                    <div id="sidebar">
+                        <div class="sidebox">
+                            <h3>Рекламный блок</h3>
+                            <ul class="post-list">
+                                <li>
+                                    <a href="#" title="">
+                                        <img src="http://orsk.ru/images/recreation/logo/6c173d174013d1d985eb0a6c6ac101c2.jpg" alt="" />
+                                    </a>
 
+                                    <h4><a href="#" title="">Ресторан колониальной кухни Тамерлан</a></h4>
+                                    <!--                                </li>-->
 
+                                    <span class="info" style="color: black;">г.Орск, ул.Станиславского 52в <br/><a href="#" title="">8(3537)212232</a></span>
+                                </li>
+
+                                <!--                                                                <li><a href="#" title=""><img src="style/images/art/blog-th2.jpg" alt="" /></a>
+                                                                                                    <h4><a href="#" title="">Maecenas malesuada felis vel quam tincidunt</a></h4>
+                                                                                                    <span class="info">8 Jan 2011 | <a href="#" title="">23 Comments</a></span></li>
+                                                                                                <li><a href="#" title=""><img src="style/images/art/blog-th3.jpg" alt="" /></a>
+                                                                                                    <h4><a href="#" title="">Maecenas malesuada felis vel quam tincidunt</a></h4>
+                                                                                                    <span class="info">11 Dec 2011 | <a href="#" title="">23 Comments</a></span></li>-->
+                            </ul>
                         </div>
                     </div>
 
-                </c:forEach>
+
+                </div>
 
                 <div class="clear"></div>
 

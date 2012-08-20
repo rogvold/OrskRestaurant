@@ -51,11 +51,13 @@ public interface FacilityManagerLocal {
 
     public List<Facility> getFilteredFacilities(List<Long> featuresId);
 
-    public List<FacilityType> getFailityTypes(Long facId);
+    public List<FacilityType> getFaсilityTypes(Long facId);
 
     public String getDescription(Long facId);
 
     public String getAddressById(Long facId);
     
     public Facility getFacilityById(Long facId);
+    
+    public List<Feature> getFeaturesByFacilityIdAndType(Long facId, int type);
 }

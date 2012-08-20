@@ -120,7 +120,8 @@ table {
 body {
     font-family:"Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", Helvetica, Arial, sans-serif;
     background-color: #f0f0f0;
-    color: #565656;
+    /*    color: #565656;*/
+    color:white;
     font-size: 13px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -149,11 +150,12 @@ p {
 a {
     text-decoration: none;
     color: #1f1f1f;
+/*    color:white;*/
 }
 
 a:hover {
     text-decoration: none;
-    color: #5d8ba6;
+    /*    color: #5d8ba6;*/
 }
 
 a.more {
@@ -255,7 +257,8 @@ img.right {
 em {
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 11px;
-    color: #565656;
+    /*    color: #565656;*/
+    color:white;
 }
 
 .button, .button:link, .button:visited {
@@ -360,7 +363,7 @@ em {
 table {
     width: 100%;
     font-size:13px;
-    border-collapse: collapse;
+    border-ctableollapse: collapse;
     border-bottom:1px solid #c1c1c1;
     border-top:1px solid #c1c1c1;
     margin-bottom: 20px;
@@ -372,7 +375,9 @@ table td {
 }
 
 table td:hover {
-    background-color: #efefef;
+    /*    background-color: #efefef;*/
+    background-color: white;
+    color: black;
 }
 
 table th {
@@ -498,7 +503,7 @@ table.price td h2 sup {
 }
 
 #wrapper {
-    width: 960px;
+    width: 1000px;
     margin: 0 auto;
     padding-top: 0;
     line-height: 20px;
@@ -506,13 +511,14 @@ table.price td h2 sup {
 
 #header-wrapper {
     min-width: 960px;
-    height: 18px;
-    background: transparent url(style/images/header-bg.png) repeat-x center bottom;
+    height: 88px;
+    opacity: 0.9;
+    background: transparent url(http://elemisdesign.com/demos/delphic/style/images/header-bg.png) repeat-x center bottom;
 }
 
 #header {
     width: 960px;
-    height: 18px;
+    height: 88px;
     margin: 0 auto;
     position: relative;
     z-index: 999;
@@ -624,7 +630,8 @@ table.price td h2 sup {
 }
 
 .ddsmoothmenu ul li a, .ddsmoothmenu ul li a:visited {
-    color: #565656;
+        color: #565656;
+/*    color: white;*/
 }
 
 .ddsmoothmenu ul li a.selected { /*CSS class that's dynamically added to the currently active menu items' LI A element*/
@@ -719,9 +726,9 @@ table.price td h2 sup {
     height: 380px;
     overflow: hidden;
     background:transparent;
-    -moz-box-shadow: 0px 1px 3px #8e8e8e;
+/*    -moz-box-shadow: 0px 1px 3px #8e8e8e;
     -webkit-box-shadow: 0px 1px 3px #8e8e8e;
-    box-shadow: 0px 1px 3px #8e8e8e;
+    box-shadow: 0px 1px 3px #8e8e8e;*/
 }
 
 .slidernav {
@@ -807,7 +814,7 @@ table.price td h2 sup {
 }
 
 .one-fourth {
-    width:22%;
+    width:21%;
 }
 
 .three-fourth {
@@ -842,6 +849,7 @@ table.price td h2 sup {
     position:relative;
     margin-right:4%;
     float:left;
+    /*    text-align: center;*/
 }
 
 .last {
@@ -859,7 +867,8 @@ table.price td h2 sup {
     text-align: center;
     font-weight: normal;
     font-family: 'Puritan20Italic';
-    color: #626262;
+    /*    color: #626262;*/
+    color:white;
 }
 
 .intro {
@@ -937,14 +946,14 @@ ul.grid:after {
 ul.grid li {
     width: 225px;
     margin: 0;
-    margin-left: 20px;
+    margin-left: 5px;
     margin-bottom: 20px;
     float: left;
     overflow: hidden;
     background: none;
-    -moz-box-shadow: 0px 1px 2px #8e8e8e;
-    -webkit-box-shadow: 0px 1px 2px #8e8e8e;
-    box-shadow: 0px 1px 2px #8e8e8e;
+    /*    -moz-box-shadow: 0px 1px 2px #8e8e8e;*/
+    /*    -webkit-box-shadow: 0px 1px 2px #8e8e8e;*/
+    /*    box-shadow: 0px 1px 2px #8e8e8e;*/
 }
 
 ul.grid li a {
@@ -974,7 +983,8 @@ ul.gallerynav li {
 ul.gallerynav li a {
     float:left;
     font-family: 'Puritan20Normal';
-    color: #565656;
+    /*    color: #565656;*/
+    color:white;
     margin: 0 15px;
     font-size: 15px;
     line-height: 18px;
@@ -1033,7 +1043,8 @@ a.p-project, a.n-project {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-style: italic;
     font-size: 12px;
-    color: #565656;
+    /*    color: #565656;*/
+    color:white;
     line-height: 1;
     float: left;
 }
@@ -1070,7 +1081,8 @@ ul#tab-menu li {
     cursor: pointer;
     padding: 20px 10px;
     margin: 0;
-    color: #565656;
+    /*    color: #565656;*/
+    color:white;
 }
 
 ul#tab-menu li:hover, ul#tab-menu li.selected {
@@ -1227,7 +1239,8 @@ h2.title {
     line-height: 24px;
     font-size: 13px;
     font-weight: normal;
-    color: #565656;
+    /*    color: #565656;*/
+    color: white;
 }
 
 #wrapper ul.page-navi li a:hover, #wrapper ul.page-navi li a.current {
@@ -1236,7 +1249,7 @@ h2.title {
 }
 
 #sidebar {
-    width: 300px;
+    width: 250px;
     float: right;
 }
 
@@ -1259,7 +1272,7 @@ h2.title {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 13px;
     font-style: italic;
-    color: #565656;
+    /*    color: #565656;*/
 }
 
 #wrapper .sidebox ul {
@@ -1318,11 +1331,11 @@ h2.title {
     font-size: 12px;
     font-style: italic;
     overflow: hidden;
-    color: #565656;
+    /*    color: #565656;*/
 }
 
 #wrapper .sidebox ul.post-list li span.info a {
-    color: #565656;
+    /*    color: #565656;*/
 }
 
 #wrapper .sidebox ul.post-list li span.info a:hover {
@@ -1460,7 +1473,7 @@ ul.ads {
     font-style: italic;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 12px;
-    color: #565656;
+    /*    color: #565656;*/
     margin-left: 5px;
     line-height: 17px;
 }
@@ -1582,7 +1595,7 @@ ul.ads {
     padding: 8px 10px\0/;
     margin-bottom: 20px;
     background-color: #e8e8e8;
-    color: #565656;
+    /*    color: #565656;*/
     font-size: 12px;
 }
 
@@ -1605,7 +1618,7 @@ ul.ads {
     border: 0;
     padding: 10px 10px 20px 10px;
     background-color: #e8e8e8;
-    color: #565656;
+    /*    color: #565656;*/
     font-size: 12px;
     font-family:"Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", Helvetica, Arial, sans-serif;
 }
@@ -1716,7 +1729,7 @@ for IE8
     font-style: italic;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 12px;
-    color: #565656;
+    /*    color: #565656;*/
     padding-left: 5px;
 }
 
@@ -1821,7 +1834,7 @@ for IE8
 .venuepic {
     width: 200px;
     height: 200px;
-/*    margin-right: 15px;*/
+    /*    margin-right: 15px;*/
     border-radius: 120px;
     -webkit-border-radius: 120px;
     -moz-border-radius: 120px;
@@ -1993,9 +2006,23 @@ h2.trigger {
     cursor: pointer;
 }
 
+ul.grid {
+    width: 985px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-left: -20px;
+    padding: 0;
+}
+
 h2.trigger:hover,h2.trigger.active:hover {
     color: #5d8ba6;
 }
+
+div.venuephoto {
+    width: 195px;
+    height: 195px;
+    display: inline-block;
+}   
 
 h2.trigger.active {
     color: #1f1f1f;
@@ -2053,7 +2080,8 @@ h2.trigger.active {
     padding: 0 15px 3px 15px;
     height: 35px;
     background-color: #cecece;
-    color: #565656;
+    /*    color: #565656;*/
+    color:white;
 }
 
 #wrapper ul.tabs li a:hover {
