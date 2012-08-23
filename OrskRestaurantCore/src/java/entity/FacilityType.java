@@ -33,6 +33,15 @@ public class FacilityType implements Serializable {
     })
     private List<Facility> facilities;
 
+    public FacilityType(String name) {
+        this.name = name;
+    }
+
+    public FacilityType() {
+    }
+
+    
+    
     public String getDescription() {
         return description;
     }

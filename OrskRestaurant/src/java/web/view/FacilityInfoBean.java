@@ -15,6 +15,7 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import utils.MySchedule;
 
 /**
  *
@@ -27,12 +28,16 @@ public class FacilityInfoBean {
     @EJB
     FacilityManagerLocal facMan;
     private Long currentId;
+    private List<String> prettySchedule;
+    private MySchedule ms;
 
     @PostConstruct
     private void init() {
         try {
             currentId = Long.parseLong(FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("id"));
             System.out.println("id = " + currentId);
+            ms = new MySchedule(facMan.getFacilityById(currentId).getSchedule());
+            prettySchedule = ms.getPrettySchedule();
         } catch (Exception e) {
         }
 
@@ -68,5 +73,13 @@ public class FacilityInfoBean {
 
     public List<Feature> featuresByIdAndType(Long facId, int type) {
         return facMan.getFeaturesByFacilityIdAndType(facId, type);
+    }
+
+    public List<String> getPrettySchedule() {
+        return prettySchedule;
+    }
+
+    public void setPrettySchedule(List<String> prettySchedule) {
+        this.prettySchedule = prettySchedule;
     }
 }

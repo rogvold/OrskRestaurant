@@ -19,6 +19,7 @@ public class Feature implements Serializable {
     public static final int TYPE_IMPORTANT = 2;
     public static final int TYPE_LOCATION = 3;
     public static final int TYPE_AVERAGE_BILL = 4;
+    public static final int TYPE_KITCHEN = 5;
     public static final int TYPE_ALL = -1;
     
     private static final long serialVersionUID = 1L;

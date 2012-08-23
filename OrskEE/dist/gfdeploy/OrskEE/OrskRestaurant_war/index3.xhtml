@@ -1,209 +1,346 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://elemisdesign.com/demos/delphic/index.html -->
+<html xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core">
     <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <title>Free CSS template by ChocoTemplates.com</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-        <!--[if lte IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!--        <meta charset="UTF-8">-->
+        <title>Orsk Restaurants</title>
+        <link rel="stylesheet" type="text/css" href="./files/style.css" media="all"/>
+        <script type="text/javascript" src="./files/jquery-1.5.min.js"></script>
+        <script type="text/javascript" src="./files/jquery.cycle.all.min.js"></script>
+        <script type="text/javascript" src="./files/ddsmoothmenu.js"></script>
+        <script type="text/javascript" src="./files/scripts.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                if ($('#sliderholder-cycle').length) {
+                    // timeouts per slide (in seconds) 
+                    var timeouts = [15000,39000,25000]; 
+                    function calculateTimeout(currElement, nextElement, opts, isForward) { 
+                        var index = opts.currSlide; 
+                        return timeouts[index] * 1000;
+                    }
+                    jQuery('#sliderholder-cycle').cycle({
+                        fx: 'scrollHorz',
+                        
+                        fx: 'fade',
+                        //                        fx: 'scrollDown',
+                        pager: '.slidernav',
 
-        <script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
-        <script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
-        <script src="js/jquery-func.js" type="text/javascript"></script>
+                        next:    '.slidernext1',
+
+                        prev:    '.sliderprev1',
+
+                        
+                        speed: 500,
+                        timeoutFn: calculateTimeout,
+                        pagerEvent: 'click',
+                        pauseOnPagerHover: true,
+                        cleartype: 1
+                    });
+                    jQuery('#sliderholder-cycle').css("display", "block");
+                    jQuery('.slidernav').css("display", "block");
+			
+                }
+            }); 
+        </script>
+        <!--    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>-->
     </head>
-    <body>
+    <!--    <body style="background: url(http://stat21.privet.ru/lr/0c1c2ef53bec6df45f102e589a761192) no-repeat;  background-size: 100%; background-size: 100% auto" >-->
+    <body style=" display:block; background:url('http://www.cannolificiomongibello.it/images/bg/bg_chi_siamo.jpg') no-repeat top center fixed; background-size: 100%; background-color: #FFFFFF; " >
+        <!--        http://i016.radikal.ru/0801/28/3f0e0751ea7a.jpg-->
+        <!--background: url(http://micons.me/images/wood_bg.jpg)  repeat top left #62523A-->
 
-        <!-- Header -->
-        <div id="header">
-            <div class="shell">
 
-                <!-- Logo -->
-                <!--                <h1 id="logo">
-                                    <a href="#">Не знаешь куда пойти ? </a>
-                                </h1>-->
-                <h1 style="font:normal normal normal 100%/normal 'Lucida Grande',Geneva,Helvetica,Arial,serif; font-style: oblique; font-weight: normal;
-                    text-align: center;
-                    text-shadow: #D5D5D5 0 1px 0;
-                    white-space: nowrap;
-                    font-size: 3em;
-                    ">
-                    <span style=" margin-top: 45px;">
-                        Как вы хотите отдохнуть? 
-                    </span>
-                </h1>
+        <div id="containerq" class="container_12" style="background: url('http://www.cannolificiomongibello.it/images/bg/pattern.jpg') repeat-y 0 0;"> 
+            <!-- Begin Header Wrapper -->
+            <ul id="nav" class="grid_9 alpha">
+                <!--                <li id="home"><a href="index.php" title="Home Page" class="currentPage">Home</a></li>
+                                <li id="chi-siamo"><a href="chi_siamo.php" title="Chi siamo">Chi siamo</a></li>
+                                <li id="prodotti"><a href="prodotti.php" title="I nostri prodotti">Prodotti</a></li>
+                                <li id="contatti"><a href="contatti.php" title="Contatti">Contatti</a></li>-->
+            </ul>
 
-                <!-- End Logo -->
+            <div id="page-top">
 
-                <!-- Navigation -->
-                <div id="navigation">
-                    <ul>
-                        <!--			    <li><a href="#">Home</a></li>
-                                                    <li><a href="#">About</a></li>
-                                                    <li><a href="#">Services</a></li>
-                                                    <li><a href="#">Contact</a></li>-->
-                    </ul>
+                <div id="header-wrapper1" > 
+                    <!-- Begin Header -->
+                    <div id="header1">
+
+                        <div id="menu-wrapper">
+                            <div id="smoothmenu1" class="ddsmoothmenu">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Menu -->
+                    </div>
+                    <!-- End Header --> 
                 </div>
-                <!-- End Navigation -->
-
             </div>
-        </div>
-        <!-- End Header -->
+            <!-- End Header Wrapper --> 
 
-        <!-- Slider -->
-        <div id="slider">
-            <div class="shell">
+            <!-- Begin Slider -->
+            <div id="cycle-wrapper">
+                <div style="display: inline-block;width: 100%; height: 20px;">
+                    <span style="display: inline-block; margin-left: 2%; width: 96%; height: 20px; background-image: url('#{request.contextPath}/faces/files/slider-bottom.jpg')"/>
+                </div>
 
-                <div class="slider-holder">
-                    <div class="slides">
-                        <ul>
+                <form method="get" action="#{request.contextPath}/faces/list.xhtml">
+                    <div style="">
+                        <!--                        style="background: url(http://fotoflexer.com/Normal/temp2/be684ccd85c534e4e5938c43ea0bf013.jpg);"-->
+                        <div id="sliderholder-cycle" style="position: relative; display: block; width: 98%; margin: 0 auto;   ">
+                            <!--                    <img src="./Delphic   Creative Portfolio Template_files/slider-1.jpg" #889DA0; width="960" height="380" style="position: absolute; top: 0px; left: 0px; opacity: 1; display: block; z-index: 4; ">-->
+                            <!--                        <div>-->
+                            <div style=" 
+                                 ;   
+                                 top: 0px; 
+                                 left: 0px; 
+                                 width: 100%; 
+                                 height: 380px;
+                                 position: absolute; 
+                                 display: none;
+                                 z-index: 4;
+                                 ">
 
-                            <!-- Slide -->
-                            <li>
-                                <div class="slide-bg">
-                                    <!--                                    <div class="slide-image">
-                                                                            <a href="#"><img src="css/images/slide-image.jpg" alt="" /></a>
-                                                                        </div>-->
-                                    <div class="slide-info">
-                                        <!--                                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan interdum nulla. Nunc venenatis tincidunt sem, nec tempus purus congue viverra. Nullam venenatis tempus libero, quis venenatis metus rhoncus et. Nulla rutrum luctus ante, quis varius justo aliquam sit amet.</p>
-                                                                                <a href="#" class="notext learn-button">Learn More</a>-->
-                                        <h:panelGrid columns="1" >
-                                            <h:selectManyCheckbox id="smc" 
-                                                                  disabled="false" 
-                                                                  title="this is 'selectManyCheckbox' demo" layout="lineDirection"> 
-                                                <f:selectItem id="si1" itemLabel="Thums Up" itemValue="11" />
-                                                <f:selectItem id="si2" itemLabel="Limca" itemValue="22" />
-                                                <f:selectItem id="si3" itemLabel="Pepsi" itemValue="33" />
-                                                <f:selectItem id="si4" itemLabel="Sprite" itemValue="44" />
-                                                <f:selectItem id="si5" itemLabel="Frooti" itemValue="55" />
-                                                <f:selectItem id="si6" itemLabel="Coca-Cola" itemValue="66" />
-                                            </h:selectManyCheckbox>
+                                <h:panelGroup style="display:inline-block; ">
+                                    <span style="text-align:center;  color:#A64F26;; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                        Что вы хотите?
+                                    </span><br />
+                                    <span style="text-align:center; width: 950px; color: #7D7661; margin-bottom: 50px; display: block; margin: 0 auto;font: italic 15px Georgia,serif; ">
+                                        Не думайте — чувствуйте! Можно выбрать несколько.
+                                    </span>
+                                    <h:panelGrid columns="4"  style="border-width: 0px; margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
+                                        <c:forEach varStatus="status0" items="#{featureBean.customFeatures(1)}" var="feature" >
+                                            <input type="checkbox" id="c1id-#{status0.current}" name="#{feature.id}" style="cursor: pointer;" value="d"/>
+                                            <label for="c1id-#{status0.current}" style="cursor: pointer; color:#4A0D09; "> #{feature.name}</label>
+                                        </c:forEach>
+                                    </h:panelGrid>
+                                </h:panelGroup>
 
-                                        </h:panelGrid>
-                                    </div>
+                                <span style="top: 330px; position: absolute; display: block; width: 960px; ">
+                                    <span style="display: inline-block; width: 470px;" >
+                                    </span>
+
+                                    <span style="display: inline-block; width: 470px;" >
+                                        <span class="slidernext1" style="margin-left:350px;" >
+                                            <a href="#" class="mybutton"  >
+                                                Далее
+                                            </a>
+                                        </span>
+                                    </span>
+                                </span>
+
+
+
+                            </div>
+
+
+                            <div style="top: 0px; left: 0px; z-index: 2; position: absolute; opacity: 0.7; display: none; ">
+
+                                <h:panelGroup style="display:inline-block; ">
+                                    <span style="text-align:center; color: #A64F26; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                        Что важно?
+                                    </span><br />
+                                    <span style="text-align:center; color: #7D7661; width: 950px; display: inline-block; margin: 0 auto;font: italic 15px Georgia,serif; ">
+                                        Здесь тоже можно выбрать несколько.
+                                    </span>
+                                    <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
+                                        <c:forEach varStatus="status1" items="#{featureBean.customFeatures(2)}" var="feature" >
+                                            <input style="cursor: pointer;" type="checkbox" id="cid-#{status1.current}" name="#{feature.id}" value="d"/>
+                                            <label for="cid-#{status1.current}" style="cursor: pointer; color:#4A0D09; "> #{feature.name}</label>
+                                        </c:forEach>
+                                    </h:panelGrid>
+                                </h:panelGroup>
+
+                                <span style="top: 330px; position: absolute; display: block; width: 960px; ">
+                                    <span style="display: inline-block; width: 470px;" >
+                                        <span class="sliderprev1" >
+                                            <a href="#" class="mybutton" style="margin-left: 50px;"  >
+                                                Назад
+                                            </a>
+                                        </span>
+                                    </span>
+
+                                    <span style="display: inline-block; width: 470px;" >
+                                        <span class="slidernext1" style="margin-left:350px;" >
+                                            <a href="#" class="mybutton"  >
+                                                Далее
+                                            </a>
+                                        </span>
+                                    </span>
+                                </span>
+                                <div style="position: absolute; color: #7D7661; top: 363px; right: 10px; width: 130px; display: block;font: italic 12px Georgia,serif; ">
+                                    Остался еще 1 вопрос
                                 </div>
-                                <span class="slide-shadow">&nbsp;</span>
-                            </li>
-                            <!-- End Slide -->
 
-                            <!-- Slide -->
-                            <li>
-                                <div class="slide-bg">
-                                    <div class="slide-image">
-                                        <a href="#"><img src="css/images/slide-image.jpg" alt="" /></a>
-                                    </div>
-                                    <div class="slide-info">
-                                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan interdum nulla. Nunc venenatis tincidunt sem, nec tempus purus congue viverra. Nullam venenatis tempus libero, quis venenatis metus rhoncus et. Nulla rutrum luctus ante, quis varius justo aliquam sit amet.</p>
-                                        <a href="#" class="notext learn-button">Learn More</a>
+                            </div>
 
-                                    </div>
-                                </div>
-                                <span class="slide-shadow">&nbsp;</span>
-                            </li>
-                            <!-- End Slide -->
+                            <div style="top: 0px; left: 0px; z-index: 2; position: absolute; opacity: 0; display: none;">
+                                <h:panelGroup style="display:inline-block; ">
+                                    <span style="text-align:center; width: 950px; color: #A64F26; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                        В каком районе?
+                                    </span><br />
+                                    <span style="text-align:center; color: #7D7661; width: 950px; display: inline-block; margin: 0 auto;font: italic 15px Georgia,serif; ">
+                                        Ну вы поняли — выбирайте, сколько хотите :)
+                                    </span>
+                                    <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
+                                        <c:forEach varStatus="status3" items="#{featureBean.customFeatures(3)}" var="feature" >
+                                            <input style="cursor: pointer;" type="checkbox" id="cida-#{status3.current}" name="#{feature.id}" value="d"/>
+                                            <label style="cursor: pointer; color:#4A0D09; " for="cida-#{status3.current}"> #{feature.name}</label>
+                                        </c:forEach>
+                                    </h:panelGrid>
+                                </h:panelGroup>
 
-                            <!-- Slide -->
-                            <li>
-                                <div class="slide-bg">
-                                    <div class="slide-image">
-                                        <a href="#">
-                                            <img src="css/images/slide-ima7ge.jpg" alt="" />
+                                <span style="top: 330px; position: absolute; display: block; width: 960px; ">
+                                    <span style="display: inline-block; width: 470px;" >
+                                        <span class="sliderprev1" >
+                                            <a href="#" class="mybutton" style="margin-left: 50px;"  >
+                                                Назад
+                                            </a>
+                                        </span>
+                                    </span>
+
+                                    <span style="display: inline-block; width: 470px;" >
+                                        <a style="cursor: pointer;">
+                                            <span  style="margin-left:350px;" >
+                                                <input type="submit" class="fbutton" value="Готово!" style="padding: 0px;" />
+
+                                                <!--                                            <span class="fbutton"  >
+                                                                                                Готово!
+                                                                                            </span>-->
+                                            </span>
                                         </a>
-                                    </div>
-                                    <div class="slide-info">
-                                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan interdum nulla. Nunc venenatis tincidunt sem, nec tempus purus congue viverra. Nullam venenatis tempus libero, quis venenatis metus rhoncus et. Nulla rutrum luctus ante, quis varius justo aliquam sit amet.</p>
-                                        <a href="#" class="notext learn-button">Learn More</a>
-
-                                    </div>
+                                    </span>
+                                </span>
+                                <input type="hidden" name="page" value="1" />
+                                <div style="position: absolute; color: #7D7661; top: 363px; right: 8px; width: 130px; display: block;font: italic 12px Georgia,serif; ">
+                                    Узнать результат!
                                 </div>
-                                <span class="slide-shadow">&nbsp;</span>
-                            </li>
-                            <!-- End Slide -->
-
-                        </ul>
+                            </div>
+                            <!--                        </div>-->
+                        </div>
                     </div>
 
-                    <!-- Slider Navigation -->
-                    <div class="slider-nav">
-                        <a href="#" class="prev">previous</a>
-                        <a href="#" class="next">next</a>
+                    <ul class="slidernav" style="display: block; ">
+
+                    </ul>
+
+                </form>
+                <div style="display: inline-block;width: 100%; height: 20px;">
+                    <span style="display: inline-block; margin-left: 2%; width: 96%; height: 20px; background-image: url('#{request.contextPath}/faces/files/slider-bottom.jpg')"/>
+                </div>
+            </div>
+
+            <div id="footer2" style="margin-top: 120px;">
+
+
+
+                <!-- End Slider --> 
+                <!--            <div style="display: block; width: 100%; background-color: grey; background-image: url(http://pritesh.info/connoisseur/images/noise.png);">-->
+                <!-- Begin Wrapper -->
+                <div style="display: block; width: 100%; margin-top:120px; ">
+
+
+                    <div id="wrapper2" style="top: 50px; width: 100%; padding-top: 20px;"> 
+
+                        <!-- Begin Intro -->
+                        <div class="intro" style="background-color:#CAB387; text-align: center;  margin: 0 auto;  display: block; border-radius: 40px; padding-top: 12px; line-height:25px; width: 500px; height: 40px;">
+                            <h1 style="color: #AF130A;"> А можно выбрать по категории </h1>
+                        </div>
+                        <!-- End Intro --> 
+
+                        <!-- Begin About -->
+                        <span id="about" style="display: inline-block; margin-top: 50px; width: 1000px;" >
+
+                            <span style="display: inline-block; margin-left: 100px; width: 800px;">
+                                <div class="one-fourth"> 
+
+                                    <h4 style="color: #4A0D09; font-size: 1.5em; font-weight: bold;">Тип:</h4>
+                                    <li style="color: #4A0D09; line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Ресторан</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бар</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Кафе</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Клуб</a></li>
+                                </div>
+                                <div class="one-fourth">
+                                    <h4 style="color:#4A0D09; font-size: 1.5em; font-weight: bold;">Особенности</h4>
+                                    <p><li  style="color: #4A0D09;line-height: 20px; " ><a href="#"  style="color:#4A0D09;">Летняя веранда</a></li>
+                                    <li style="color: #4A0D09; line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Wi-Fi</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Кальян</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бизнес-ланчи</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Караоке</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Танцпол</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бильярд</a></li></p>
+                                </div>
+                                <div class="one-fourth">
+                                    <h4 style="color:#4A0D09; font-size: 1.5em; font-weight: bold;">Район:</h4>
+                                    <p>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Старый город</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">к-тр МИР</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color: #4A0D09;">ОЗТП</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color: #4A0D09;">240 квартал</a></li>
+                                    <!--                        <li><a href="/check/1500-2000">1500—2000 р.</a></li>-->
+                                    <!--                        <li><a href="/check/2000-3000">2000—3000 р.</a></li>-->
+
+                                    </p>
+                                </div>
+                                <div class="one-fourth last">
+                                    <h4 style="color: #4A0D09; font-size: 1.5em; font-weight: bold;">Средний чек:</h4>
+                                    <p><li style="color: #4A0D09;line-height: 20px; " ><a href="#"  style="color:#4A0D09;">до 300 р.</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">300—500 р.</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">500—1000 р.</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">1000—1500 р.</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">1500—2000 р.</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">2000—3000 р.</a></li>
+                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">от 3000 р.</a></li></p>
+                                </div>
+                            </span>
+
+                        </span>
+                        <!-- End About --> 
+
                     </div>
-                    <!-- End Slider Navigation -->
+                </div>
+
+
+                <!-- End Wrapper -->
+                <!--            <div class="clearfix"></div>
+                            <div class="push"></div>-->
+
+
+                <!-- Begin Footer -->
+                <div id="footer-wrapper" style="">
+                    <div id="footer">
+                        <div id="footer-content"> 
+
+                            <!-- Begin Copyright -->
+                            <div id="copyright">
+                                <p>© Copyright 2012 RestOrsk </p>
+                            </div>
+                            <!-- End Copyright --> 
+
+                            <!-- Begin Social Icons -->
+                            <div id="socials">
+                                <ul>
+                                    <li><a href="#"><img src="./files/icon-rss.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="./files/icon-twitter.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="./files/icon-dribble.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="./files/icon-tumblr.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="./files/icon-flickr.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="./files/icon-facebook.png" alt=""/></a></li>
+                                </ul>
+
+                            </div>
+                            <!-- End Social Icons --> 
+
+                        </div>
+                    </div>
                 </div>
 
             </div>
+
         </div>
-        <!-- End Slider -->
 
-        <!-- Main -->
-        <div id="main">
-            <div class="shell">
-
-                <!-- Cols -->
-                <div class="three-cols">
-                    <div class="cl">&nbsp;</div>
-
-                    <!-- Col -->
-                    <div class="col">
-                        <h3 class="ico ico1">Тип</h3>
-
-                        <p>Тут будет перечисление типов. </p>
-                        <p>Nullam venenatis tempus libero, quis venenatis metus rhoncus et. Nulla rutrum luctus ante, quis varius justo aliquam sit amet.</p>
-                        <p class="more"><a href="#">Lorem Impsum</a></p>
-
-                    </div>
-                    <!-- End Col -->
-
-                    <!-- Col -->
-                    <div class="col">
-                        <h3 class="ico ico2">Особенности</h3>
-
-                        <p>Deugiat tincidunt ac a tortor. Sed nec elit quis tellus dictum pharetra. Mauris nec ante eu mauris consequat ultricies nec vitae purus. Proin nec urna odio. </p>
-                        <p>Mauris sapien justo, commodo non mollis sed, dictum sit amet dolor. Maecenas purus lacus, viverra a sollicitudin eget, posuere vel diam.</p>
-                        <p class="more"><a href="#">Lorem Impsum</a></p>
-
-                    </div>
-                    <!-- End Col -->
-
-                    <!-- Col -->
-                    <div class="col col-last">
-                        <h3 class="ico ico3">Средний чек</h3>
-
-                        <p></p>
-                        <p>Nunc ultricies massa id nibh ultricies in pharetra sapien sagittis. Donec imperdiet eros vitae purus interdum suscipit eu faucibus libero.</p>
-                        <p class="more"><a href="#">Lorem Impsum</a></p>
-
-                    </div>
-                    <!-- End Col -->
-
-                    <div class="cl">&nbsp;</div>
-
-                </div>
-                <!-- End Cols -->
-
-            </div>
-        </div>
-        <!-- End Main -->
-
-        <!-- Footer -->
-        <div id="footer">
-            <div class="shell">
-                <p class="left">
-                    <a href="featuresManager.xhtml">Feature Manager</a>
-                    <span>|</span>
-                    <a href="facilityManager.xhtml">Facility Manager</a>
-                    <span>|</span>
-                    <a href="#">Services</a>
-                    <span>|</span>
-                    <a href="#">Contact</a>
-                </p>
-                <p class="right">&copy; 2010 Company Name. 
-                    Design by <a href="http://chocotemplates.com" target="_blank" title="The Sweetest CSS Templates WorldWide">Chocotemplates.com</a></p>
-            </div>
-        </div>
         <!-- End Footer -->
 
     </body>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<facility>
+<name>Тамерлан</name>
+<phone>213421</phone>
+<features>
+<feature>
+<name>Wi-Fi</name>
+<rating>1</rating>
+<type>2</type>
+</feature>
+</features>
+
+
+</facility>

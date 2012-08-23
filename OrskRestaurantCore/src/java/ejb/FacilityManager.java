@@ -105,7 +105,7 @@ public class FacilityManager implements FacilityManagerLocal {
     public void addFacility(Facility facility, List<Feature> features, List<Image> images, List<FacilityType> types) {
         System.out.println("try to create facility ");
         System.out.println("features = " + features);
-        Facility nf = new Facility(facility.getName(), facility.getAddress(), facility.getDescription(), facility.getPhone(), facility.getSite(), facility.getSchedule());
+        Facility nf = new Facility(facility.getName(), facility.getAddress(),facility.getCoordinates(), facility.getDescription(), facility.getPhone(), facility.getSite(), facility.getSchedule());
         nf = em.merge(nf);
         addFeatures(features, nf.getId());
         addImages(images, nf.getId());
@@ -114,7 +114,7 @@ public class FacilityManager implements FacilityManagerLocal {
 
     @Override
     public void addFacilityByFuckingFeaturesAndFacilityTypeId(Facility facility, List<Long> featuresId, List<Image> images, List<Long> typesId) {
-        Facility nf = new Facility(facility.getName(), facility.getAddress(), facility.getDescription(), facility.getPhone(), facility.getSite(), facility.getSchedule());
+        Facility nf = new Facility(facility.getName(), facility.getAddress(), facility.getCoordinates(), facility.getDescription(), facility.getPhone(), facility.getSite(), facility.getSchedule());
         nf = em.merge(nf);
         addFeaturesByTheirId(featuresId, nf.getId());
         addImages(images, nf.getId());

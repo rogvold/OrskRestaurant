@@ -10,18 +10,67 @@
         <script type="text/javascript" src="./files/jquery-1.6.1.min.js"></script>
         <script type="text/javascript" src="./files/jquery.prettyPhoto.js"></script>
         <link rel="stylesheet" type="text/css" href="./files/prettyPhoto.css" />
-        <!--        <script type="text/javascript" src="./files/jquery-1.6.1.min.js"></script>-->
+        <!-- Yandex Map-->
+        <script src="http://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU"
+        type="text/javascript"></script>
+        <link rel="stylesheet" href="http://yandex.st/jquery-ui/1.8.15/themes/humanity/jquery.ui.all.min.css"
+              type="text/css"/>
 
-        <script type="text/javascript" src="./catalog/view/javascript/jquery/prettyPhoto/jquery.cycle.lite.1.0.min.js"></script>
+        <script type="text/javascript">
+            ymaps.ready(init1);
+            
+            function olosh(){
+                alert('olosh');
+            }
+            var myMap;
+            function init1(){
+                myMap = new ymaps.Map('tab31', {
+                    center: [50,51], 
+                    zoom: 16,
+                    type: "yandex#publicMap"         
+                });
+                
+                //                var placemark = new YMaps.Placemark(map.getCenter(), { 
+                //                    style : {
+                //                        balloonStyle : {
+                //                            template : "plain#balloon"
+                //                        }
+                //                    }
+                //                });
+                //                placemark.name = "Название объекта";
+                //                placemark.description = "Описание объекта";
+                //                myMap.addOverlay(placemark);
+
+                
+                myMap.controls.add("zoomControl").add("mapTools");
+                //                var point = new YMaps.GeoPoint(51.22203800805332,58.496577013001804);
+                //                var placemark = new YMaps.Placemark(point);
+                //                myMap.addOverlay(placemark);
+                //                placemark.setBalloonContent('hello moteo');
+                //                placemark.openBallon();
+                //                placemark.
+                
+                var pl = new ymaps.Placemark(['#{facilityInfoBean.facility.coordinates}'],
+                {balloonContent:'<span style="font-weight:bold; font-size:medium;">#{facilityInfoBean.facility.name}</span>'}, 
+                {preset: 'twirl#lightblueDotIcon'}
+            );
+                             
+                myMap.geoObjects.add(pl);
+                pl.balloon.open();
+                                
+                //                
+                //               myMap.geoObjects.add(new ymaps.Placemark([51.22203800805332,58.496577013001804], {balloonContent: "Ресторан"}, {preset: "twirl#lightblueDotIcon"}));
+            }
+            function init2(){
+                myMap.setCenter([ #{facilityInfoBean.facility.coordinates} ]);
+                myMap.container.fitToViewport();
+            }
+
+        </script>
 
 
 
-        <!--        <script type="text/javascript" charset="utf-8">
-                    $(document).ready(function(){
-                        $("gallery a[rel^='prettyPhoto']").prettyPhoto();
-                    });
-                </script>-->
-        <!--        <script type="text/javascript" src="./files/jquery.cycle.all.min.js"></script>-->
+        <!-- End Yandex Map -->
         <script type="text/javascript" src="./files/ddsmoothmenu.js"></script>
         <script type="text/javascript" src="./files/scripts.js"></script>
 
@@ -62,9 +111,9 @@
 
 
             <!-- Begin Wrapper -->
-            <div id="wrapper"> 
+            <div id="wrapper" style="width: 820px;"> 
                 <div class="content">
-                    <div class="tabbed-content">
+                    <div class="tabbed-content" id="mytabs">
                         <h3>#{facilityInfoBean.facility.name} <span style="font-style: italic;
                                                                     font-family: Georgia, 'Times New Roman', Times, serif;
                                                                     font-size: 12px;
@@ -83,15 +132,23 @@
                         <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
                             <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
                             Работает ещё mm минуты, до HH:MM
+
                         </span><br/>
+
+                        <!--                        <div style="display: block; width: 100; height: 100px; background-color: yellow;" id="olo">
+                        
+                                                </div>-->
+
+
+
 
                         <ul class="tabs">
                             <li class="active"><a href="#tab1">Фото</a></li>
                             <li class=""><a href="#tab2">Подробности</a></li>
-                            <li class=""><a href="#tab3">Карта</a></li>
+                            <li class="" id="mymap"><a href="#tab3">Карта</a></li>
                             <li class=""><a href="#tab4">Отзывы</a></li>
                         </ul>
-                        <div class="tab_container" style="color:  #966F33;">
+                        <div class="tab_container" style="color:  #966F33;" id="mytabs2" >
                             <div style="display: block; width: 800px; " id="tab1" class="tab_content">
                                 <ul id="gallery" class="grid">
                                     <c:forEach varStatus="status" items="#{facilityInfoBean.imagesByFacilityId(facilityInfoBean.facility.id)}" var="image">
@@ -106,14 +163,25 @@
                             </div>
                             <div style="display: none; " id="tab2" class="tab_content">
                                 <p>#{facilityInfoBean.facility.description}</p>
+                                <span style="display:  inline-block; color: black; background-color: white; opacity: 0.8; border-radius: 5px; padding: 5px;">
+                                    <h4>Расписание</h4>
+                                    <c:forEach items="#{facilityInfoBean.prettySchedule}" var="day">
+                                        #{day} <br/>
+                                    </c:forEach>
+                                </span>
+
                                 <div style="display: block; width: 500px;">
                                     <!--                                    <h:panelGrid columns="2">-->
                                     <span style="display: inline-block; width: 200px;" >
                                         <h4>Особенности</h4>
                                         <!--                                        <h:panelGrid columns="1">-->
-                                        <c:forEach var="feature" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 1)}">
+                                        <c:forEach varStatus="statusq" var="feature" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 1)}">
                                             <span style="display: inline-block">
-                                                #{feature.name}
+                                                
+                                                        #{feature.name}
+<!--                                                    </span>
+                                                </c:if>-->
+                                                
                                             </span><br/>
                                         </c:forEach>
                                         <!--                                        </h:panelGrid>-->
@@ -127,19 +195,19 @@
                                         </c:forEach>
 
                                     </span>
+
                                     <!--                                    </h:panelGrid>-->
                                 </div>
 
                             </div>
-                            <div style="display: none; " id="tab3" class="tab_content">
+                            <div style="width: 550px;" id="tab3" class="tab_content">
                                 <h3>Карта</h3>
-                                <p>Nulla non tortor eget ligula dapibus semper non ut mauris. Nam feugiat, lorem a tempus auctor, odio nisl porttitor lacus, ut ultrices neque massa a odio. Pellentesque sit amet leo dictum nisl tempor malesuada id ut magna. Etiam non mauris eget massa sagittis euismod. Aliquam lectus nulla, consequat eget molestie id, malesuada sit amet lectus. Pellentesque eget justo sit amet nunc adipiscing semper at ac quam. Praesent a volutpat nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                <p> Morbi congue pellentesque quam, eu ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc rhoncus tortor quis eros bibendum a tempus est dapibus. Vivamus consectetur quam eu tellus porttitor ultrices. Nunc metus massa, ullamcorper sit amet malesuada a, porttitor in tellus. Vestibulum ullamcorper quam nec lorem aliquam id feugiat risus tincidunt. </p>
+                                <div id="tab31" style="width:740px; height:500px; margin-bottom: 20px;"></div>
                             </div>
                             <div style="display: none; " id="tab4" class="tab_content">
                                 <h3>Отзывы</h3>
-                                <p>Nulla non tortor eget ligula dapibus semper non ut mauris. Nam feugiat, lorem a tempus auctor, odio nisl porttitor lacus, ut ultrices neque massa a odio. Pellentesque sit amet leo dictum nisl tempor malesuada id ut magna. Etiam non mauris eget massa sagittis euismod. Aliquam lectus nulla, consequat eget molestie id, malesuada sit amet lectus. Pellentesque eget justo sit amet nunc adipiscing semper at ac quam. Praesent a volutpat nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                <p> Morbi congue pellentesque quam, eu ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc rhoncus tortor quis eros bibendum a tempus est dapibus. Vivamus consectetur quam eu tellus porttitor ultrices. Nunc metus massa, ullamcorper sit amet malesuada a, porttitor in tellus. Vestibulum ullamcorper quam nec lorem aliquam id feugiat risus tincidunt. </p>
+                                <p>Будут как только захостим сайт </p>
+                                
                             </div>
                         </div>
                     </div>

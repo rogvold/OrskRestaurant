@@ -24,7 +24,7 @@ public class Facility implements Serializable, Comparable<Facility> {
     private String name;
     @Column
     private String address;
-    @Column
+    @Column(length=3000)
     private String description;
     @Column
     private String phone;
@@ -34,6 +34,8 @@ public class Facility implements Serializable, Comparable<Facility> {
     private String schedule;
     @Column
     private int status;
+    @Column
+    private String coordinates;
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "Facility_FacilityType", joinColumns = {
         @JoinColumn(name = "facility_id")
@@ -46,13 +48,14 @@ public class Facility implements Serializable, Comparable<Facility> {
     public Facility() {
     }
 
-    public Facility(String name, String address, String description, String phone, String site, String schedule) {
+    public Facility(String name, String address,String coordinates, String description, String phone, String site, String schedule) {
         this.name = name;
         this.address = address;
         this.description = description;
         this.phone = phone;
         this.site = site;
         this.schedule = schedule;
+        this.coordinates = coordinates;
     }
 
     public List<FacilityType> getFacilityTypes() {
@@ -70,6 +73,16 @@ public class Facility implements Serializable, Comparable<Facility> {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public String getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
+    }
+    
+    
 
     public String getDescription() {
         return description;

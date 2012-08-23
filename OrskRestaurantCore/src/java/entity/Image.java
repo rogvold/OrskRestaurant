@@ -30,6 +30,16 @@ public class Image implements Serializable {
     @Column
     private Long ownerFacilityId;
 
+    public Image(String src, Long ownerFacilityId) {
+        this.src = src;
+        this.ownerFacilityId = ownerFacilityId;
+    }
+
+    public Image() {
+    }
+
+    
+    
     public Long getOwnerFacilityId() {
         return ownerFacilityId;
     }
