@@ -215,17 +215,7 @@
                         3
                     </rating>
                 </feature>
-                <feature>
-                    <name>
-                        Поесть
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
+
                 <feature>
                     <name>
                         Поесть мяса
@@ -314,7 +304,343 @@
                         3
                     </rating>
                 </feature>
+                
+                <feature>
+                    <name>
+                        Блюда на углях
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Еда на вынос
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Кальян
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+
+                <feature>
+                    <name>
+                        Разливное пиво
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Сигары
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Крепкий алкоголь
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Бильярд
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Боулинг
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Караоке
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Спорт-трансляции
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Вид из окна
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Японская кухня
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Диванчики
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Кондиционер
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Летняя веранда
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Столики для курящих
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Столики для некурящих
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Отдельные кабинки
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Камин
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Wi-Fi
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Принимают кредитки
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Парковка
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Бизнес-ланчи
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Европейская кухня
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+            
+            
+                <feature>
+                    <name>
+                        500-1000
+                    </name>
+                    <type>
+                        4
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        вино
+                    </name>
+                    <type>
+                        6
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        коктейли
+                    </name>
+                    <type>
+                        6
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        крепкие напитки
+                    </name>
+                    <type>
+                        6
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Mastercard
+                    </name>
+                    <type>
+                        7
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        европейская
+                    </name>
+                    <type>
+                        5
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
             </features>
+            
         </facility> 
         <facility>
             <name>
@@ -365,17 +691,6 @@
             </types>
         
             <features>
-                <feature>
-                    <name>
-                        Выпить чаю, кофе
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
                 <feature>
                     <name>
                         Позавтракать
@@ -528,7 +843,7 @@
                 8(3537)230551
             </phone>
             <site>
-                http://orsk.ru/index.php?option=com_afisha&amp;task=viewPlace&amp;cat=4&amp;id=274&amp;Itemid=303
+              
             </site>
             <schedule>
                 /11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/
@@ -580,7 +895,7 @@
                 8(3537) 20-31-20
             </phone>
             <site>
-                http://orsk.ru/index.php?option=com_afisha&amp;task=viewPlace&amp;cat=4&amp;id=916&amp;Itemid=303
+               
             </site>
             <schedule>
                 /11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/
@@ -659,6 +974,344 @@
                 </item>
                 <item>
                     Бар
+                </item>
+            </types>
+        </facility>
+        
+        <facility>
+            <name>
+                Дружба
+            </name>
+            <description>
+                Одно из самых презентабельных и известных заведений города. Вы можете заказать уютный столик на двоих или целый ресторан для проведения торжественных мероприятий!
+            </description>
+            <address>
+                г.Орск, пр-кт Ленина 2 		
+            </address>
+            <coordinates>
+                51.222261,58.479310
+            </coordinates>
+            <phone>
+                8(3537) 25-03-46 		
+            </phone>
+            <site>
+                http://druzhba123.vse56.ru/
+            </site>
+            <schedule>
+                /12:00-24:00/12:00-24:00/12:00-24:00/12:00-24:00/12:00-24:00/12:00-24:00/12:00-24:00/
+            </schedule>
+            <images>
+                <item>
+                    http://otdih.vse56.ru/files/client/5161/sitePages/47146/21716.jpg
+                </item>
+                <item>
+                    http://otdih.vse56.ru/files/client/5161/sitePages/47146/21715.jpg
+                </item>
+                <item>
+                    http://otdih.vse56.ru/files/client/5161/sitePages/47146/21707.jpg
+                </item>
+                <item>
+                    http://otdih.vse56.ru/files/client/5161/sitePages/47146/21704.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134513559744925.jpg
+                </item>
+            </images>
+            <types>
+                <item>
+                    Ресторан 
+                </item>
+                <item>
+                    Кафе
+                </item>
+            </types>
+        </facility>
+
+        <facility>
+            <name>
+                Креп Жоржет
+            </name>
+            <description>
+                Крепы (фр. - crepes) - блюдо французской кухни, являющее собой чрезвычайно тонкие блины, в которые заботливо "упрятываются" различные начинки. Для Вас любые крепы на любой вкус, супы и салаты, горячие блюда и соусы, десерты, безалкогольные коктейли, безалкогольные напитки, а также алкогольные коктейли и горячие напитки!
+            </description>
+            <address>
+                г.Орск, пр-кт Ленина 34	
+            </address>
+            <coordinates>
+                51.2319,58.474297
+            </coordinates>
+            <phone>
+                8(3537)21-35-85	
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                / 10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/020a554f0c687655010b14a9b9d6c5c7.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/cb1f6757c99432846484ec1332ff4176.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/105e13a3db8280ab5f1fe188af39de06.jpg
+                </item>
+            </images>
+            <types>
+                <item>
+                    Блинная
+                </item>
+                <item>
+                    Кафе
+                </item>
+            </types>
+        </facility>
+
+        <facility>
+            <name>
+                Корчма
+            </name>
+            <description>
+                Украинский хутор в центре уральского города? Так не бывает! Еще как бывает!!!
+                Кафе «Корчма» - это щедрая украинская кухня, изысканная японская кухня. Уютная, комфортная обстановка, живая музыка, развлекательное шоу, звуки живого саксофона и Ваше чудесное настроение!
+            </description>
+            <address>
+                г.Орск, ул.Горького 153	
+            </address>
+            <coordinates>
+                51.251099,58.447599
+            </coordinates>
+            <phone>
+                8(3537)28-54-74
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /12:00 -24:00/12:00 -24:00/12:00 -24:00/12:00 -24:00/12:00 -24:00/12:00 -24:00/12:00 -24:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/777fd10880d423b15d078d94bfe89b7a.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/0f01a38f06ca7c99bd69e331205d4f76.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/fa7901cb8a9fb34ccd5974d8124b3c54.jpg          
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/a3c9e8988e715eff7a13d8acc8b7a141.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/130d255349c0ff0c72a559ee5ecf4eec.jpg    
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/f86ecc6464a517ea3a26b87b3c6827a7.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/615a4896ada419340b76209f3ea0a547.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/aefb3f79886a666bcfdb0e3761954ada.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/c49be289e01b37cd19a8750ad2929dbe.jpg
+                </item>
+            </images>
+            <types>
+                <item>
+                    Кафе
+                </item>
+            </types>
+        </facility>
+        <facility>
+            <name>
+                Садко
+            </name>
+            <description>
+                Нет такого человека в Орске, который не знал бы кафе «Садко»! Свадьбы, юбилеи, дни рождений и корпоративы , выпускные вечера и уж если сам не был, то друзья или родственники были точно, а потом долго рассказывали о прекрасной кухне и отличных интерьерах!
+            </description>
+            <address>
+                г.Орск, пр-кт Ленина 86
+            </address>
+            <coordinates>
+                51.246461,58.462256
+            </coordinates>
+            <phone>
+                8(3537)21-64-63
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /11:00-24:00/11:00-24:00/11:00-24:00/11:00-24:00/11:00-24:00/11:00-24:00/11:00-24:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/134081803260173.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134081803454844.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134081803675947.jpg     
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134081804076476.jpg  
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134081804253847.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134081809221419.jpg
+                </item>
+            </images>
+            <types>
+                <item>
+                    Ресторан 
+                </item>
+                <item>
+                    Кафе
+                </item>
+            </types>
+        </facility>
+        <facility>
+            <name>
+                ГардемарИнн
+            </name>
+            <description>
+                Приятная атмосфера и внимательное обслуживание способны превратить самый обычный день в настоящий праздник! У нас в гостях вы можете не только отдохнуть в спокойной, дружелюбной обстановке, но и запастись положительной энергией для будущих дел! Одно из основных его достоинств – прекрасное сочетание цены и качества. 
+            </description>
+            <address>
+                г.Орск, ул.Медногорская 8	
+            </address>
+            <coordinates>
+                51.217867,58.477447
+            </coordinates>
+            <phone>
+                8(3537)26-98-05
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /12:00-02:00/12:00-02:00/12:00-02:00/12:00-02:00/12:00-02:00/12:00-02:00/12:00-02:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/d5bb3fd772d9fd8e60beb6002437b9bc.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/70c3e52bbbb679441a4b3d24d33f31dd.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/e289032f2ddada0b658ac1fc6cfdd8c3.png
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/cdafeadda64b0de68038a78371a1934a.jpg
+                </item>
+            </images>
+            <types>
+                <item>
+                    Кафе
+                </item>
+            </types>
+        </facility>
+        <facility>
+            <name>
+                Пышечка
+            </name>
+            <description>
+                Добро пожаловать Кафе «Пышечка» города Орска!
+                Мы рады предложить Вам разнообразие и высокое качество наших блюд, приготовленных только из самых свежих продуктов.
+            </description>
+            <address>
+                г.Орск, пер.Школьный 6а
+            </address>
+            <coordinates>
+                51.22579,58.502603
+            </coordinates>
+            <phone>
+                8(3537)23-67-60
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /09:00-23:00/09:00-23:00/09:00-23:00/09:00-23:00/09:00-23:00/09:00-23:00/09:00-23:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/63c650df28b1048c01fe742c4e8d7251.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/81860babe48d598d8eda60e44f3a6a8d.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/39afeaadae6a41eb09397171d1416bee.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/21b317cb8f1d9d368c086d4f23992253.jpg
+                </item>
+                <item>
+                    http://s43.radikal.ru/i102/0912/d1/4fcd8fed02ec.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/d1191838db7a6bf53ffac212deaeabd6.jpg
+                </item>
+            </images>
+            <types>
+                <item>
+                    Кафе
+                </item>
+            </types>
+        </facility>
+        <facility>
+            <name>
+                Пироговая
+            </name>
+            <description>
+                "Пироговая" – это единственное в городе кафе, где мы попытались воссоздать как атмосферу, так и вкус пирогов начала ХХ века!
+            </description>
+            <address>
+                г.Орск, пр-кт Ленина, 49	
+            </address>
+            <coordinates>
+                51.236794,58.470715
+            </coordinates>
+            <phone>
+                8(3537) 25-34-53
+            </phone>
+            <site>
+                http://www.ubiley-orsk.ru/pirogovaya
+            </site>
+            <schedule>
+                /09:00-20:00/09:00-20:00/09:00-20:00/09:00-20:00/09:00-20:00/09:00-20:00/09:00-20:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/29eadf8a60f88b4e52311bcd69e6a4bb.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/648cd3beeed65e3672d6045241b7ffe9.jpg
+                </item>
+                <item>
+                    http://www.ubiley-orsk.ru/assets/images/gallery/pirogovaya/MSK_9886.jpg
+                </item>
+                <item>
+                    http://www.ubiley-orsk.ru/assets/images/gallery/pirogovaya/MSK_9890.jpg 
+                </item>
+                <item>
+                    http://www.ubiley-orsk.ru/assets/images/gallery/pirogovaya/MSK_9878.jpg    
+                </item>          
+            </images>
+            <types>
+                <item>
+                    Кафе
                 </item>
             </types>
         </facility>

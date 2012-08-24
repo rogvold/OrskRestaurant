@@ -23,7 +23,7 @@
                     jQuery('#sliderholder-cycle').cycle({
                         fx: 'scrollHorz',
                         
-                        fx: 'fade',
+                        // fx: 'fade',
                         //                        fx: 'scrollDown',
                         pager: '.slidernav',
 
@@ -32,7 +32,7 @@
                         prev:    '.sliderprev1',
 
                         
-                        speed: 500,
+                        speed: 1000,
                         timeoutFn: calculateTimeout,
                         pagerEvent: 'click',
                         pauseOnPagerHover: true,
@@ -44,36 +44,29 @@
                 }
             }); 
         </script>
-
-        <!-- Put this script tag to the <head> of your page -->
-        <!--        <script type="text/javascript" src="http://vk.com/js/api/share.js?11" charset="windows-1251"></script>-->
         <!--    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>-->
     </head>
     <!--    <body style="background: url(http://stat21.privet.ru/lr/0c1c2ef53bec6df45f102e589a761192) no-repeat;  background-size: 100%; background-size: 100% auto" >-->
-    <body style=" display:block; background:url('#{request.contextPath}/faces/files/background_.jpg') no-repeat top center fixed;  background-color: #FFFFFF; " >
+    <body style="background: url('#{request.contextPath}/faces/files/bg3.jpg')  no-repeat top left; background-color: #FFFFFF;   background-size: 100% 620px;" >
         <!--        http://i016.radikal.ru/0801/28/3f0e0751ea7a.jpg-->
         <!--background: url(http://micons.me/images/wood_bg.jpg)  repeat top left #62523A-->
 
 
-        <div id="containerq" class="container_12" style="background: url('#{request.contextPath}/faces/files/divback2.jpg') repeat-y 0 0;"> 
+        <div id="container"> 
             <!-- Begin Header Wrapper -->
-            <a href="#{request.contextPath}/faces/index.xhtml">
-                <ul id="nav" class="grid_9 alpha" style="background-image: url('#{request.contextPath}/faces/files/bg_nav.jpg')">
-                    <!--                <li id="home"><a href="index.php" title="Home Page" class="currentPage">Home</a></li>
-                                    <li id="chi-siamo"><a href="chi_siamo.php" title="Chi siamo">Chi siamo</a></li>
-                                    <li id="prodotti"><a href="prodotti.php" title="I nostri prodotti">Prodotti</a></li>
-                                    <li id="contatti"><a href="contatti.php" title="Contatti">Contatti</a></li>-->
-                </ul>
-            </a>
-            <!-- Put this script tag to the place, where the Share button will be -->
-
-
             <div id="page-top">
 
-                <div id="header-wrapper1" > 
+                <div id="header-wrapper" > 
                     <!-- Begin Header -->
-                    <div id="header1">
-
+                    <div id="header">
+                        <div id="logo">
+                            <a href="#{request.contextPath}/faces/index.xhtml">
+                                <img src="#{request.contextPath}/faces/files/logo2.png" alt="Restorsk" />
+                                <img src="#{request.contextPath}/faces/files/slogan3.png" alt="Restorsk" style="margin-left: 50px;" />
+                            </a>
+                        </div>
+                        <!-- Logo --> 
+                        <!-- Begin Menu -->
                         <div id="menu-wrapper">
                             <div id="smoothmenu1" class="ddsmoothmenu">
                                 <ul>
@@ -89,21 +82,17 @@
 
             <!-- Begin Slider -->
             <div id="cycle-wrapper">
-                <!--                <div style="display: inline-block;width: 100%; height: 20px;">
-                                    <span style="display: inline-block; margin-left: 2%; width: 96%; height: 20px; background-image: url('#{request.contextPath}/faces/files/slider-bottom.jpg')"/>
-                                </div>-->
-
                 <form method="get" action="#{request.contextPath}/faces/list.xhtml">
                     <div style="">
                         <!--                        style="background: url(http://fotoflexer.com/Normal/temp2/be684ccd85c534e4e5938c43ea0bf013.jpg);"-->
-                        <div id="sliderholder-cycle" style="position: relative; display: block; width: 98%; margin: 0 auto;   ">
+                        <div id="sliderholder-cycle" style="position: relative; display: block; background-color: black;  opacity: 0.8; ">
                             <!--                    <img src="./Delphic   Creative Portfolio Template_files/slider-1.jpg" #889DA0; width="960" height="380" style="position: absolute; top: 0px; left: 0px; opacity: 1; display: block; z-index: 4; ">-->
                             <!--                        <div>-->
                             <div style=" 
                                  ;   
                                  top: 0px; 
                                  left: 0px; 
-                                 width: 100%; 
+                                 width: 960px; 
                                  height: 380px;
                                  position: absolute; 
                                  display: none;
@@ -111,16 +100,16 @@
                                  ">
 
                                 <h:panelGroup style="display:inline-block; ">
-                                    <span style="text-align:center;  color:#A12124; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                    <span style="text-align:center; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
                                         Что вы хотите?
                                     </span><br />
-                                    <span style="text-align:center; width: 950px; color: #7D7661; margin-bottom: 50px; display: block; margin: 0 auto;font: italic 15px Georgia,serif; ">
+                                    <span style="text-align:center; width: 950px; margin-bottom: 50px; display: block; margin: 0 auto;font: italic 15px Georgia,serif; ">
                                         Не думайте — чувствуйте! Можно выбрать несколько.
                                     </span>
                                     <h:panelGrid columns="4"  style="border-width: 0px; margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
                                         <c:forEach varStatus="status0" items="#{featureBean.customFeatures(1)}" var="feature" >
                                             <input type="checkbox" id="c1id-#{status0.current}" name="#{feature.id}" style="cursor: pointer;" value="d"/>
-                                            <label for="c1id-#{status0.current}" style="cursor: pointer; color:#4A0D09; "> #{feature.name}</label>
+                                            <label for="c1id-#{status0.current}" style="cursor: pointer;"> #{feature.name}</label>
                                         </c:forEach>
                                     </h:panelGrid>
                                 </h:panelGroup>
@@ -146,16 +135,16 @@
                             <div style="top: 0px; left: 0px; z-index: 2; position: absolute; opacity: 0.7; display: none; ">
 
                                 <h:panelGroup style="display:inline-block; ">
-                                    <span style="text-align:center; color: #A12124; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                    <span style="text-align:center; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
                                         Что важно?
                                     </span><br />
-                                    <span style="text-align:center; color: #7D7661; width: 950px; display: inline-block; margin: 0 auto;font: italic 15px Georgia,serif; ">
+                                    <span style="text-align:center; width: 950px; display: inline-block; margin: 0 auto;font: italic 15px Georgia,serif; ">
                                         Здесь тоже можно выбрать несколько.
                                     </span>
                                     <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
                                         <c:forEach varStatus="status1" items="#{featureBean.customFeatures(2)}" var="feature" >
                                             <input style="cursor: pointer;" type="checkbox" id="cid-#{status1.current}" name="#{feature.id}" value="d"/>
-                                            <label for="cid-#{status1.current}" style="cursor: pointer; color:#4A0D09; "> #{feature.name}</label>
+                                            <label for="cid-#{status1.current}" style="cursor: pointer;"> #{feature.name}</label>
                                         </c:forEach>
                                     </h:panelGrid>
                                 </h:panelGroup>
@@ -177,7 +166,7 @@
                                         </span>
                                     </span>
                                 </span>
-                                <div style="position: absolute; color: #7D7661; top: 363px; right: 10px; width: 130px; display: block;font: italic 12px Georgia,serif; ">
+                                <div style="position: absolute; top: 363px; right: 10px; width: 130px; display: block;font: italic 12px Georgia,serif; ">
                                     Остался еще 1 вопрос
                                 </div>
 
@@ -185,16 +174,16 @@
 
                             <div style="top: 0px; left: 0px; z-index: 2; position: absolute; opacity: 0; display: none;">
                                 <h:panelGroup style="display:inline-block; ">
-                                    <span style="text-align:center; width: 950px; color: #A12124; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                    <span style="text-align:center; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
                                         В каком районе?
                                     </span><br />
-                                    <span style="text-align:center; color: #7D7661; width: 950px; display: inline-block; margin: 0 auto;font: italic 15px Georgia,serif; ">
+                                    <span style="text-align:center; width: 950px; display: inline-block; margin: 0 auto;font: italic 15px Georgia,serif; ">
                                         Ну вы поняли — выбирайте, сколько хотите :)
                                     </span>
                                     <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
                                         <c:forEach varStatus="status3" items="#{featureBean.customFeatures(3)}" var="feature" >
-                                            <input style="cursor: pointer;" type="checkbox" id="cida-#{status3.current}" name="#{feature.id}" value=""/>
-                                            <label style="cursor: pointer; color:#4A0D09; " for="cida-#{status3.current}"> #{feature.name}</label>
+                                            <input style="cursor: pointer;" type="checkbox" id="cida-#{status3.current}" name="#{feature.id}" value="d"/>
+                                            <label style="cursor: pointer;" for="cida-#{status3.current}"> #{feature.name}</label>
                                         </c:forEach>
                                     </h:panelGrid>
                                 </h:panelGroup>
@@ -221,7 +210,7 @@
                                     </span>
                                 </span>
                                 <input type="hidden" name="page" value="1" />
-                                <div style="position: absolute; color: #7D7661; top: 363px; right: 8px; width: 130px; display: block;font: italic 12px Georgia,serif; ">
+                                <div style="position: absolute; top: 363px; right: 8px; width: 130px; display: block;font: italic 12px Georgia,serif; ">
                                     Узнать результат!
                                 </div>
                             </div>
@@ -234,89 +223,76 @@
                     </ul>
 
                 </form>
-                <div style="display: inline-block;width: 100%; height: 20px;">
-                    <span style="display: inline-block; margin-left: 2%; width: 96%; height: 20px; background-image: url('#{request.contextPath}/faces/files/slider-bottom.jpg')"/>
-                </div>
             </div>
-
-            <div id="footer2" style="margin-top: 12px;">
-
-
-
-                <!-- End Slider --> 
-                <!--            <div style="display: block; width: 100%; background-color: grey; background-image: url(http://pritesh.info/connoisseur/images/noise.png);">-->
+            <!-- End Slider --> 
+            <div style="display: block; width: 100%; background-color: grey; background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/light_noise_diagonal.png);">
                 <!-- Begin Wrapper -->
-                <div style="display: block; width: 100%; margin-top:12px; ">
+                <div id="wrapper" style="background-color: black; opacity: 0.8;" > 
 
-
-                    <div id="wrapper2" style="top: 50px; width: 100%; padding-top: 20px;"> 
-
-                        <!-- Begin Intro -->
-                        <div class="intro" style="background-color:#CAB387; text-align: center;  margin: 0 auto;  display: block; border-radius: 40px; padding-top: 12px; line-height:25px; width: 500px; height: 40px;">
-                            <h1 style="color: #AF130A;"> А можно выбрать по категории </h1>
-                        </div>
-                        <!-- End Intro --> 
-
-                        <!-- Begin About -->
-                        <span id="about" style="display: inline-block; margin-top: 50px; width: 1000px;" >
-
-                            <span style="display: inline-block; margin-left: 100px; width: 800px;">
-                                <div class="one-fourth"> 
-
-                                    <h4 style="color: #4A0D09; font-size: 1.5em; font-weight: bold;">Тип:</h4>
-                                    <li style="color: #4A0D09; line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Ресторан</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бар</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Кафе</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Клуб</a></li>
-                                </div>
-                                <div class="one-fourth">
-                                    <h4 style="color:#4A0D09; font-size: 1.5em; font-weight: bold;">Особенности</h4>
-                                    <p><li  style="color: #4A0D09;line-height: 20px; " ><a href="#"  style="color:#4A0D09;">Летняя веранда</a></li>
-                                    <li style="color: #4A0D09; line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Wi-Fi</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Кальян</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бизнес-ланчи</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Караоке</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Танцпол</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бильярд</a></li></p>
-                                </div>
-                                <div class="one-fourth">
-                                    <h4 style="color:#4A0D09; font-size: 1.5em; font-weight: bold;">Район:</h4>
-                                    <p>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Старый город</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">к-тр МИР</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color: #4A0D09;">ОЗТП</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color: #4A0D09;">240 квартал</a></li>
-                                    <!--                        <li><a href="/check/1500-2000">1500—2000 р.</a></li>-->
-                                    <!--                        <li><a href="/check/2000-3000">2000—3000 р.</a></li>-->
-
-                                    </p>
-                                </div>
-                                <div class="one-fourth last">
-                                    <h4 style="color: #4A0D09; font-size: 1.5em; font-weight: bold;">Средний чек:</h4>
-                                    <p><li style="color: #4A0D09;line-height: 20px; " ><a href="#"  style="color:#4A0D09;">до 300 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">300—500 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">500—1000 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">1000—1500 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">1500—2000 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">2000—3000 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">от 3000 р.</a></li></p>
-                                </div>
-                            </span>
-
-                        </span>
-                        <!-- End About --> 
-
+                    <!-- Begin Intro -->
+                    <div class="intro" style="color:white;">
+                        <h1>Все рестораны, бары, кафе и клубы Орска </h1>
                     </div>
-                </div>
+                    <!-- End Intro --> 
 
+                    <!-- Begin About -->
+                    <span id="about" style="display: inline-block; width: 1000px;" >
+
+                        <span style="display: inline-block; margin-left: 100px; width: 800px;">
+                            <div class="one-fourth"> 
+
+                                <h4 style="color:white; font-size: 1.5em; font-weight: bold;">Тип:</h4>
+                                <li><a href="#"  style="color: white;">Ресторан</a></li>
+                                <li><a href="#"  style="color: white;">Бар</a></li>
+                                <li><a href="#"  style="color: white;">Кафе</a></li>
+                                <li><a href="#"  style="color: white;">Клуб</a></li>
+                            </div>
+                            <div class="one-fourth">
+                                <h4 style="color:white; font-size: 1.5em; font-weight: bold;">Особенности</h4>
+                                <p><li><a href="#"  style="color: white;">Летняя веранда</a></li>
+                                <li><a href="#"  style="color: white;">Wi-Fi</a></li>
+                                <li><a href="#"  style="color: white;">Кальян</a></li>
+                                <li><a href="#"  style="color: white;">Бизнес-ланчи</a></li>
+                                <li><a href="#"  style="color: white;">Караоке</a></li>
+                                <li><a href="#"  style="color: white;">Танцпол</a></li>
+                                <li><a href="#"  style="color: white;">Бильярд</a></li></p>
+                            </div>
+                            <div class="one-fourth">
+                                <h4 style="color:white; font-size: 1.5em; font-weight: bold;">Район:</h4>
+                                <p>
+                                <li><a href="#"  style="color: white;">Старый город</a></li>
+                                <li><a href="#"  style="color: white;">к-тр МИР</a></li>
+                                <li><a href="#"  style="color: white;">ОЗТП</a></li>
+                                <li><a href="#"  style="color: white;">240 квартал</a></li>
+                                <!--                        <li><a href="/check/1500-2000">1500—2000 р.</a></li>-->
+                                <!--                        <li><a href="/check/2000-3000">2000—3000 р.</a></li>-->
+
+                                </p>
+                            </div>
+                            <div class="one-fourth last">
+                                <h4 style="color:white; font-size: 1.5em; font-weight: bold;">Средний чек:</h4>
+                                <p><li><a href="#"  style="color: white;">до 300 р.</a></li>
+                                <li><a href="#"  style="color: white;">300—500 р.</a></li>
+                                <li><a href="#"  style="color: white;">500—1000 р.</a></li>
+                                <li><a href="#"  style="color: white;">1000—1500 р.</a></li>
+                                <li><a href="#"  style="color: white;">1500—2000 р.</a></li>
+                                <li><a href="#"  style="color: white;">2000—3000 р.</a></li>
+                                <li><a href="#"  style="color: white;">от 3000 р.</a></li></p>
+                            </div>
+                        </span>
+
+                    </span>
+                    <!-- End About --> 
+
+                </div>
 
                 <!-- End Wrapper -->
-                <!--            <div class="clearfix"></div>
-                            <div class="push"></div>-->
+                <div class="clearfix"></div>
+                <div class="push"></div>
 
 
                 <!-- Begin Footer -->
-                <div id="footer-wrapper" style="">
+                <div id="footer-wrapper">
                     <div id="footer">
                         <div id="footer-content"> 
 
@@ -327,27 +303,24 @@
                             <!-- End Copyright --> 
 
                             <!-- Begin Social Icons -->
-                            <!--                            <div id="socials">
-                                                            <ul>
-                                                                <li><a href="#"><img src="./files/icon-rss.png" alt=""/></a></li>
-                                                                <li><a href="#"><img src="./files/icon-twitter.png" alt=""/></a></li>
-                                                                <li><a href="#"><img src="./files/icon-dribble.png" alt=""/></a></li>
-                                                                <li><a href="#"><img src="./files/icon-tumblr.png" alt=""/></a></li>
-                                                                <li><a href="#"><img src="./files/icon-flickr.png" alt=""/></a></li>
-                                                                <li><a href="#"><img src="./files/icon-facebook.png" alt=""/></a></li>
-                                                            </ul>
-                            
-                                                        </div>-->
+                            <div id="socials">
+                                <ul>
+                                    <li><a href="#"><img src="./files/icon-rss.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="./files/icon-twitter.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="./files/icon-dribble.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="./files/icon-tumblr.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="./files/icon-flickr.png" alt=""/></a></li>
+                                    <li><a href="#"><img src="./files/icon-facebook.png" alt=""/></a></li>
+                                </ul>
+                                
+                            </div>
                             <!-- End Social Icons --> 
 
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
         <!-- End Footer -->
 
     </body>

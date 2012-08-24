@@ -43,6 +43,17 @@ public class FacilityInfoBean {
 
     }
 
+    public boolean siteExists(Long facId) {
+        try {
+            if (facMan.getFacilityById(facId).getSite().length() > 5) {
+                return true;
+            }
+        } catch (Exception e) {
+            return false;
+        }
+        return false;
+    }
+
     public Facility getFacility() {
         return facMan.getFacilityById(currentId);
     }

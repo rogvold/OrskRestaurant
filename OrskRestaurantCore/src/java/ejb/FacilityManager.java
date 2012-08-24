@@ -105,7 +105,7 @@ public class FacilityManager implements FacilityManagerLocal {
     public void addFacility(Facility facility, List<Feature> features, List<Image> images, List<FacilityType> types) {
         System.out.println("try to create facility ");
         System.out.println("features = " + features);
-        Facility nf = new Facility(facility.getName(), facility.getAddress(),facility.getCoordinates(), facility.getDescription(), facility.getPhone(), facility.getSite(), facility.getSchedule());
+        Facility nf = new Facility(facility.getName(), facility.getAddress(), facility.getCoordinates(), facility.getDescription(), facility.getPhone(), facility.getSite(), facility.getSchedule());
         nf = em.merge(nf);
         addFeatures(features, nf.getId());
         addImages(images, nf.getId());
@@ -307,5 +307,22 @@ public class FacilityManager implements FacilityManagerLocal {
             }
         }
         return list;
+    }
+
+    @Override
+    public List<Facility> getAllFacilitiesExceptForList(int maxAmount, List<Long> list) {
+        System.out.println("getAllFacilitiesExceptForList excList = " + list);
+        String sq = "select f from Facility f ";
+        if (list != null && !list.isEmpty()) {
+            sq += " where 1 = 1 ";
+            for (Long l : list) {
+                sq += " and f.id != " + l;
+            }
+        }
+        Query q = em.createQuery(sq);
+        if (maxAmount > 0) {
+            q.setMaxResults(maxAmount);
+        }
+        return q.getResultList();
     }
 }

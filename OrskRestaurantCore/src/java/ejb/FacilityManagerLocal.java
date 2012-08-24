@@ -46,6 +46,8 @@ public interface FacilityManagerLocal {
     public String getAvatarSrc(Long facId);
 
     public List<Facility> getAllFacilities();
+    
+    public List<Facility> getAllFacilitiesExceptForList(int maxAmount, List<Long> list);
 
     public List<Long> getFilteredFacilitiesId(List<Long> featuresId);
 

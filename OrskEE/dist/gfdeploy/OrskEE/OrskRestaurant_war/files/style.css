@@ -543,7 +543,7 @@ table.price td h2 sup {
 }
 
 #page-top {
-    padding-bottom: 70px;
+    padding-bottom: 30px;
 }
 
 #logo {
@@ -759,7 +759,7 @@ table.price td h2 sup {
 
 .slidernav a {
     cursor: pointer;
-    background-color: #cbcbcb; 
+    background-color: #b9aa89; 
     overflow: hidden;
     width: 10px;
     height: 10px;
@@ -769,7 +769,7 @@ table.price td h2 sup {
 }
 
 .slidernav a:hover, .slidernav .activeSlide {
-    background-color: #8c8c8c;
+    background-color: #4a0e0e;
 }
 
 .sliderprev, .slidernext {

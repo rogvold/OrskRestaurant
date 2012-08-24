@@ -50,13 +50,13 @@
                 //                placemark.openBallon();
                 //                placemark.
                 
-                var pl = new ymaps.Placemark(['#{facilityInfoBean.facility.coordinates}'],
-                {balloonContent:'<span style="font-weight:bold; font-size:medium;">#{facilityInfoBean.facility.name}</span>'}, 
-                {preset: 'twirl#lightblueDotIcon'}
-            );
-                             
-                myMap.geoObjects.add(pl);
-                pl.balloon.open();
+                //                var pl = new ymaps.Placemark(['#{facilityInfoBean.facility.coordinates}'],
+                //                {balloonContent:'<span style="font-weight:bold; font-size:medium;">#{facilityInfoBean.facility.name}</span>'}, 
+                //                {preset: 'twirl#lightblueDotIcon'}
+                //            );
+                //                             
+                //                myMap.geoObjects.add(pl);
+                //                pl.balloon.open();
                                 
                 //                
                 //               myMap.geoObjects.add(new ymaps.Placemark([51.22203800805332,58.496577013001804], {balloonContent: "Ресторан"}, {preset: "twirl#lightblueDotIcon"}));
@@ -64,6 +64,14 @@
             function init2(){
                 myMap.setCenter([ #{facilityInfoBean.facility.coordinates} ]);
                 myMap.container.fitToViewport();
+                
+                var pl = new ymaps.Placemark(['#{facilityInfoBean.facility.coordinates}'],
+                {balloonContent:'<span style="font-weight:bold; font-size:medium;">#{facilityInfoBean.facility.name}</span>'}, 
+                {preset: 'twirl#lightblueDotIcon'}
+            );
+                             
+                myMap.geoObjects.add(pl);
+                pl.balloon.open();
             }
 
         </script>
@@ -129,6 +137,14 @@
                             #{facilityInfoBean.facility.phone}
                         </span><br/>
 
+                        <h:panelGroup rendered="#{facilityInfoBean.siteExists(facilityInfoBean.facility.id)}" style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
+                            <!--                            <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />-->
+                            <a href="#{facilityInfoBean.facility.site}">
+                                #{facilityInfoBean.facility.site}
+                            </a>
+                            <br/>
+                        </h:panelGroup>
+
                         <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
                             <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
                             Работает ещё mm минуты, до HH:MM
@@ -163,12 +179,66 @@
                             </div>
                             <div style="display: none; " id="tab2" class="tab_content">
                                 <p>#{facilityInfoBean.facility.description}</p>
-                                <span style="display:  inline-block; color: black; background-color: white; opacity: 0.8; border-radius: 5px; padding: 5px;">
-                                    <h4>Расписание</h4>
-                                    <c:forEach items="#{facilityInfoBean.prettySchedule}" var="day">
-                                        #{day} <br/>
-                                    </c:forEach>
-                                </span>
+
+                                <div style="display: block; width: 100%;">
+                                    <div style="display:  inline-block; margin-right: 30px; color: black; background-color: white; opacity: 0.8; border-radius: 5px; padding: 5px;">
+                                        <h4>Режим работы</h4>
+                                        <c:forEach varStatus="status" items="#{facilityInfoBean.prettySchedule}" var="day">
+                                            <h:panelGroup style="color: red;" rendered="#{status.count &gt; 5}">
+                                                #{day} <br/>
+                                            </h:panelGroup>
+                                            <h:panelGroup style="color: black;" rendered="#{status.count &lt; 6}">
+                                                #{day} <br/>
+                                            </h:panelGroup>
+
+                                        </c:forEach>
+                                    </div>
+                                    <!--                                    <div style="display: inline-block; height: 150px; ">-->
+                                    <div style=" height: 100%; position: relative; margin-right: 30px; display:  inline-block; color: black; background-color: white; opacity: 0.8; border-radius: 5px; padding: 5px;">
+                                        <span style="display: inline-block; ">
+                                            <span style="font-weight: bold;">Кухня:</span>
+
+
+                                            <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 5)}">
+                                                <c:if test="#{status.count > 1}">
+                                                    ,
+                                                </c:if>
+                                                #{item.name}
+                                            </c:forEach>
+                                            <!--                                                Европейская-->
+                                        </span><br/>
+                                        <span style="display:   block; ">
+                                            <span style="font-weight: bold; ">Алкоголь:</span> 
+                                            <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 6)}">
+                                                <c:if test="#{status.count > 1}">
+                                                    ,
+                                                </c:if>                                               
+                                                #{item.name}
+                                            </c:forEach>
+                                            <!--                                                вино, коктейли, крепкие напитки-->
+                                        </span>
+                                        <span style="display: block; ">
+                                            <span style="font-weight: bold;">Средний чек:</span>
+                                            <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 4)}">
+                                                #{item.name}
+                                            </c:forEach>
+                                            <!--                                                500-1000 р.-->
+                                        </span>
+                                        <span style="display: block; ">
+                                            <span style="font-weight: bold;">Кредитки:</span>
+                                            <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 7)}">
+                                                <c:if test="#{status.count > 1}">
+                                                    ,
+                                                </c:if>                                               
+                                                #{item.name}
+                                            </c:forEach>
+                                            <!--                                            Мастеркдард, Виза-->
+                                        </span>
+
+
+                                    </div>
+                                    <!--                                    </div>-->
+                                </div>
 
                                 <div style="display: block; width: 500px;">
                                     <!--                                    <h:panelGrid columns="2">-->
@@ -177,11 +247,11 @@
                                         <!--                                        <h:panelGrid columns="1">-->
                                         <c:forEach varStatus="statusq" var="feature" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 1)}">
                                             <span style="display: inline-block">
-                                                
-                                                        #{feature.name}
-<!--                                                    </span>
-                                                </c:if>-->
-                                                
+
+                                                #{feature.name}
+                                                <!--                                                    </span>
+                                                                                                </c:if>-->
+
                                             </span><br/>
                                         </c:forEach>
                                         <!--                                        </h:panelGrid>-->
@@ -207,7 +277,7 @@
                             <div style="display: none; " id="tab4" class="tab_content">
                                 <h3>Отзывы</h3>
                                 <p>Будут как только захостим сайт </p>
-                                
+
                             </div>
                         </div>
                     </div>

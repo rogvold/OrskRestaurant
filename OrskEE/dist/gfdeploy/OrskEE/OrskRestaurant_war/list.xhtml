@@ -12,166 +12,276 @@
         <script type="text/javascript" src="./files/ddsmoothmenu.js"></script>
         <script type="text/javascript" src="./files/scripts.js"></script>
 
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $contentLoadTriggered = false;
+                req = "";
+                $(document).scroll(function(){
+                    $("#testdiv").text($(document).scrollTop() + $(window).height() + "/" + $(document).height());
+                     shouldScroll = $(document).height() - ($(document).scrollTop() + $(window).height());
+                    if (shouldScroll &lt; 10){
+                        req = "";
+                        var myarr = [];
+                        $('div.tab-wrapper1').each(function(){
+                            myarr[myarr.length] = $(this).attr('id');
+                            req = req + $(this).attr('id') + "_";
+                        });
+                        //                        alert(req);
+                        if($contentLoadTriggered == false){
+                            $contentLoadTriggered = true;
+                            $.get("LazyServlet?list="+req, function(data){
+//                                alert('loading');
+                                myString = $('<span />').html(data).text();
+                                $('#post-wrapper1').append(myString);
+                                $contentLoadTriggered = false;
+                            });
+                        }
+                    }
+                    
+                });
+            });
+        </script>
+
         <!--    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>-->
     </head>
-    <body style="background: url(http://micons.me/images/wood_bg.jpg)  repeat top left #62523A"  >
+    <body class='mybody' style=" display:block; background:url('#{request.contextPath}/faces/files/background_.jpg') no-repeat top center fixed;  background-color: #FFFFFF; " >
+      
+        <div id="testdiv" style="color: black; position: fixed; top: 2px; " >
+            dfdf
+        </div>
+        
         <div id="container"> 
             <!-- Begin Header Wrapper -->
-            <div id="page-top">
 
-                <div id="header-wrapper"> 
-                    <!-- Begin Header -->
-                    <div id="header">
-                        <div id="logo">
-                            <a href="#{request.contextPath}/faces/index.xhtml">
-                                <img src="#{request.contextPath}/faces/files/logo2.png" alt="Restorsk" />
-                                <img src="#{request.contextPath}/faces/files/slogan3.png" alt="Restorsk" style="margin-left: 50px;" />
-                            </a>
-                        </div>
-                        <!-- Logo --> 
-                        <!-- Begin Menu -->
-                        <div id="menu-wrapper">
-                            <div id="smoothmenu1" class="ddsmoothmenu">
-                                <ul>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- End Menu --> 
-                    </div>
-                    <!-- End Header --> 
-                </div>
-            </div>
             <!-- End Header Wrapper --> 
 
+            <div id="containerq" class="container_12" style="background: url('#{request.contextPath}/faces/files/divback2.jpg') repeat-y 0 0;"> 
+                <!-- Begin Header Wrapper -->
+                <a href="#{request.contextPath}/faces/index.xhtml">
+                    <ul id="nav" class="grid_9 alpha" style="background-image: url('#{request.contextPath}/faces/files/bg_nav.jpg')">
+                    </ul>
+                </a>
+                <!-- Put this script tag to the place, where the Share button will be -->
+                <h1 style="margin-left: 40px; margin-top: 50px; color: #A12124;'">
+                    Результаты поиска:
+                    <a href="#">
+                        <span style="float: right; font-size: large; color: #A64F26; margin-right: 160px;">
+                            показать условия поиска
+                        </span>
+                        <span>
+
+                        </span>
+                    </a>
+                </h1>
 
 
-            <!-- Begin Wrapper -->
-            <div id="wrapper"> 
-                <div class="tab-wrapper">
-
-                    <!--                    <ul id="tab-menu" style="margin-top: 0px; ">
-                                            <li class="selected mouseout"><img src="style/images/icon-palette.png" alt="" /> Graphic Design</li>
-                                            <li class="mouseout"><img src="style/images/icon-art.png" alt="" /> Illustration</li>
-                                            <li class="mouseout"><img src="style/images/icon-laptop.png" alt="" /> Web Design</li>
-                                            <li class="mouseout"><img src="style/images/icon-camera.png" alt="" /> Photography</li>
-                                        </ul>-->
-                    <div id="post-wrapper" >
-                        <c:forEach items="#{facilityViewBean.allFacilities}" var="facility">
-                            <div class="tab-wrapper">
-                                <div class="tab-content">
-                                    <div class="tab" style="display: block; ">
-                                        <h3><a style="cursor: pointer;" href="#{request.contextPath}/faces/info.xhtml?id=#{facility.id}" >#{facility.name}</a><span style="font-style: italic;
-                                                                                                                                                                    font-family: Georgia, 'Times New Roman', Times, serif;
-                                                                                                                                                                    font-size: 12px;
-                                                                                                                                                                    color: #565656;
-                                                                                                                                                                    padding-left: 5px;"> #{facilityViewBean.stringOfFacilityTypes(facility.id)}</span></h3>
-                                        <p>
-                                            <span style="float:right; width: 200px; height: 150px; display: block; margin-left:20px;">
-                                                <span style="display: inline-block; height: 150px; margin: 0 auto; float: right; background-color: yellow;">
-                                                    <a style="cursor: pointer;" href="#{request.contextPath}/faces/info.xhtml?id=#{facility.id}">
-                                                        <img src="#{facilityViewBean.avatar(facility.id)}"  style="height: 150px; "  alt=""  />
-                                                    </a>
-                                                </span>
-                                            </span>
-
-                                            <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
-                                                <img src="http://www.restosapiens.ru/img/icons/home.gif" style="width:16px; height:16px; " />
-                                                #{facility.address}
-                                            </span>
-
-                                            <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
-                                                <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />
-                                                #{facility.phone}
-                                            </span>
-
-                                            <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
-                                                <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
-                                                Работает ещё mm минуты, до HH:MM
-                                            </span><br/>
-
-                                            <span style="width:400px; display: block; color: black; font-size: 14px; ">
-                                                #{facilityViewBean.shortDescription(facility.id)}
-                                            </span>
-
-                                            <span style="width:400px; display: block; color: black; font-size: 14px; text-align:  right;">
-                                                <a style="cursor: pointer;" href="#{request.contextPath}/faces/info.xhtml?id=#{facility.id}">Подробнее</a>
-                                            </span>
-                                        </p>
-                                    </div>
-
-
-
-
+                <div id="page-top">
+                    <div id="header-wrapper1" > 
+                        <div id="header1">
+                            <div id="menu-wrapper">
+                                <div id="smoothmenu1" class="ddsmoothmenu">
+                                    <ul>
+                                    </ul>
                                 </div>
                             </div>
-
-
-                        </c:forEach>
+                        </div>
                     </div>
-                    <div id="sidebar">
-                        <div class="sidebox">
-                            <h3>Рекламный блок</h3>
-                            <ul class="post-list">
-                                <li>
-                                    <a href="#" title="">
-                                        <img src="http://orsk.ru/images/recreation/logo/6c173d174013d1d985eb0a6c6ac101c2.jpg" alt="" />
-                                    </a>
+                </div>
 
-                                    <h4><a href="#" title="">Ресторан колониальной кухни Тамерлан</a></h4>
-                                    <!--                                </li>-->
+                <!-- Begin Wrapper -->
+                <div id="wrapper"> 
+                    <div class="tab-wrapper">
+                        <div id="post-wrapper1" class="sha" style="margin: 0 auto; width: 700px; float: center;" >
+                            <c:forEach items="#{facilityViewBean.allFacilities(2)}" var="facility">
+                                <!--                                <span class="trol">-->
+                                <div class="tab-wrapper1" id="#{facility.id}">
+                                    <div class="tab-content" style="border-radius: 10px; background-color: #DEC79D;" >
+                                        <div class="tab" style="display: block; ">
+                                            <h3><a style="cursor: pointer; color: #A12124;" href="info.xhtml?id=#{facility.id}" >#{facility.name}</a><span style="font-style: italic;
+                                                                                                                                                           font-family: Georgia, 'Times New Roman', Times, serif;
+                                                                                                                                                           font-size: 12px;
+                                                                                                                                                           color: #565656;
+                                                                                                                                                           padding-left: 5px;"> #{facilityViewBean.stringOfFacilityTypes(facility.id)}</span></h3>
+                                            <p>
+                                                <span style="float:right; width: 200px; height: 150px; display: block; margin-left:20px;">
+                                                    <span style="display: inline-block; height: 150px; margin: 0 auto; float: right; background-color: yellow;">
+                                                        <a style="cursor: pointer;" href="info.xhtml?id=#{facility.id}">
+                                                            <img src="#{facilityViewBean.avatar(facility.id)}"  style="height: 150px; max-width: 230px; "  alt=""  />
+                                                        </a>
+                                                    </span>
+                                                </span>
 
-                                    <span class="info" style="color: black;">г.Орск, ул.Станиславского 52в <br/><a href="#" title="">8(3537)212232</a></span>
-                                </li>
+                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
+                                                    <img src="http://www.restosapiens.ru/img/icons/home.gif" style="width:16px; height:16px; " />
+                                                    #{facility.address}
+                                                </span>
 
-                                <!--                                                                <li><a href="#" title=""><img src="style/images/art/blog-th2.jpg" alt="" /></a>
-                                                                                                    <h4><a href="#" title="">Maecenas malesuada felis vel quam tincidunt</a></h4>
-                                                                                                    <span class="info">8 Jan 2011 | <a href="#" title="">23 Comments</a></span></li>
-                                                                                                <li><a href="#" title=""><img src="style/images/art/blog-th3.jpg" alt="" /></a>
-                                                                                                    <h4><a href="#" title="">Maecenas malesuada felis vel quam tincidunt</a></h4>
-                                                                                                    <span class="info">11 Dec 2011 | <a href="#" title="">23 Comments</a></span></li>-->
-                            </ul>
+                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
+                                                    <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />
+                                                    #{facility.phone}
+                                                </span>
+
+                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
+                                                    <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
+                                                    Работает ещё mm минуты, до HH:MM
+                                                </span><br/>
+
+                                                <span style="width:400px; display: block; color: black; font-size: 14px; ">
+                                                    #{facilityViewBean.shortDescription(facility.id)}
+                                                </span>
+                                                <span style="width:400px; display: block; color: black; font-size: 14px; text-align:  right;">
+                                                    <a style="cursor: pointer;" href="info.xhtml?id=#{facility.id}">Подробнее</a>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--                                </span>-->
+
+
+                            </c:forEach>
+
+                        </div>
+
+                
+
+
+
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+                <div id="footer2" style="margin-top: 12px; display: none;">
+
+
+
+                    <!-- End Slider --> 
+                    <!--            <div style="display: block; width: 100%; background-color: grey; background-image: url(http://pritesh.info/connoisseur/images/noise.png);">-->
+                    <!-- Begin Wrapper -->
+                    <div style="display: block; width: 100%; margin-top:12px; ">
+
+
+                        <div id="wrapper2" style="top: 50px; width: 100%; padding-top: 20px;"> 
+
+                            <!-- Begin Intro -->
+                            <div class="intro" style="background-color:#CAB387; text-align: center;  margin: 0 auto;  display: block; border-radius: 40px; padding-top: 12px; line-height:25px; width: 500px; height: 40px;">
+                                <h1 style="color: #AF130A;"> А можно выбрать по категории </h1>
+                            </div>
+                            <!-- End Intro --> 
+
+                            <!-- Begin About -->
+                            <span id="about" style="display: inline-block; margin-top: 50px; width: 1000px;" >
+
+                                <span style="display: inline-block; margin-left: 100px; width: 800px;">
+                                    <div class="one-fourth"> 
+
+                                        <h4 style="color: #4A0D09; font-size: 1.5em; font-weight: bold;">Тип:</h4>
+                                        <li style="color: #4A0D09; line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Ресторан</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бар</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Кафе</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Клуб</a></li>
+                                    </div>
+                                    <div class="one-fourth">
+                                        <h4 style="color:#4A0D09; font-size: 1.5em; font-weight: bold;">Особенности</h4>
+                                        <p><li  style="color: #4A0D09;line-height: 20px; " ><a href="#"  style="color:#4A0D09;">Летняя веранда</a></li>
+                                        <li style="color: #4A0D09; line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Wi-Fi</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Кальян</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бизнес-ланчи</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Караоке</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Танцпол</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бильярд</a></li></p>
+                                    </div>
+                                    <div class="one-fourth">
+                                        <h4 style="color:#4A0D09; font-size: 1.5em; font-weight: bold;">Район:</h4>
+                                        <p>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Старый город</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">к-тр МИР</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color: #4A0D09;">ОЗТП</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color: #4A0D09;">240 квартал</a></li>
+                                        <!--                        <li><a href="/check/1500-2000">1500—2000 р.</a></li>-->
+                                        <!--                        <li><a href="/check/2000-3000">2000—3000 р.</a></li>-->
+
+                                        </p>
+                                    </div>
+                                    <div class="one-fourth last">
+                                        <h4 style="color: #4A0D09; font-size: 1.5em; font-weight: bold;">Средний чек:</h4>
+                                        <p><li style="color: #4A0D09;line-height: 20px; " ><a href="#"  style="color:#4A0D09;">до 300 р.</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">300—500 р.</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">500—1000 р.</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">1000—1500 р.</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">1500—2000 р.</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">2000—3000 р.</a></li>
+                                        <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">от 3000 р.</a></li></p>
+                                    </div>
+                                </span>
+
+                            </span>
+                            <!-- End About --> 
+
                         </div>
                     </div>
 
 
-                </div>
+                    <!-- End Wrapper -->
+                    <!--            <div class="clearfix"></div>
+                                <div class="push"></div>-->
 
-                <div class="clear"></div>
+
+                    <!-- Begin Footer -->
+                    <div id="footer-wrapper" style="">
+                        <div id="footer">
+                            <div id="footer-content"> 
+
+                                <!-- Begin Copyright -->
+                                <div id="copyright">
+                                    <p>© Copyright 2012 RestOrsk </p>
+                                </div>
+                                <!-- End Copyright --> 
+
+                                <!-- Begin Social Icons -->
+                                <!--                            <div id="socials">
+                                                                <ul>
+                                                                    <li><a href="#"><img src="./files/icon-rss.png" alt=""/></a></li>
+                                                                    <li><a href="#"><img src="./files/icon-twitter.png" alt=""/></a></li>
+                                                                    <li><a href="#"><img src="./files/icon-dribble.png" alt=""/></a></li>
+                                                                    <li><a href="#"><img src="./files/icon-tumblr.png" alt=""/></a></li>
+                                                                    <li><a href="#"><img src="./files/icon-flickr.png" alt=""/></a></li>
+                                                                    <li><a href="#"><img src="./files/icon-facebook.png" alt=""/></a></li>
+                                                                </ul>
+                                
+                                                            </div>-->
+                                <!-- End Social Icons --> 
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
 
+
             <!-- End Wrapper -->
-            <div class="clearfix"></div>
-            <div class="push"></div>
+            <!--            <div class="clearfix"></div>
+                        <div class="push"></div>-->
         </div>
 
         <!-- Begin Footer -->
-        <div id="footer-wrapper">
-            <div id="footer">
-                <div id="footer-content"> 
-
-                    <!-- Begin Copyright -->
-                    <div id="copyright">
-                        <p>© Copyright 2011 Delphic | Creative Portfolio Template</p>
+        <!--        <div id="footer-wrapper">
+                    <div id="footer">
+                        <div id="footer-content"> 
+        
+                             Begin Copyright 
+                            <div id="copyright">
+                                <p>© Copyright 2011 Delphic | Creative Portfolio Template</p>
+                            </div>
+                             End Copyright  
+        
+        
+                        </div>
                     </div>
-                    <!-- End Copyright --> 
-
-                    <!-- Begin Social Icons -->
-                    <div id="socials">
-                        <ul>
-                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-rss.png" alt=""/></a></li>
-                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-twitter.png" alt=""/></a></li>
-                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-dribble.png" alt=""/></a></li>
-                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-tumblr.png" alt=""/></a></li>
-                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-flickr.png" alt=""/></a></li>
-                            <li><a href="http://elemisdesign.com/demos/delphic/index.html#"><img src="./files/icon-facebook.png" alt=""/></a></li>
-                        </ul>
-                    </div>
-                    <!-- End Social Icons --> 
-
-                </div>
-            </div>
-        </div>
+                </div>-->
         <!-- End Footer -->
 
     </body>
