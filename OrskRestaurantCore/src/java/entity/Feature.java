@@ -21,6 +21,9 @@ public class Feature implements Serializable {
     public static final int TYPE_AVERAGE_BILL = 4;
     public static final int TYPE_KITCHEN = 5;
     public static final int TYPE_ALCOHOL = 6;
+    
+    public static final int TYPE_FACILITY_TYPE = 9;
+    
     public static final int TYPE_CREDIT_CARD = 7;
     public static final int TYPE_ALL = -1;
     

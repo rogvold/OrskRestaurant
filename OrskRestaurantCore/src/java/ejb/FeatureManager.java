@@ -75,4 +75,12 @@ public class FeatureManager implements FeatureManagerLocal {
         Feature f = em.find(Feature.class, featureId);
         return f.getType();
     }
+
+    @Override
+    public Feature getFeatureById(Long featId) {
+        if (featId == null) {
+            return null;
+        }
+        return em.find(Feature.class, featId);
+    }
 }

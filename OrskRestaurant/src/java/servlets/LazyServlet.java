@@ -6,7 +6,8 @@ package servlets;
 
 import ejb.FacilityManagerLocal;
 import entity.Facility;
-import entity.FacilityType;
+import entity.Feature;
+//import entity.FacilityType;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -24,50 +25,11 @@ import web.view.FacilityViewBean;
  * @author rogvold
  */
 public class LazyServlet extends HttpServlet {
-    
-    private static Integer counter = 1;
+
     public static int CARD_PER_REQUEST = 3;
     @EJB
     FacilityManagerLocal facMan;
 
-//     <div class="tab-wrapper" id="{facility.id}">
-//                                    <div class="tab-content" style="border-radius: 10px; background-color: #DEC79D;" >
-//                                        <div class="tab" style="display: block; ">
-//                                            <h3><a style="cursor: pointer; color: #A12124;" href="info.xhtml?id=#{facility.id}" >#{facility.name}</a><span style="font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 12px; color: #565656; padding-left: 5px;"> #{facilityViewBean.stringOfFacilityTypes(facility.id)}</span></h3>
-//                                            <p>
-//                                                <span style="float:right; width: 200px; height: 150px; display: block; margin-left:20px;">
-//                                                    <span style="display: inline-block; height: 150px; margin: 0 auto; float: right; background-color: yellow;">
-//                                                        <a style="cursor: pointer;" href="info.xhtml?id=#{facility.id}">
-//                                                            <img src="#{facilityViewBean.avatar(facility.id)}"  style="height: 150px; max-width: 230px; "  alt=""  />
-//                                                        </a>
-//                                                    </span>
-//                                                </span>
-//
-//                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
-//                                                    <img src="http://www.restosapiens.ru/img/icons/home.gif" style="width:16px; height:16px; " />
-//                                                    #{facility.address}
-//                                                </span>
-//
-//                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
-//                                                    <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />
-//                                                    #{facility.phone}
-//                                                </span>
-//
-//                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
-//                                                    <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
-//                                                    Работает ещё mm минуты, до HH:MM
-//                                                </span><br/>
-//
-//                                                <span style="width:400px; display: block; color: black; font-size: 14px; ">
-//                                                    #{facilityViewBean.shortDescription(facility.id)}
-//                                                </span>
-//                                                <span style="width:400px; display: block; color: black; font-size: 14px; text-align:  right;">
-//                                                    <a style="cursor: pointer;" href="info.xhtml?id=#{facility.id}">Подробнее</a>
-//                                                </span>
-//                                            </p>
-//                                        </div>
-//                                    </div>
-//                                </div>
     public String generateHtmlForOneFacility(Facility facility) {
         String html = "&lt;div class='tab-wrapper1' id='" + facility.getId() + "'&gt;" + "\n"
                 + "&lt;div class='tab-content' style='border-radius: 10px; background-color: #DEC79D;' &gt;" + "\n"
@@ -114,15 +76,15 @@ public class LazyServlet extends HttpServlet {
                 + "  &lt;/div&gt;" + "\n"
                 + " &lt;/div&gt;" + "\n"
                 + "&lt;/div&gt;";
-        
+
         return html;
     }
-    
+
     private String test() {
-        
+
         return generateHtmlForOneFacility(facMan.getFacilityById(Long.parseLong("4049")));
     }
-    
+
     public String shortDescription(Long facId) {
         String s = facMan.getDescription(facId);
         if (s.length() >= FacilityViewBean.MAX_DESCRIPTION_LENGTH) {
@@ -130,13 +92,14 @@ public class LazyServlet extends HttpServlet {
         }
         return s;
     }
-    
+
     public String avatar(Long facId) {
         return facMan.getAvatarSrc(facId);
     }
-    
+
     public String stringOfFacilityTypes(Long facId) {
-        List<FacilityType> list = facMan.getFaсilityTypes(facId);
+//        List<FacilityType> list = facMan.getFaсilityTypes(facId);
+        List<Feature> list = facMan.getFeaturesByFacilityIdAndType(facId, Feature.TYPE_FACILITY_TYPE);
         String s = "";
         int last = list.size() - 1;
         if (last < 0) {
@@ -151,35 +114,50 @@ public class LazyServlet extends HttpServlet {
         }
         return s;
     }
-    
+
     private String generateHtml(List<Long> exceptList) {
         List<Facility> list = facMan.getAllFacilitiesExceptForList(CARD_PER_REQUEST, exceptList);
         String res = "";
         for (Facility f : list) {
             res += generateHtmlForOneFacility(f);
         }
-        
+
         return res;
     }
     
+        private String generateHtml(List<Long> exceptList,List<Long> featuresId) {
+//            System.out.println("generateHTML :");
+//            System.out.println("featuresId = " + featuresId);
+        List<Facility> list = facMan.getFilteredFacilitiesExceptForList(CARD_PER_REQUEST, exceptList,featuresId);
+        String res = "";
+        for (Facility f : list) {
+            res += generateHtmlForOneFacility(f);
+        }
+
+        return res;
+    }
+
     private List<Long> getExceptionList(String input) {
         //format is 122_2323_13123_23
+        System.out.println("input = " + input);
         String[] arr = input.split("\\_");
         List<String> slist = Arrays.asList(arr);
         List<Long> list = new ArrayList();
         for (String s : slist) {
+            System.out.println("s = " + s);
             list.add(Long.parseLong(s));
         }
+        System.out.println("excList = " + list);
         return list;
     }
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
             String resp = "";
-            resp = generateHtml(getExceptionList(request.getParameter("list")));
+            resp = generateHtml(getExceptionList(request.getParameter("list")),getExceptionList(request.getParameter("features")));
             out.write(resp);
         } finally {
             out.close();

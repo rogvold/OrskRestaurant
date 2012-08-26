@@ -193,7 +193,7 @@
                                     </span>
                                     <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
                                         <c:forEach varStatus="status3" items="#{featureBean.customFeatures(3)}" var="feature" >
-                                            <input style="cursor: pointer;" type="checkbox" id="cida-#{status3.current}" name="#{feature.id}" value=""/>
+                                            <input style="cursor: pointer;" type="checkbox" id="cida-#{status3.current}" name="#{feature.id}" value="d"/>
                                             <label style="cursor: pointer; color:#4A0D09; " for="cida-#{status3.current}"> #{feature.name}</label>
                                         </c:forEach>
                                     </h:panelGrid>
@@ -220,7 +220,7 @@
                                         </a>
                                     </span>
                                 </span>
-                                <input type="hidden" name="page" value="1" />
+<!--                                <input type="hidden" name="page" value="1" />-->
                                 <div style="position: absolute; color: #7D7661; top: 363px; right: 8px; width: 130px; display: block;font: italic 12px Georgia,serif; ">
                                     Узнать результат!
                                 </div>
@@ -264,42 +264,52 @@
                                 <div class="one-fourth"> 
 
                                     <h4 style="color: #4A0D09; font-size: 1.5em; font-weight: bold;">Тип:</h4>
-                                    <li style="color: #4A0D09; line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Ресторан</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бар</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Кафе</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Клуб</a></li>
+                                    <c:forEach items="#{featureViewBean.featureByType(9)}" var="feature">
+                                        <li  style="color: #4A0D09;line-height: 20px; " >
+                                            <a href="simpleList2.xhtml?#{feature.id}=p&amp;type=#{feature.type}"  style="color:#4A0D09;">
+                                                #{feature.name}
+                                            </a>
+                                        </li>
+                                    </c:forEach>
                                 </div>
                                 <div class="one-fourth">
-                                    <h4 style="color:#4A0D09; font-size: 1.5em; font-weight: bold;">Особенности</h4>
-                                    <p><li  style="color: #4A0D09;line-height: 20px; " ><a href="#"  style="color:#4A0D09;">Летняя веранда</a></li>
-                                    <li style="color: #4A0D09; line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Wi-Fi</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Кальян</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бизнес-ланчи</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Караоке</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Танцпол</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Бильярд</a></li></p>
+                                    <h4 style="color:#4A0D09; font-size: 1.5em; font-weight: bold;">Кухня</h4>
+                                    <p>
+                                    <c:forEach items="#{featureViewBean.featureByType(5)}" var="feature">
+                                        <li  style="color: #4A0D09;line-height: 20px; " >
+                                            <a href="simpleList2.xhtml?#{feature.id}=p&amp;type=#{feature.type}"  style="color:#4A0D09;">
+                                                #{feature.name}
+                                            </a>
+                                        </li>
+                                    </c:forEach>
+
+                                    </p>
                                 </div>
                                 <div class="one-fourth">
                                     <h4 style="color:#4A0D09; font-size: 1.5em; font-weight: bold;">Район:</h4>
                                     <p>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">Старый город</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">к-тр МИР</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color: #4A0D09;">ОЗТП</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color: #4A0D09;">240 квартал</a></li>
-                                    <!--                        <li><a href="/check/1500-2000">1500—2000 р.</a></li>-->
-                                    <!--                        <li><a href="/check/2000-3000">2000—3000 р.</a></li>-->
+                                    <c:forEach items="#{featureViewBean.featureByType(3)}" var="feature">
+                                        <li  style="color: #4A0D09;line-height: 20px; " >
+                                            <a href="simpleList2.xhtml?#{feature.id}=p&amp;type=#{feature.type}"  style="color:#4A0D09;">
+                                                #{feature.name}
+                                            </a>
+                                        </li>
+                                    </c:forEach>
 
                                     </p>
                                 </div>
                                 <div class="one-fourth last">
                                     <h4 style="color: #4A0D09; font-size: 1.5em; font-weight: bold;">Средний чек:</h4>
-                                    <p><li style="color: #4A0D09;line-height: 20px; " ><a href="#"  style="color:#4A0D09;">до 300 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">300—500 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">500—1000 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">1000—1500 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">1500—2000 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">2000—3000 р.</a></li>
-                                    <li style="color: #4A0D09;line-height: 20px; "  ><a href="#"  style="color:#4A0D09;">от 3000 р.</a></li></p>
+                                    <p>
+                                    <c:forEach items="#{featureViewBean.featureByType(4)}" var="feature">
+                                        <li  style="color: #4A0D09;line-height: 20px; " >
+                                            <a href="simpleList2.xhtml?#{feature.id}=p&amp;type=#{feature.type}"  style="color:#4A0D09;">
+                                                #{feature.name}
+                                            </a>
+                                        </li>
+                                    </c:forEach>
+
+                                    </p>
                                 </div>
                             </span>
 
@@ -308,37 +318,17 @@
 
                     </div>
                 </div>
+                <hr style="border-style: dotted ; margin-top: 50px;  width: 80%; border-color:#BBAB89; "/>
 
-
-                <!-- End Wrapper -->
-                <!--            <div class="clearfix"></div>
-                            <div class="push"></div>-->
-
-
-                <!-- Begin Footer -->
                 <div id="footer-wrapper" style="">
                     <div id="footer">
-                        <div id="footer-content"> 
+                        <div id="footer-content" style="text-align: center;"> 
 
                             <!-- Begin Copyright -->
-                            <div id="copyright">
-                                <p>© Copyright 2012 RestOrsk </p>
+                            <div id="copyright" style="color: #4A0D09; margin: 0 auto; ">
+                                <p>Copyright © 2012 - Cистема подбора заведений г. Орска </p>
+                                <p>Сделано орчанами для орчан</p>
                             </div>
-                            <!-- End Copyright --> 
-
-                            <!-- Begin Social Icons -->
-                            <!--                            <div id="socials">
-                                                            <ul>
-                                                                <li><a href="#"><img src="./files/icon-rss.png" alt=""/></a></li>
-                                                                <li><a href="#"><img src="./files/icon-twitter.png" alt=""/></a></li>
-                                                                <li><a href="#"><img src="./files/icon-dribble.png" alt=""/></a></li>
-                                                                <li><a href="#"><img src="./files/icon-tumblr.png" alt=""/></a></li>
-                                                                <li><a href="#"><img src="./files/icon-flickr.png" alt=""/></a></li>
-                                                                <li><a href="#"><img src="./files/icon-facebook.png" alt=""/></a></li>
-                                                            </ul>
-                            
-                                                        </div>-->
-                            <!-- End Social Icons --> 
 
                         </div>
                     </div>

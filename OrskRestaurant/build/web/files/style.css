@@ -376,105 +376,115 @@ table td {
 
 table td:hover {
     /*    background-color: #efefef;*/
-    background-color: white;
-    color: black;
-}
+    background-color: #DEC79D;
+    color: white;
+    border-radius: 100px;
+    -moz-border-radius:100px;/*Mozilla-FireFox*/
+    -webkit-border-radius:100px; /* Safari and Chrome*/
+    -khtml-border-radius:100px; /* Linux browsers */
+        
+        color: black;
+    }
+    
+    table th {
+        padding: 10px;
+        font-size:18px;
+        color:#1f1f1f;
+        text-align: left;
+        border-right:1px solid #c1c1c1;
+        font-family: 'Puritan20Normal';
+        font-weight: normal;
+    }
+    
+    table td.center {
+        text-align: center;
+    }
+    
+    table td.last {
+        background: none;
+    }
+    
+    table th.center {
+        text-align: center;
+    }
+    
+    table th.last {
+        background: none;
+    }
+    
+    table tr {
+        border-left:1px solid #c1c1c1;
+        border-top:1px solid #c1c1c1;
+    }
+    
+    table tr.caption {
+        border-left:1px solid #c1c1c1;
+    }
+    
+    table.price td {
+        text-align: center;
+    }
+    
+    table.price td.left {
+        text-align: left;
+    }
+    
+    table.price td.right {
+        text-align: right;
+    }
+    
+    table.price td h2 {
+        margin:0;
+        font-size: 22px;
+    }
+    table.price td h2 span {
+        display: block;
+        font-size: 18px;
+        color: #747474;
+    }
+    
+    table.price td h2 sup {
+        padding-left: 5px;
+        line-height: 20px;
+    }
+    
+    table.cond td:hover{
+        background-color: transparent;
+    }
+    
+    .quote-right, .quote-left {
+        color:#1f1f1f;
+        border-left:1px solid #e3e3e3;
+        float:right;
+        letter-spacing:0px;
+        line-height:23px;
+        margin-left:20px;
+        margin-top:10px;
+        margin-bottom:5px;
+        padding:0px;
+        padding-left:10px;
+        padding-right:10px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+        width:25%;
+    }
+    
+    .quote-left {
+        border: none;
+        border-right:1px solid #e3e3e3;
+        float:left;
+        padding:0;
+        padding-right:5px;
+        margin-bottom:0;
+        margin-left: 0;
+        margin-right:20px;
+    }
+    
+    /*-----------------------------------------------------------------------------------*/
+    /*	3.	LAYOUT
+    /*-----------------------------------------------------------------------------------*/
 
-table th {
-    padding: 10px;
-    font-size:18px;
-    color:#1f1f1f;
-    text-align: left;
-    border-right:1px solid #c1c1c1;
-    font-family: 'Puritan20Normal';
-    font-weight: normal;
-}
-
-table td.center {
-    text-align: center;
-}
-
-table td.last {
-    background: none;
-}
-
-table th.center {
-    text-align: center;
-}
-
-table th.last {
-    background: none;
-}
-
-table tr {
-    border-left:1px solid #c1c1c1;
-    border-top:1px solid #c1c1c1;
-}
-
-table tr.caption {
-    border-left:1px solid #c1c1c1;
-}
-
-table.price td {
-    text-align: center;
-}
-
-table.price td.left {
-    text-align: left;
-}
-
-table.price td.right {
-    text-align: right;
-}
-
-table.price td h2 {
-    margin:0;
-    font-size: 22px;
-}
-table.price td h2 span {
-    display: block;
-    font-size: 18px;
-    color: #747474;
-}
-
-table.price td h2 sup {
-    padding-left: 5px;
-    line-height: 20px;
-}
-
-.quote-right, .quote-left {
-    color:#1f1f1f;
-    border-left:1px solid #e3e3e3;
-    float:right;
-    letter-spacing:0px;
-    line-height:23px;
-    margin-left:20px;
-    margin-top:10px;
-    margin-bottom:5px;
-    padding:0px;
-    padding-left:10px;
-    padding-right:10px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-style: italic;
-    width:25%;
-}
-
-.quote-left {
-    border: none;
-    border-right:1px solid #e3e3e3;
-    float:left;
-    padding:0;
-    padding-right:5px;
-    margin-bottom:0;
-    margin-left: 0;
-    margin-right:20px;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/*	3.	LAYOUT
-/*-----------------------------------------------------------------------------------*/
-
-#wrapper ul {
+    #wrapper ul {
     padding: 0 0 20px 0;
     display: block;
     overflow: hidden;
@@ -561,7 +571,7 @@ table.price td h2 sup {
 }
 #footer-wrapper {
     height: 45px;
-    padding-top:100px;
+/*    padding-top:100px;*/
 }
 
 #footer {
@@ -584,14 +594,14 @@ table.price td h2 sup {
 }
 
 #copyright {
-    float: left;
-    position: absolute;
+/*    float: left;*/
+/*    position: absolute;*/
     top: 15px;
     left: 0;
 }
 
 #copyright p {
-    font-size: 11px;
+    font-size: 13px;
     margin: 0;
 }
 
@@ -2087,6 +2097,7 @@ h2.trigger.active {
     float: left;
     list-style: none;
     width: 100%;
+    border-bottom: dotted 1px #A12124;
 }
 
 #wrapper ul.tabs li {
@@ -2106,7 +2117,7 @@ h2.trigger.active {
     line-height: 35px;
     padding: 0 15px 3px 15px;
     height: 35px;
-    background-color: #cecece;
+    background-color: #4A0E0E;
     /*    color: #565656;*/
     color:white;
 }
@@ -2116,7 +2127,7 @@ h2.trigger.active {
 }
 
 #wrapper ul.tabs li.active a {
-    background-color: #e8e8e8;
+    background-color: #B9AA89;
     position: relative;
     z-index: 999;
     color: #1f1f1f;
@@ -2128,11 +2139,12 @@ h2.trigger.active {
 }
 
 .tab_container {
+/*    margin-top: 20px;*/
+/*    border-top: solid 2px;*/
     clear: both;
     float: left;
     width: 100%;
     margin-top: -3px;
-    background-color: #e8e8e8;
     z-index: 999;
     position: relative;
 }

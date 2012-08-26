@@ -40,16 +40,33 @@
                     http://orsk.ru/images/recreation/42719bdc09a15391fa09813d56554c48.jpg
                 </item>
             </images>
-            <types>
-                <item>
-                    Бар
-                </item>
-                <item>
-                    Ресторан
-                </item>
-            </types>
+
         
             <features>
+                <feature>
+                    <name>
+                        Бар
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                <feature>
+                    <name>
+                        Ресторан
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
                 <feature>
                     <name>
                         Выйти в свет
@@ -871,11 +888,31 @@
                     http://orsk.ru/images/recreation/66e4f38302b6ae1247fc2928ecb07146.jpg
                 </item>
             </images>
-            <types>
-                <item>
-                    Кафе
-                </item>
-            </types>
+            <features>
+                <feature>
+                    <name>
+                        Бар
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Ресторан
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+                
         </facility>
         
         <facility>
@@ -920,11 +957,19 @@
                     http://orsk.ru/images/recreation/134354529871298.jpg
                 </item> 
             </images>
-            <types>
-                <item>
-                    Кафе
-                </item>
-            </types>
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
         </facility>
         <facility>
             <name>
@@ -968,14 +1013,30 @@
                     http://cafe-snejana.ru/images/cafe/fotocafe_16.jpg
                 </item>
             </images>
-            <types>
-                <item>
-                    Кафе
-                </item>
-                <item>
-                    Бар
-                </item>
-            </types>
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Бар
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
         </facility>
         
         <facility>
@@ -1017,14 +1078,30 @@
                     http://orsk.ru/images/recreation/134513559744925.jpg
                 </item>
             </images>
-            <types>
-                <item>
-                    Ресторан 
-                </item>
-                <item>
-                    Кафе
-                </item>
-            </types>
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Ресторан
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
         </facility>
 
         <facility>
@@ -1060,14 +1137,30 @@
                     http://orsk.ru/images/recreation/105e13a3db8280ab5f1fe188af39de06.jpg
                 </item>
             </images>
-            <types>
-                <item>
-                    Блинная
-                </item>
-                <item>
-                    Кафе
-                </item>
-            </types>
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Блинная
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
         </facility>
 
         <facility>
@@ -1122,11 +1215,19 @@
                     http://orsk.ru/images/recreation/c49be289e01b37cd19a8750ad2929dbe.jpg
                 </item>
             </images>
-            <types>
-                <item>
-                    Кафе
-                </item>
-            </types>
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
         </facility>
         <facility>
             <name>
@@ -1170,14 +1271,30 @@
                     http://orsk.ru/images/recreation/134081809221419.jpg
                 </item>
             </images>
-            <types>
-                <item>
-                    Ресторан 
-                </item>
-                <item>
-                    Кафе
-                </item>
-            </types>
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Ресторан
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
         </facility>
         <facility>
             <name>
@@ -1215,11 +1332,19 @@
                     http://orsk.ru/images/recreation/cdafeadda64b0de68038a78371a1934a.jpg
                 </item>
             </images>
-            <types>
-                <item>
-                    Кафе
-                </item>
-            </types>
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
         </facility>
         <facility>
             <name>
@@ -1264,11 +1389,19 @@
                     http://orsk.ru/images/recreation/d1191838db7a6bf53ffac212deaeabd6.jpg
                 </item>
             </images>
-            <types>
-                <item>
-                    Кафе
-                </item>
-            </types>
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
         </facility>
         <facility>
             <name>
@@ -1309,11 +1442,19 @@
                     http://www.ubiley-orsk.ru/assets/images/gallery/pirogovaya/MSK_9878.jpg    
                 </item>          
             </images>
-            <types>
-                <item>
-                    Кафе
-                </item>
-            </types>
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
         </facility>
         
     </facilities>

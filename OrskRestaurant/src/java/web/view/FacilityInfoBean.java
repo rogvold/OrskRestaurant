@@ -6,7 +6,7 @@ package web.view;
 
 import ejb.FacilityManagerLocal;
 import entity.Facility;
-import entity.FacilityType;
+//import entity.FacilityType;
 import entity.Feature;
 import entity.Image;
 import java.util.List;
@@ -59,7 +59,8 @@ public class FacilityInfoBean {
     }
 
     public String stringOfFacilityTypes(Long facId) {
-        List<FacilityType> list = facMan.getFaсilityTypes(facId);
+//        List<Feature> list = facMan.getFaсilityTypes(facId);
+        List<Feature> list = facMan.getFeaturesByFacilityIdAndType(facId, Feature.TYPE_FACILITY_TYPE);
         if (list == null) {
             return null;
         }

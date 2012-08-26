@@ -24,7 +24,7 @@ public class Facility implements Serializable, Comparable<Facility> {
     private String name;
     @Column
     private String address;
-    @Column(length=3000)
+    @Column(length = 3000)
     private String description;
     @Column
     private String phone;
@@ -36,19 +36,11 @@ public class Facility implements Serializable, Comparable<Facility> {
     private int status;
     @Column
     private String coordinates;
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "Facility_FacilityType", joinColumns = {
-        @JoinColumn(name = "facility_id")
-    },
-    inverseJoinColumns = {
-        @JoinColumn(name = "facilityType_id")
-    })
-    private List<FacilityType> facilityTypes;
 
     public Facility() {
     }
 
-    public Facility(String name, String address,String coordinates, String description, String phone, String site, String schedule) {
+    public Facility(String name, String address, String coordinates, String description, String phone, String site, String schedule) {
         this.name = name;
         this.address = address;
         this.description = description;
@@ -56,14 +48,6 @@ public class Facility implements Serializable, Comparable<Facility> {
         this.site = site;
         this.schedule = schedule;
         this.coordinates = coordinates;
-    }
-
-    public List<FacilityType> getFacilityTypes() {
-        return facilityTypes;
-    }
-
-    public void setFacilityTypes(List<FacilityType> facilityTypes) {
-        this.facilityTypes = facilityTypes;
     }
 
     public String getAddress() {
@@ -81,8 +65,6 @@ public class Facility implements Serializable, Comparable<Facility> {
     public void setCoordinates(String coordinates) {
         this.coordinates = coordinates;
     }
-    
-    
 
     public String getDescription() {
         return description;
@@ -162,7 +144,7 @@ public class Facility implements Serializable, Comparable<Facility> {
 
     @Override
     public String toString() {
-        return "entity.Facility[ id=" + id + " ]";
+        return "Facility[ id=" + id + " ; status = " + status + " ]";
     }
 
     @Override

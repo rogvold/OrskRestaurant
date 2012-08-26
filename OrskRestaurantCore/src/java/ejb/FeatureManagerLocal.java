@@ -4,7 +4,6 @@
  */
 package ejb;
 
-import entity.FacilityType;
 import entity.Feature;
 import java.util.List;
 import javax.ejb.Local;
@@ -26,6 +25,6 @@ public interface FeatureManagerLocal {
     
     public int getTypeByFeatureId(Long featureId);
     
-
+    public Feature getFeatureById(Long featId);
     
 }

@@ -24,7 +24,7 @@
                 // associative array
                 var params = params.split("&amp;");
                 var queryStringList = {};
-                var featuresList = "";
+                var featuresList = "_";
                 
                 for(var i=0;i &lt; params.length;i++)
                 {
@@ -103,59 +103,26 @@
                 </a>
                 <!-- Put this script tag to the place, where the Share button will be -->
                 <h1 style="margin-left: 40px; margin-top: 50px; color: #A12124;'">
-                    Результаты поиска:
-                    <a href="#" >
-                        <span id="showcond" style="float: right; font-size: large; color: #A64F26; margin-right: 160px;">
-                            показать условия поиска
-                        </span>
-                        <span>
 
-                        </span>
-                    </a>
+                    <c:if test="#{param['type'].equals('9')}" >
+                        Поиск по типу заведения: 
+                    </c:if>
+                    <c:if test="#{param['type'].equals('5')}" >
+                        Поиск по кухне: 
+                    </c:if>
+                    <c:if test="#{param['type'].equals('3')}" >
+                        Поиск по району: 
+                    </c:if>
+                    <c:if test="#{param['type'].equals('4')}" >
+                        Поиск по среднему чеку: 
+                    </c:if>
+
+                    <span>
+                        #{facilityViewBean.firstSelectedFeature(param['type']).name}
+                        
+                    </span>
                 </h1>
-                <div id="cond" style="padding-top: 10px;  display: none; margin: 0 auto; color: black; width: 90%; border-style: dotted; border-color: #7D7661; border-width: 0px; border-radius: 2px; ">
-                    <table class="cond" style="width: 100%; border: 0px; font-size: medium; border-spacing: 2px;">
-                        <tr style="border: 0px; text-align: center; padding-top: 10px;">
-                            <td style="valign:top; width: 33%;">
-                                <span style="font-weight: bold; color: #A12124; ">
-                                    Настроение
-                                </span><br/><br/>
-                                <ul>
-                                    <c:forEach items="#{facilityViewBean.selectedFeatures(1)}" var="feat">
-                                        <li style="color:#7D7661;  padding-bottom: 10px;"> #{feat.name}</li>
-                                    </c:forEach>
-                                </ul>
-                            </td>
-                            <td style="valign:top; width: 33%; ">
-                                <span style="font-weight: bold; color: #A12124;">
-                                    Мне важно
-                                </span><br/><br/>
-                                <ul >
-                                    <c:forEach items="#{facilityViewBean.selectedFeatures(2)}" var="feat">
-                                        <li style="color:#7D7661; padding-bottom: 10px;"> #{feat.name}</li>
-                                    </c:forEach>
-                                    <!--                                    <li > dsfsadf</li>
-                                                                        <li> dsfsadf</li>
-                                                                        <li> dsfsadf</li>
-                                                                        <li> dsfsadf</li>
-                                                                        <li> dsfsadf</li>-->
-                                </ul>
-                            </td>
-                            <td style="valign:top; width: 33%;">
-                                <span style="font-weight: bold; color: #A12124;">
-                                    Район города
-                                </span><br/><br/>
-                                <ul>
-                                    <c:forEach items="#{facilityViewBean.selectedFeatures(3)}" var="feat">
-                                        <li style="color:#7D7661; padding-bottom: 10px;"> #{feat.name}</li>
-                                    </c:forEach>
-                                </ul>
-                            </td>
-                        </tr>
-
-                    </table>
-                </div>
-
+              
 
                 <div id="page-top">
                     <div id="header-wrapper1" > 
@@ -274,21 +241,6 @@
                                 <div id="copyright">
                                     <p>© Copyright 2012 RestOrsk </p>
                                 </div>
-                                <!-- End Copyright --> 
-
-                                <!-- Begin Social Icons -->
-                                <!--                            <div id="socials">
-                                                                <ul>
-                                                                    <li><a href="#"><img src="./files/icon-rss.png" alt=""/></a></li>
-                                                                    <li><a href="#"><img src="./files/icon-twitter.png" alt=""/></a></li>
-                                                                    <li><a href="#"><img src="./files/icon-dribble.png" alt=""/></a></li>
-                                                                    <li><a href="#"><img src="./files/icon-tumblr.png" alt=""/></a></li>
-                                                                    <li><a href="#"><img src="./files/icon-flickr.png" alt=""/></a></li>
-                                                                    <li><a href="#"><img src="./files/icon-facebook.png" alt=""/></a></li>
-                                                                </ul>
-                                
-                                                            </div>-->
-                                <!-- End Social Icons --> 
 
                             </div>
                         </div>

@@ -21,6 +21,7 @@ import javax.persistence.Query;
 @Stateless
 public class FacilityManager implements FacilityManagerLocal {
 
+    public static final int INFINITE_RATING = 1000000;
     @PersistenceContext(unitName = "OrskRestaurantCorePU")
     EntityManager em;
     @EJB
@@ -47,20 +48,18 @@ public class FacilityManager implements FacilityManagerLocal {
         System.out.println("picture (src = " + img.getSrc() + " ) is added to database");
     }
 
-    @Override
-    public void addFacilityType(String name, String description) {
-        FacilityType ft = new FacilityType();
-        ft.setDescription(description);
-        ft.setName(name);
-        em.persist(ft);
-    }
-
-    @Override
-    public List<FacilityType> getAllExistingFacilityTypes() {
-        Query q = em.createQuery("select ft from FacilityType ft");
-        return q.getResultList();
-    }
-
+//    @Override
+//    public void addFacilityType(String name, String description) {
+//        FacilityType ft = new FacilityType();
+//        ft.setDescription(description);
+//        ft.setName(name);
+//        em.persist(ft);
+//    }
+//    @Override
+//    public List<FacilityType> getAllExistingFacilityTypes() {
+//        Query q = em.createQuery("select ft from FacilityType ft");
+//        return q.getResultList();
+//    }
     private boolean extendedFeatureExists(Long facilityId, Long featureId) {
         Query q = em.createQuery("select ef from ExtendedFeature ef where ef.featureId = " + featureId + " and ef.facilityId = " + facilityId);
         List list = q.getResultList();
@@ -102,14 +101,14 @@ public class FacilityManager implements FacilityManagerLocal {
     }
 
     @Override
-    public void addFacility(Facility facility, List<Feature> features, List<Image> images, List<FacilityType> types) {
+    public void addFacility(Facility facility, List<Feature> features, List<Image> images) {
         System.out.println("try to create facility ");
         System.out.println("features = " + features);
         Facility nf = new Facility(facility.getName(), facility.getAddress(), facility.getCoordinates(), facility.getDescription(), facility.getPhone(), facility.getSite(), facility.getSchedule());
         nf = em.merge(nf);
         addFeatures(features, nf.getId());
         addImages(images, nf.getId());
-        addFacilityTypes(types, nf.getId());
+//        addFacilityTypes(types, nf.getId());
     }
 
     @Override
@@ -118,7 +117,7 @@ public class FacilityManager implements FacilityManagerLocal {
         nf = em.merge(nf);
         addFeaturesByTheirId(featuresId, nf.getId());
         addImages(images, nf.getId());
-        addFacilityTypesByTheirId(typesId, nf.getId());
+//        addFacilityTypesByTheirId(typesId, nf.getId());
     }
 
     @Override
@@ -148,33 +147,30 @@ public class FacilityManager implements FacilityManagerLocal {
         em.persist(ef);
     }
 
-    @Override
-    public FacilityType getFacilityTypeByName(String name) {
-        System.out.println("getFacilityTypeByName occured ; name = " + name);
-        Query q = em.createQuery("select ft from FacilityType ft where ft.name = '" + name + "'");
-        return (FacilityType) q.getSingleResult();
-    }
-
-    @Override
-    public void addFacilityTypes(List<FacilityType> types, Long facId) {
-        System.out.println("try to add facility types ( types = " + types + " ) ; facId = " + facId);
-        Facility fac = em.find(Facility.class, facId);
-        fac.setFacilityTypes(types);
-        Facility merge = em.merge(fac);
-    }
-
-    @Override
-    public void addFacilityTypesByTheirId(List<Long> typesId, Long facId) {
-        Facility fac = em.find(Facility.class, facId);
-        List<FacilityType> list = new ArrayList();
-        for (Long l : typesId) {
-            FacilityType t = em.find(FacilityType.class, l);
-            list.add(t);
-        }
-        fac.setFacilityTypes(list);
-        Facility merge = em.merge(fac);
-    }
-
+//    @Override
+//    public FacilityType getFacilityTypeByName(String name) {
+//        System.out.println("getFacilityTypeByName occured ; name = " + name);
+//        Query q = em.createQuery("select ft from FacilityType ft where ft.name = '" + name + "'");
+//        return (FacilityType) q.getSingleResult();
+//    }
+//    @Override
+//    public void addFacilityTypes(List<FacilityType> types, Long facId) {
+//        System.out.println("try to add facility types ( types = " + types + " ) ; facId = " + facId);
+//        Facility fac = em.find(Facility.class, facId);
+//        fac.setFacilityTypes(types);
+//        Facility merge = em.merge(fac);
+//    }
+//    @Override
+//    public void addFacilityTypesByTheirId(List<Long> typesId, Long facId) {
+//        Facility fac = em.find(Facility.class, facId);
+//        List<FacilityType> list = new ArrayList();
+//        for (Long l : typesId) {
+//            FacilityType t = em.find(FacilityType.class, l);
+//            list.add(t);
+//        }
+//        fac.setFacilityTypes(list);
+//        Facility merge = em.merge(fac);
+//    }
     @Override
     public List<Facility> getAllFacilities() {
         Query q = em.createQuery("select f from Facility f");
@@ -185,25 +181,22 @@ public class FacilityManager implements FacilityManagerLocal {
     private int calculateСompatibility(List<Long> featuresId, Long facId) {
         List<ExtendedFeature> list = getExtendedFeaturesByFacilityId(facId);
         int result = 0;
-        // check location
-        boolean flag = false;
+        int k = 0;
         for (ExtendedFeature ef : list) {
-            if (featMan.getTypeByFeatureId(ef.getFeatureId()) != Feature.TYPE_LOCATION) {
-                result += ef.getRating(); //sum not location features
-                continue;
-            }
-            for (Long l : featuresId) {
-                if (l.equals(ef.getFeatureId())) {
-                    flag = true;
-                }
+            if (featuresId.contains(ef.getFeatureId())) {
+                k++;
+                result += ef.getRating();
             }
         }
-        if (flag == false) {
-            return -1; // location does not matches
+        if (k == featuresId.size()) {
+            result = result + FacilityManager.INFINITE_RATING;
         }
+        System.out.println("id ; k/list.size / rating : " + facId + " ; " + k + " / " + featuresId.size() + " / " + result);
+
         return result;
     }
 
+//    private boolean
     @Override
     public List<Long> getFilteredFacilitiesId(List<Long> featuresId) {
         List<Long> list = new ArrayList();
@@ -236,20 +229,6 @@ public class FacilityManager implements FacilityManagerLocal {
             return null;
         }
 
-
-
-    }
-
-    @Override
-    public List<FacilityType> getFaсilityTypes(Long facId) {
-        try {
-            Facility fac = em.find(Facility.class, facId);
-            return fac.getFacilityTypes();
-
-        } catch (Exception e) {
-            return null;
-        }
-
     }
 
     @Override
@@ -276,17 +255,11 @@ public class FacilityManager implements FacilityManagerLocal {
 
     @Override
     public List<Facility> getFilteredFacilities(List<Long> featuresId) {
-        try {
-            List<Long> lolist = getFilteredFacilitiesId(featuresId);
-            List<Facility> list = new ArrayList();
-            for (Long l : lolist) {
-                list.add(getFacilityById(l));
-            }
-            return list;
-        } catch (Exception e) {
-            return null;
-        }
-
+        List<Facility> list = new ArrayList();
+        list.addAll(getCompleteCorrespondentFacilities(featuresId));
+        list.addAll(getNotCorrespondentFacilities(featuresId));
+        System.out.println("getFilteredFacilities(): list = " + list);
+        return list;
     }
 
     @Override
@@ -324,5 +297,86 @@ public class FacilityManager implements FacilityManagerLocal {
             q.setMaxResults(maxAmount);
         }
         return q.getResultList();
+    }
+
+    @Override
+    public List<Facility> getFilteredFacilitiesExceptForList(int maxAmount, List<Long> list, List<Long> featuresId) {
+        List<Facility> rlist = new ArrayList();
+        List<Facility> alist = getFilteredFacilities2(featuresId);
+        int k = 0;
+        for (Facility f : alist) {
+            if (k >= maxAmount) {
+                break;
+            }
+            if (list.contains(f.getId())) {
+                continue;
+            }
+            k++;
+            rlist.add(f);
+        }
+        return rlist;
+//        return q.getResultList();
+    }
+
+    private boolean isCorrespondent(Long facId, List<Long> featuresList) {
+        List<ExtendedFeature> elist = getExtendedFeaturesByFacilityId(facId);
+        boolean f = false;
+        for (Long l : featuresList) {
+            f = false;
+            for (ExtendedFeature ef : elist) {
+                if (ef.getFeatureId().equals(l)) {
+                    f = true;
+                    break;
+                }
+            }
+            if (f == false) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public List<Facility> getFilteredFacilities2(List<Long> featuresId) {
+        System.out.println("EJB: getFilteredFacilities2 occured");
+        List<Facility> list = new ArrayList();
+        List<Facility> allFac = getAllFacilities();
+        for (Facility fac : allFac) {
+            fac.setStatus(calculateСompatibility(featuresId, fac.getId()));
+            list.add(fac);
+        }
+        Collections.sort(list);
+        return list;
+    }
+
+    @Override
+    public List<Facility> getCompleteCorrespondentFacilities(List<Long> featuresId) {
+        List<Facility> allFac = getAllFacilities();
+        List<Facility> flist = new ArrayList();
+        for (Facility fac : allFac) {
+            if (isCorrespondent(fac.getId(), featuresId) == false) {
+                continue;
+            }
+            fac.setStatus(calculateСompatibility(featuresId, fac.getId()));
+            flist.add(fac);
+        }
+        Collections.sort(flist);
+        return flist;
+    }
+
+    @Override
+    public List<Facility> getNotCorrespondentFacilities(List<Long> featuresId) {
+        List<Facility> clist = getCompleteCorrespondentFacilities(featuresId);
+        List<Facility> alist = getAllFacilities();
+        List<Facility> list = new ArrayList();
+        for (Facility fac : alist) {
+            if (clist.contains(fac)) {
+                continue;
+            }
+            fac.setStatus(calculateСompatibility(featuresId, fac.getId()));
+            list.add(fac);
+        }
+        Collections.sort(list);
+        return list;
     }
 }

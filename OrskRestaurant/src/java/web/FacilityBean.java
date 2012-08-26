@@ -7,7 +7,7 @@ package web;
 import ejb.FacilityManagerLocal;
 import ejb.FeatureManagerLocal;
 import entity.Facility;
-import entity.FacilityType;
+//import entity.FacilityType;
 import entity.Feature;
 import entity.Image;
 import java.io.Serializable;
@@ -33,7 +33,7 @@ public class FacilityBean implements Serializable {
     @EJB
     FeatureManagerLocal feaMan;
     private List<Feature> selectedFeatures;
-    private List<FacilityType> selectedTypes;
+//    private List<FacilityType> selectedTypes;
     private List<Long> selectedFeaturesId;
     private List<Long> selectedTypesId;
     private Facility newFacility;
@@ -46,7 +46,7 @@ public class FacilityBean implements Serializable {
     @PostConstruct
     private void init() {
         FeatureConverter.featureMan = feaMan;
-        FacilityTypeConverter.facMan = facMan;
+//        FacilityTypeConverter.facMan = facMan;
     }
 
     public String getImageStr() {
@@ -89,17 +89,17 @@ public class FacilityBean implements Serializable {
         this.selectedTypesId = selectedTypesId;
     }
 
-    public List<FacilityType> getSelectedTypes() {
-        return selectedTypes;
-    }
-
-    public void setSelectedTypes(List<FacilityType> selectedTypes) {
-        this.selectedTypes = selectedTypes;
-    }
+//    public List<FacilityType> getSelectedTypes() {
+//        return selectedTypes;
+//    }
+//
+//    public void setSelectedTypes(List<FacilityType> selectedTypes) {
+//        this.selectedTypes = selectedTypes;
+//    }
 
     public void createNewFacility() {
         System.out.println("createNewFacility() occured");
-        facMan.addFacility(newFacility, selectedFeatures, extractImages(imageStr), selectedTypes);
+        facMan.addFacility(newFacility, selectedFeatures, extractImages(imageStr));
     }
 
     public void createNewFuckingFacility() {
