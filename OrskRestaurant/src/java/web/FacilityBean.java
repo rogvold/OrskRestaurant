@@ -15,7 +15,6 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 /**
- * 
  * @author rogvold
  */
 @ManagedBean
@@ -94,15 +93,11 @@ public class FacilityBean implements Serializable {
 
 
     private List<Image> extractImages(String text) {
-        System.out.println("extracting images...");
-        System.out.println("text = " + text);
-
         List<Image> list = new ArrayList();
         StringTokenizer st = new StringTokenizer(text);
 
         while (st.hasMoreTokens()) {
             Image img = new Image();
-            img.setName("default name");
             img.setSrc(st.nextToken());
             list.add(img);
         }

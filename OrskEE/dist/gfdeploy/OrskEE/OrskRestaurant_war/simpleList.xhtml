@@ -14,6 +14,36 @@
 
         <script type="text/javascript">
             $(document).ready(function(){
+                
+                
+                var url = window.location.toString();
+                //get the parameters
+                url.match(/\?(.+)$/);
+                var params = RegExp.$1;
+                // split up the query string and store in an
+                // associative array
+                var params = params.split("&amp;");
+                var queryStringList = {};
+                var featuresList = "_";
+                
+                for(var i=0;i &lt; params.length;i++)
+                {
+                    var tmp = params[i].split("=");
+                    //                    alert(tmp[0]);
+                    if (tmp[1] === 'd') {
+                        featuresList += tmp[0] + "_";
+                    }
+                       
+                    queryStringList[tmp[0]] = unescape(tmp[1]);
+                }
+                //                alert();
+                
+                
+                
+                
+                
+                
+                
                 $("#showcond").click(function(){
                     if ($("#cond").css('display')=='none'){
                         $("#cond").show('200');
@@ -39,7 +69,7 @@
                         //                        alert(req);
                         if($contentLoadTriggered == false){
                             $contentLoadTriggered = true;
-                            $.get("LazyServlet?list="+req, function(data){
+                            $.get("LazyServlet?list="+req+"&amp;features="+featuresList, function(data){
                                 //                                alert('loading');
                                 myString = $('<span />').html(data).text();
                                 $('#post-wrapper1').append(myString);
@@ -67,10 +97,39 @@
 
             <div id="containerq" class="container_12" style="background: url('#{request.contextPath}/faces/files/divback2.jpg') repeat-y 0 0;"> 
                 <!-- Begin Header Wrapper -->
-                <a href="#{request.contextPath}/faces/index.xhtml">
-                    <ul id="nav" class="grid_9 alpha" style="background-image: url('#{request.contextPath}/faces/files/bg_nav.jpg')">
-                    </ul>
-                </a>
+                <ul id="nav" class="grid_9 alpha" style="padding: 0; margin-bottom:90px;">
+                    <a href="#{request.contextPath}/faces/index.xhtml" class="logo">
+                        <img src="#{request.contextPath}/faces/files/logo.png" class="logo" style="margin-left: 10px;" />
+                    </a>
+                    <img src="#{request.contextPath}/faces/files/logo_2.png" />
+                    <div style="margin-left: 730px; display: block; font: italic 15px Georgia,serif; color: #7D7661; width: 200px; text-align: center; top: -140px; position: relative;">
+                        Поддержите проект - расскажите друзьям!<br/><br/>
+                        <div >
+                            <a  rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0 0 6px;background:url(#{request.contextPath}/files/icons.png) -224px 0" href="#" onclick="window.open('http://vkontakte.ru/share.php?url=http%3A%2F%2Forsk.in/OrskRestaurant/faces/index.xhtml', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false" title="Поделиться В Контакте" target="_blank"></a>    
+                            <a  rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0 0 6px;background:url(#{request.contextPath}/files/icons.png) -64px 0" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Forsk.in/OrskRestaurant/faces/index.xhtml" title="Поделиться в Facebook" target="_blank"></a>
+                        </div>
+                    </div>
+                </ul>
+                <div id="page-top">
+
+                    <div id="header-wrapper1" > 
+                        <!-- Begin Header -->
+                        <div id="header1">
+
+                            <div id="menu-wrapper">
+                                <div id="smoothmenu1" class="ddsmoothmenu">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End Menu -->
+                        </div>
+                        <!-- End Header --> 
+                    </div>
+                </div>
+                <div style="display: inline-block;width: 100%; height: 20px; margin-bottom: 30px;">
+                    <span style="display: inline-block; margin-left: 2%; width: 96%; height: 20px; background-image: url('#{request.contextPath}/faces/files/slider-bottom.jpg')"/>
+                </div>
                 <!-- Put this script tag to the place, where the Share button will be -->
                 <h1 style="margin-left: 40px; margin-top: 50px; color: #A12124;'">
 
@@ -89,51 +148,9 @@
 
                     <span>
                         #{facilityViewBean.firstSelectedFeature(param['type']).name}
-                        
+
                     </span>
                 </h1>
-                <!--                <div id="cond" style="padding-top: 10px;  display: none; margin: 0 auto; color: black; width: 90%; border-style: dotted; border-color: #7D7661; border-width: 0px; border-radius: 2px; ">
-                                    <table class="cond" style="width: 100%; border: 0px; font-size: medium; border-spacing: 2px;">
-                                        <tr style="border: 0px; text-align: center; padding-top: 10px;">
-                                            <td style="valign:top; width: 33%;">
-                                                <span style="font-weight: bold; color: #A12124; ">
-                                                    Настроение
-                                                </span><br/><br/>
-                                                <ul>
-                                                    <c:forEach items="#{facilityViewBean.selectedFeatures(1)}" var="feat">
-                                                        <li style="color:#7D7661;  padding-bottom: 10px;"> #{feat.name}</li>
-                                                    </c:forEach>
-                                                </ul>
-                                            </td>
-                                            <td style="valign:top; width: 33%; ">
-                                                <span style="font-weight: bold; color: #A12124;">
-                                                    Мне важно
-                                                </span><br/><br/>
-                                                <ul >
-                                                    <c:forEach items="#{facilityViewBean.selectedFeatures(2)}" var="feat">
-                                                        <li style="color:#7D7661; padding-bottom: 10px;"> #{feat.name}</li>
-                                                    </c:forEach>
-                                                                                        <li > dsfsadf</li>
-                                                                                        <li> dsfsadf</li>
-                                                                                        <li> dsfsadf</li>
-                                                                                        <li> dsfsadf</li>
-                                                                                        <li> dsfsadf</li>
-                                                </ul>
-                                            </td>
-                                            <td style="valign:top; width: 33%;">
-                                                <span style="font-weight: bold; color: #A12124;">
-                                                    Район города
-                                                </span><br/><br/>
-                                                <ul>
-                                                    <c:forEach items="#{facilityViewBean.selectedFeatures(3)}" var="feat">
-                                                        <li style="color:#7D7661; padding-bottom: 10px;"> #{feat.name}</li>
-                                                    </c:forEach>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                
-                                    </table>
-                                </div>-->
 
 
                 <div id="page-top">
@@ -153,7 +170,7 @@
                 <div id="wrapper"> 
                     <div class="tab-wrapper">
                         <div id="post-wrapper1" class="sha" style="margin: 0 auto; width: 700px; float: center;" >
-                            <c:forEach items="#{facilityViewBean.allFacilities(5)}" var="facility">
+                            <c:forEach items="#{facilityViewBean.filteredList(5)}" var="facility">
                                 <!--                                <span class="trol">-->
                                 <div class="tab-wrapper1" id="#{facility.id}">
                                     <div class="tab-content" style="border-radius: 10px; background-color: #DEC79D;" >
@@ -180,12 +197,12 @@
                                                 <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
                                                     <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />
                                                     #{facility.phone}
-                                                </span>
+                                                </span><br/>
 
-                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
+<!--                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
                                                     <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
                                                     Работает ещё mm минуты, до HH:MM
-                                                </span><br/>
+                                                </span><br/>-->
 
                                                 <span style="width:400px; display: block; color: black; font-size: 14px; ">
                                                     #{facilityViewBean.shortDescription(facility.id)}

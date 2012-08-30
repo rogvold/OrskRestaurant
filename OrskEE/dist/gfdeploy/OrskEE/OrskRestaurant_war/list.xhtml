@@ -101,7 +101,9 @@
                 <!-- Begin Header Wrapper -->
 <!--                <a href="#{request.contextPath}/faces/index.xhtml" >-->
                 <ul id="nav" class="grid_9 alpha" style="padding: 0; margin-bottom:90px;">
-                    <img src="#{request.contextPath}/faces/files/logo.png" class="logo" style="margin-left: 10px;" />
+                    <a href="#{request.contextPath}/faces/index.xhtml" class="logo">
+                        <img src="#{request.contextPath}/faces/files/logo.png" class="logo" style="margin-left: 10px;" />
+                    </a>
                     <img src="#{request.contextPath}/faces/files/logo_2.png" />
                     <div style="margin-left: 730px; display: block; font: italic 15px Georgia,serif; color: #7D7661; width: 200px; text-align: center; top: -140px; position: relative;">
                         Поддержите проект - расскажите друзьям!<br/><br/>
@@ -131,7 +133,6 @@
                 <div style="display: inline-block;width: 100%; height: 20px; margin-bottom: 30px;">
                     <span style="display: inline-block; margin-left: 2%; width: 96%; height: 20px; background-image: url('#{request.contextPath}/faces/files/slider-bottom.jpg')"/>
                 </div>
-                <!-- Put this script tag to the place, where the Share button will be -->
                 <h1 style="margin-left: 40px;  color: #A12124;'">
                     Результаты поиска:
                     <a href="#" >
@@ -224,19 +225,19 @@
                                                 </span>
 
                                                 <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
-                                                    <img src="http://www.restosapiens.ru/img/icons/home.gif" style="width:16px; height:16px; " />
+                                                    <img src="#{request.contextPath}/files/home.gif" style="width:16px; height:16px; " />
                                                     #{facility.address}
                                                 </span>
 
                                                 <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
-                                                    <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />
+                                                    <img src="#{request.contextPath}/files/phone.gif" style="width:16px; height:16px;" />
                                                     #{facility.phone}
-                                                </span>
-
-                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
-                                                    <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
-                                                    Работает ещё mm минуты, до HH:MM
                                                 </span><br/>
+
+                                                <!--                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
+                                                                                                    <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
+                                                                                                    Работает ещё mm минуты, до HH:MM
+                                                                                                </span><br/>-->
 
                                                 <span style="width:400px; display: block; color: black; font-size: 14px; ">
                                                     #{facilityViewBean.shortDescription(facility.id)}
