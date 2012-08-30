@@ -370,8 +370,12 @@ table {
 }
 
 table td {
-    padding: 8px 10px;
+/*    padding: 8px 10px;*/
     /*    border-right:1px solid #c1c1c1;*/
+}
+
+#tabletd{
+     padding: 8px 10px;
 }
 
 table td:hover {
@@ -401,7 +405,7 @@ table td:hover {
     }
     
     table td.last {
-        background: none;
+/*        background: none;*/
     }
     
     table th.center {
@@ -413,8 +417,8 @@ table td:hover {
     }
     
     table tr {
-        border-left:1px solid #c1c1c1;
-        border-top:1px solid #c1c1c1;
+/*        border-left:1px solid #c1c1c1;*/
+/*        border-top:1px solid #c1c1c1;*/
     }
     
     table tr.caption {
@@ -548,7 +552,8 @@ table td:hover {
 }
 .panelGridStyle {
     border-width: 0px;
-    font-size: 18px;
+    font-size: 17px;
+    margin-top: 10px;
     border-right-width: 1px;
 }
 
@@ -1106,9 +1111,9 @@ ul#tab-menu {
 }
 ul#nav {
     margin: 0;
-    padding: 145px 0 0 200px;
-    width: 500px;
-    background: url('http://www.cannolificiomongibello.it/images/bg/bg_nav.jpg') no-repeat 40px bottom;
+/*    padding: 145px 0 0 200px;*/
+    width: 950px;
+/*    background: url('http://www.cannolificiomongibello.it/images/bg/bg_nav.jpg') no-repeat 40px bottom;*/
     height: 50px;
     list-style-type: none;
 }

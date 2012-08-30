@@ -4,8 +4,11 @@
 <html xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <!--        <meta charset="UTF-8">-->
-        <title>Orsk Restaurants</title>
+        <meta name="description" content="Система подбора заведений г. Орска" />
+        <title>ORSK.IN</title>
+        <link rel="image_src" href="#{request.contextPath}/faces/files/logo.png" />
+        
+        <link rel="shortcut icon" type="image/png" href="#{request.contextPath}/faces/files/logo.png" />
         <link rel="stylesheet" type="text/css" href="./files/style.css" media="all"/>
         <script type="text/javascript" src="./files/jquery-1.5.min.js"></script>
         <script type="text/javascript" src="./files/jquery.cycle.all.min.js"></script>
@@ -57,14 +60,22 @@
 
         <div id="containerq" class="container_12" style="background: url('#{request.contextPath}/faces/files/divback2.jpg') repeat-y 0 0;"> 
             <!-- Begin Header Wrapper -->
-            <a href="#{request.contextPath}/faces/index.xhtml">
-                <ul id="nav" class="grid_9 alpha" style="background-image: url('#{request.contextPath}/faces/files/bg_nav.jpg')">
-                    <!--                <li id="home"><a href="index.php" title="Home Page" class="currentPage">Home</a></li>
-                                    <li id="chi-siamo"><a href="chi_siamo.php" title="Chi siamo">Chi siamo</a></li>
-                                    <li id="prodotti"><a href="prodotti.php" title="I nostri prodotti">Prodotti</a></li>
-                                    <li id="contatti"><a href="contatti.php" title="Contatti">Contatti</a></li>-->
-                </ul>
-            </a>
+<!--            <a href="#{request.contextPath}/faces/index.xhtml">-->
+<!--                <ul id="nav" class="grid_9 alpha" style="background-image: url('#{request.contextPath}/faces/files/bg_nav.jpg')">-->
+            <ul id="nav" class="grid_9 alpha" style="padding: 0; margin-bottom:90px;">
+                <a href="#{request.contextPath}/faces/index.xhtml" class="logo">
+                    <img src="#{request.contextPath}/faces/files/logo.png" class="logo" style="margin-left: 10px;" />
+                </a>
+                <img src="#{request.contextPath}/faces/files/logo_2.png" />
+                <div style="margin-left: 730px; display: block; font: italic 15px Georgia,serif; color: #7D7661; width: 200px; text-align: center; top: -140px; position: relative;">
+                    Поддержите проект - расскажите друзьям!<br/><br/>
+                    <div >
+                        <a  rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0 0 6px;background:url(#{request.contextPath}/files/icons.png) -224px 0" href="#" onclick="window.open('http://vkontakte.ru/share.php?url=http%3A%2F%2Forsk.in/OrskRestaurant/faces/index.xhtml', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false" title="Поделиться В Контакте" target="_blank"></a>    
+                        <a  rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0 0 6px;background:url(#{request.contextPath}/files/icons.png) -64px 0" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Forsk.in/OrskRestaurant/faces/index.xhtml" title="Поделиться в Facebook" target="_blank"></a>
+                    </div>
+                </div>
+            </ul>
+            <!--            </a>-->
             <!-- Put this script tag to the place, where the Share button will be -->
 
 
@@ -86,7 +97,9 @@
                 </div>
             </div>
             <!-- End Header Wrapper --> 
-
+            <div style="display: inline-block;width: 100%; height: 20px; margin-bottom: 50px;">
+                <span style="display: inline-block; margin-left: 2%; width: 96%; height: 20px; background-image: url('#{request.contextPath}/faces/files/slider-bottom.jpg')"/>
+            </div>
             <!-- Begin Slider -->
             <div id="cycle-wrapper">
                 <!--                <div style="display: inline-block;width: 100%; height: 20px;">
@@ -111,15 +124,15 @@
                                  ">
 
                                 <h:panelGroup style="display:inline-block; ">
-                                    <span style="text-align:center;  color:#A12124; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                    <span style="text-align:center;  color:#A12124; width: 950px; display: inline-block; margin: 0 auto;font: 25px Georgia,serif; ">
                                         Что вы хотите?
                                     </span><br />
                                     <span style="text-align:center; width: 950px; color: #7D7661; margin-bottom: 50px; display: block; margin: 0 auto;font: italic 15px Georgia,serif; ">
                                         Не думайте — чувствуйте! Можно выбрать несколько.
                                     </span>
-                                    <h:panelGrid columns="4"  style="border-width: 0px; margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
+                                    <h:panelGrid columns="4"  style="border-width: 0px; margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="tabletd" columnClasses="tabletd" styleClass="panelGridStyle"  headerClass="tabletd">
                                         <c:forEach varStatus="status0" items="#{featureBean.customFeatures(1)}" var="feature" >
-                                            <input type="checkbox" id="c1id-#{status0.current}" name="#{feature.id}" style="cursor: pointer;" value="d"/>
+                                            <input type="checkbox" id="c1id-#{status0.current}" name="#{feature.id}" style="cursor: pointer; margin-top: 10px; margin-bottom: 10px;" value="d"/>
                                             <label for="c1id-#{status0.current}" style="cursor: pointer; color:#4A0D09; "> #{feature.name}</label>
                                         </c:forEach>
                                     </h:panelGrid>
@@ -146,7 +159,7 @@
                             <div style="top: 0px; left: 0px; z-index: 2; position: absolute; opacity: 0.7; display: none; ">
 
                                 <h:panelGroup style="display:inline-block; ">
-                                    <span style="text-align:center; color: #A12124; width: 950px; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                    <span style="text-align:center; color: #A12124; width: 950px; display: inline-block; margin: 0 auto;font: 25px Georgia,serif; ">
                                         Что важно?
                                     </span><br />
                                     <span style="text-align:center; color: #7D7661; width: 950px; display: inline-block; margin: 0 auto;font: italic 15px Georgia,serif; ">
@@ -154,7 +167,7 @@
                                     </span>
                                     <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
                                         <c:forEach varStatus="status1" items="#{featureBean.customFeatures(2)}" var="feature" >
-                                            <input style="cursor: pointer;" type="checkbox" id="cid-#{status1.current}" name="#{feature.id}" value="d"/>
+                                            <input style="cursor: pointer; margin-top: 10px; margin-bottom: 10px;" type="checkbox" id="cid-#{status1.current}" name="#{feature.id}" value="d"/>
                                             <label for="cid-#{status1.current}" style="cursor: pointer; color:#4A0D09; "> #{feature.name}</label>
                                         </c:forEach>
                                     </h:panelGrid>
@@ -185,7 +198,7 @@
 
                             <div style="top: 0px; left: 0px; z-index: 2; position: absolute; opacity: 0; display: none;">
                                 <h:panelGroup style="display:inline-block; ">
-                                    <span style="text-align:center; width: 950px; color: #A12124; display: inline-block; margin: 0 auto;font: 30px Georgia,serif; ">
+                                    <span style="text-align:center; width: 950px; color: #A12124; display: inline-block; margin: 0 auto;font: 25px Georgia,serif; ">
                                         В каком районе?
                                     </span><br />
                                     <span style="text-align:center; color: #7D7661; width: 950px; display: inline-block; margin: 0 auto;font: italic 15px Georgia,serif; ">
@@ -193,7 +206,7 @@
                                     </span>
                                     <h:panelGrid columns="4"  style="border-width: 0px;margin-top: 30px;" footerClass="panelGridStyle" border="0" class="panelGridStyle" captionClass="panelGridStyle" rowClasses="panelGridStyle" columnClasses="panelGridStyle" styleClass="panelGridStyle"  headerClass="panelGridStyle">
                                         <c:forEach varStatus="status3" items="#{featureBean.customFeatures(3)}" var="feature" >
-                                            <input style="cursor: pointer;" type="checkbox" id="cida-#{status3.current}" name="#{feature.id}" value="d"/>
+                                            <input style="cursor: pointer; margin-top: 10px; margin-bottom: 10px; " type="checkbox" id="cida-#{status3.current}" name="#{feature.id}" value="d"/>
                                             <label style="cursor: pointer; color:#4A0D09; " for="cida-#{status3.current}"> #{feature.name}</label>
                                         </c:forEach>
                                     </h:panelGrid>
@@ -220,7 +233,7 @@
                                         </a>
                                     </span>
                                 </span>
-<!--                                <input type="hidden" name="page" value="1" />-->
+                                <!--                                <input type="hidden" name="page" value="1" />-->
                                 <div style="position: absolute; color: #7D7661; top: 363px; right: 8px; width: 130px; display: block;font: italic 12px Georgia,serif; ">
                                     Узнать результат!
                                 </div>

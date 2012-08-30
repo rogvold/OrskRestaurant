@@ -1,13 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package servlets;
 
 import ejb.FacilityManagerLocal;
 import entity.Facility;
 import entity.Feature;
-//import entity.FacilityType;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -21,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 import web.view.FacilityViewBean;
 
 /**
- *
  * @author rogvold
  */
 public class LazyServlet extends HttpServlet {
@@ -80,10 +74,6 @@ public class LazyServlet extends HttpServlet {
         return html;
     }
 
-    private String test() {
-
-        return generateHtmlForOneFacility(facMan.getFacilityById(Long.parseLong("4049")));
-    }
 
     public String shortDescription(Long facId) {
         String s = facMan.getDescription(facId);
@@ -98,7 +88,6 @@ public class LazyServlet extends HttpServlet {
     }
 
     public String stringOfFacilityTypes(Long facId) {
-//        List<FacilityType> list = facMan.getFaсilityTypes(facId);
         List<Feature> list = facMan.getFeaturesByFacilityIdAndType(facId, Feature.TYPE_FACILITY_TYPE);
         String s = "";
         int last = list.size() - 1;
@@ -124,11 +113,9 @@ public class LazyServlet extends HttpServlet {
 
         return res;
     }
-    
-        private String generateHtml(List<Long> exceptList,List<Long> featuresId) {
-//            System.out.println("generateHTML :");
-//            System.out.println("featuresId = " + featuresId);
-        List<Facility> list = facMan.getFilteredFacilitiesExceptForList(CARD_PER_REQUEST, exceptList,featuresId);
+
+    private String generateHtml(List<Long> exceptList, List<Long> featuresId) {
+        List<Facility> list = facMan.getFilteredFacilitiesExceptForList(CARD_PER_REQUEST, exceptList, featuresId);
         String res = "";
         for (Facility f : list) {
             res += generateHtmlForOneFacility(f);
@@ -138,7 +125,6 @@ public class LazyServlet extends HttpServlet {
     }
 
     private List<Long> getExceptionList(String input) {
-        //format is 122_2323_13123_23
         System.out.println("input = " + input);
         String[] arr = input.split("\\_");
         List<String> slist = Arrays.asList(arr);
@@ -157,14 +143,13 @@ public class LazyServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             String resp = "";
-            resp = generateHtml(getExceptionList(request.getParameter("list")),getExceptionList(request.getParameter("features")));
+            resp = generateHtml(getExceptionList(request.getParameter("list")), getExceptionList(request.getParameter("features")));
             out.write(resp);
         } finally {
             out.close();
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP
      * <code>GET</code> method.
@@ -202,6 +187,6 @@ public class LazyServlet extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+        return "Servlet for Lazy Scroll";
+    }
 }

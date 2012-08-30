@@ -3,9 +3,11 @@
 <!-- saved from url=(0048)http://elemisdesign.com/demos/delphic/index.html -->
 <html xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <!--        <meta charset="UTF-8">-->
-        <title>Orsk Restaurants</title>
+        <meta name="description" content="Система подбора заведений г. Орска" />
+        <title>ORSK.IN</title>
+        <link rel="image_src" href="#{request.contextPath}/faces/files/logo.png" />
+
+        <link rel="shortcut icon" type="image/png" href="#{request.contextPath}/faces/files/logo.png" />
         <link rel="stylesheet" type="text/css" href="./files/style.css" media="all"/>
         <script type="text/javascript" src="./files/jquery-1.5.min.js"></script>
         <script type="text/javascript" src="./files/jquery.cycle.all.min.js"></script>
@@ -36,7 +38,7 @@
                        
                     queryStringList[tmp[0]] = unescape(tmp[1]);
                 }
-//                alert();
+                //                alert();
                 
                 
                 
@@ -97,12 +99,41 @@
 
             <div id="containerq" class="container_12" style="background: url('#{request.contextPath}/faces/files/divback2.jpg') repeat-y 0 0;"> 
                 <!-- Begin Header Wrapper -->
-                <a href="#{request.contextPath}/faces/index.xhtml">
-                    <ul id="nav" class="grid_9 alpha" style="background-image: url('#{request.contextPath}/faces/files/bg_nav.jpg')">
-                    </ul>
-                </a>
-                <!-- Put this script tag to the place, where the Share button will be -->
-                <h1 style="margin-left: 40px; margin-top: 50px; color: #A12124;'">
+<!--                <a href="#{request.contextPath}/faces/index.xhtml" >-->
+                <ul id="nav" class="grid_9 alpha" style="padding: 0; margin-bottom:90px;">
+                    <a href="#{request.contextPath}/faces/index.xhtml" class="logo">
+                        <img src="#{request.contextPath}/faces/files/logo.png" class="logo" style="margin-left: 10px;" />
+                    </a>
+                    <img src="#{request.contextPath}/faces/files/logo_2.png" />
+                    <div style="margin-left: 730px; display: block; font: italic 15px Georgia,serif; color: #7D7661; width: 200px; text-align: center; top: -140px; position: relative;">
+                        Поддержите проект - расскажите друзьям!<br/><br/>
+                        <div >
+                            <a  rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0 0 6px;background:url(#{request.contextPath}/files/icons.png) -224px 0" href="#" onclick="window.open('http://vkontakte.ru/share.php?url=http%3A%2F%2Forsk.in/OrskRestaurant/faces/index.xhtml', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false" title="Поделиться В Контакте" target="_blank"></a>    
+                            <a  rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0 0 6px;background:url(#{request.contextPath}/files/icons.png) -64px 0" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Forsk.in/OrskRestaurant/faces/index.xhtml" title="Поделиться в Facebook" target="_blank"></a>
+                        </div>
+                    </div>
+                </ul>
+                <div id="page-top">
+
+                    <div id="header-wrapper1" > 
+                        <!-- Begin Header -->
+                        <div id="header1">
+
+                            <div id="menu-wrapper">
+                                <div id="smoothmenu1" class="ddsmoothmenu">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End Menu -->
+                        </div>
+                        <!-- End Header --> 
+                    </div>
+                </div>
+                <div style="display: inline-block;width: 100%; height: 20px; margin-bottom: 30px;">
+                    <span style="display: inline-block; margin-left: 2%; width: 96%; height: 20px; background-image: url('#{request.contextPath}/faces/files/slider-bottom.jpg')"/>
+                </div>
+                <h1 style="margin-left: 40px;  color: #A12124;'">
                     Результаты поиска:
                     <a href="#" >
                         <span id="showcond" style="float: right; font-size: large; color: #A64F26; margin-right: 160px;">
@@ -201,12 +232,12 @@
                                                 <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
                                                     <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />
                                                     #{facility.phone}
-                                                </span>
-
-                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
-                                                    <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
-                                                    Работает ещё mm минуты, до HH:MM
                                                 </span><br/>
+
+                                                <!--                                                <span style="width:400px; display: block; color: black; font-size: 14px; font-style: italic;">
+                                                                                                    <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
+                                                                                                    Работает ещё mm минуты, до HH:MM
+                                                                                                </span><br/>-->
 
                                                 <span style="width:400px; display: block; color: black; font-size: 14px; ">
                                                     #{facilityViewBean.shortDescription(facility.id)}

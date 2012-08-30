@@ -16,7 +16,7 @@ public class MySchedule {
 
     public static final String HOLIDAY_STRING = "x";
     public static final String NOCTIDIAL_STRING = "k";
-    public static final String EXAMPLE = "/08:30-20:00/x/09:00-21:00/09:00-21:00/09:00-22:30/09:00-21:00/k";
+    public static final String EXAMPLE = "/08:30-20:00/x/09:00-21:00/09:00-21:00/09:00-22:30/09:00-21:00/k/";
     /**
      * format is following: /hh:mm-hh:mm/x/o/hh:mm-hh:mm/
      */

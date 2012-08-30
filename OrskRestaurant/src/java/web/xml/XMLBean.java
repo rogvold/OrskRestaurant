@@ -28,6 +28,8 @@ public class XMLBean {
     }
     
     public void updateDBFromXML(){
+        System.out.println("updating from xml....");
+        
         xmlMan.updateDB(xmlText);
     }
     

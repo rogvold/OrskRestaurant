@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package ejb;
 
 import entity.Feature;
@@ -20,8 +16,6 @@ public class FeatureManager implements FeatureManagerLocal {
 
     @PersistenceContext(unitName = "OrskRestaurantCorePU")
     EntityManager em;
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
 
     @Override
     public void createFeature(String name, String description, int type) {
@@ -65,7 +59,6 @@ public class FeatureManager implements FeatureManagerLocal {
 
     @Override
     public Feature getFeatureByName(String name) {
-//        throw new UnsupportedOperationException("Not supported yet.");
         Query q = em.createQuery("select f from Feature f where f.name = '" + name + "'");
         return (Feature) q.getSingleResult();
     }

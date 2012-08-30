@@ -4,8 +4,11 @@
 <html xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <!--        <meta charset="UTF-8">-->
-        <title>Orsk Restaurants</title>
+        <meta name="description" content="Система подбора заведений г. Орска" />
+        <title>ORSK.IN</title>
+        <link rel="image_src" href="#{request.contextPath}/faces/files/logo.png" />
+
+        <link rel="shortcut icon" type="image/png" href="#{request.contextPath}/faces/files/logo.png" />
         <link rel="stylesheet" type="text/css" href="./files/style.css" media="all"/>
         <script type="text/javascript" src="./files/jquery-1.6.1.min.js"></script>
         <script type="text/javascript" src="./files/jquery.prettyPhoto.js"></script>
@@ -15,6 +18,13 @@
         type="text/javascript"></script>
         <link rel="stylesheet" href="http://yandex.st/jquery-ui/1.8.15/themes/humanity/jquery.ui.all.min.css"
               type="text/css"/>
+
+        <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?52"></script>
+
+        <script type="text/javascript">
+            VK.init({apiId: 3103089, onlyWidgets: true});
+        </script>
+
 
         <script type="text/javascript">
             ymaps.ready(init1);
@@ -61,10 +71,39 @@
 
             <div id="containerq" class="container_12" style="background: url('#{request.contextPath}/faces/files/divback2.jpg') repeat-y 0 0; height: 100%;" > 
                 <!-- Begin Header Wrapper -->
-                <a href="#{request.contextPath}/faces/index.xhtml">
-                    <ul id="nav" class="grid_9 alpha" style="background-image: url('#{request.contextPath}/faces/files/bg_nav.jpg')">
-                    </ul>
-                </a>
+                <ul id="nav" class="grid_9 alpha" style="padding: 0; margin-bottom:90px;">
+                    <a href="#{request.contextPath}/faces/index.xhtml" class="logo">
+                        <img src="#{request.contextPath}/faces/files/logo.png" class="logo" style="margin-left: 10px;" />
+                    </a>
+                    <img src="#{request.contextPath}/faces/files/logo_2.png" />
+                    <div style="margin-left: 730px; display: block; font: italic 15px Georgia,serif; color: #7D7661; width: 200px; text-align: center; top: -140px; position: relative;">
+                        Поддержите проект - расскажите друзьям!<br/><br/>
+                        <div >
+                            <a  rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0 0 6px;background:url(#{request.contextPath}/files/icons.png) -224px 0" href="#" onclick="window.open('http://vkontakte.ru/share.php?url=http%3A%2F%2Forsk.in/OrskRestaurant/faces/index.xhtml', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false" title="Поделиться В Контакте" target="_blank"></a>    
+                            <a  rel="nofollow" style="display:inline-block;width:32px;height:32px;margin:0 0 6px;background:url(#{request.contextPath}/files/icons.png) -64px 0" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Forsk.in/OrskRestaurant/faces/index.xhtml" title="Поделиться в Facebook" target="_blank"></a>
+                        </div>
+                    </div>
+                </ul>
+                <div id="page-top">
+
+                    <div id="header-wrapper1" > 
+                        <!-- Begin Header -->
+                        <div id="header1">
+
+                            <div id="menu-wrapper">
+                                <div id="smoothmenu1" class="ddsmoothmenu">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End Menu -->
+                        </div>
+                        <!-- End Header --> 
+                    </div>
+                </div>
+                <div style="display: inline-block;width: 100%; height: 20px; margin-bottom: 30px;">
+                    <span style="display: inline-block; margin-left: 2%; width: 96%; height: 20px; background-image: url('#{request.contextPath}/faces/files/slider-bottom.jpg')"/>
+                </div>
 
                 <!-- Begin Header Wrapper -->
                 <div id="page-top">
@@ -110,12 +149,12 @@
                                 </a>
                                 <br/>
                             </h:panelGroup>
-
-                            <span style="width:400px; display: block; color: black; margin-top: 18px; font-size: 18px; font-style: italic;">
-                                <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
-                                Работает ещё mm минуты, до HH:MM
-
-                            </span><br/>
+                            <br/>
+                            <!--                            <span style="width:400px; display: block; color: black; margin-top: 18px; font-size: 18px; font-style: italic;">
+                                                            <img src="http://www.restosapiens.ru/img/openbull.gif" style="width:10px; height:10px;" />
+                                                            Работает ещё mm минуты, до HH:MM
+                            
+                                                        </span><br/>-->
 
                             <!--                        <div style="display: block; width: 100; height: 100px; background-color: yellow;" id="olo">
                             
@@ -146,8 +185,8 @@
                                 <div style="display: none; " id="tab2" class="tab_content">
                                     <p>#{facilityInfoBean.facility.description}</p>
 
-                                    <div style="display: block; width: 100%;">
-                                        <div style="display:  inline-block; margin-right: 30px; color: black; background-color: white; opacity: 0.8; border-radius: 5px; padding: 5px;">
+                                    <div style="display: block; width: 100%; margin-bottom: 20px;">
+                                        <div style="display:  inline-block; margin-right: 30px; color: black;  border-radius: 5px; padding: 5px;">
                                             <h4>Режим работы</h4>
                                             <c:forEach varStatus="status" items="#{facilityInfoBean.prettySchedule}" var="day">
                                                 <h:panelGroup style="color: red;" rendered="#{status.count &gt; 5}">
@@ -160,7 +199,7 @@
                                             </c:forEach>
                                         </div>
                                         <!--                                    <div style="display: inline-block; height: 150px; ">-->
-                                        <div style=" height: 100%; position: relative; margin-right: 30px; display:  inline-block; color: black; background-color: white; opacity: 0.8; border-radius: 5px; padding: 5px;">
+                                        <div style=" height: 100%; position: relative; margin-right: 30px; display:  inline-block; color: black;  border-radius: 5px; padding: 5px;">
                                             <span style="display: inline-block; ">
                                                 <span style="font-weight: bold;">Кухня:</span>
 
@@ -241,8 +280,13 @@
                                     <div id="tab31" style="width:740px; height:500px; margin-bottom: 20px;"></div>
                                 </div>
                                 <div style="display: none; " id="tab4" class="tab_content">
-                                    <h3>Отзывы</h3>
-                                    <p>Будут как только захостим сайт </p>
+                                    <!--                                    <h3>Отзывы</h3>-->
+                                    <div>
+                                        <div id="vk_comments"></div>
+                                        <script type="text/javascript">
+                                            VK.Widgets.Comments("vk_comments", {limit: 10, width: "720", attach: "*"});
+                                        </script>
+                                    </div>
                                     <div id="fee" style="width:740px; height:300px; margin-bottom: 20px;"></div>
                                 </div>
                             </div>

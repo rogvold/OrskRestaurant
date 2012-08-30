@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package ejb;
 
 import entity.*;
@@ -48,18 +44,6 @@ public class FacilityManager implements FacilityManagerLocal {
         System.out.println("picture (src = " + img.getSrc() + " ) is added to database");
     }
 
-//    @Override
-//    public void addFacilityType(String name, String description) {
-//        FacilityType ft = new FacilityType();
-//        ft.setDescription(description);
-//        ft.setName(name);
-//        em.persist(ft);
-//    }
-//    @Override
-//    public List<FacilityType> getAllExistingFacilityTypes() {
-//        Query q = em.createQuery("select ft from FacilityType ft");
-//        return q.getResultList();
-//    }
     private boolean extendedFeatureExists(Long facilityId, Long featureId) {
         Query q = em.createQuery("select ef from ExtendedFeature ef where ef.featureId = " + featureId + " and ef.facilityId = " + facilityId);
         List list = q.getResultList();
@@ -108,16 +92,6 @@ public class FacilityManager implements FacilityManagerLocal {
         nf = em.merge(nf);
         addFeatures(features, nf.getId());
         addImages(images, nf.getId());
-//        addFacilityTypes(types, nf.getId());
-    }
-
-    @Override
-    public void addFacilityByFuckingFeaturesAndFacilityTypeId(Facility facility, List<Long> featuresId, List<Image> images, List<Long> typesId) {
-        Facility nf = new Facility(facility.getName(), facility.getAddress(), facility.getCoordinates(), facility.getDescription(), facility.getPhone(), facility.getSite(), facility.getSchedule());
-        nf = em.merge(nf);
-        addFeaturesByTheirId(featuresId, nf.getId());
-        addImages(images, nf.getId());
-//        addFacilityTypesByTheirId(typesId, nf.getId());
     }
 
     @Override
@@ -136,48 +110,17 @@ public class FacilityManager implements FacilityManagerLocal {
         for (Image im : images) {
             im.setOwnerFacilityId(facId);
             em.persist(im);
-//            ExtendedFeature nef = new ExtendedFeature(f.getId(), facId, ExtendedFeature.RATING_DEFAULT);
-//            em.persist(nef);
         }
     }
 
-    @Override
-    public void cheat() {
-        ExtendedFeature ef = new ExtendedFeature();
-        em.persist(ef);
-    }
 
-//    @Override
-//    public FacilityType getFacilityTypeByName(String name) {
-//        System.out.println("getFacilityTypeByName occured ; name = " + name);
-//        Query q = em.createQuery("select ft from FacilityType ft where ft.name = '" + name + "'");
-//        return (FacilityType) q.getSingleResult();
-//    }
-//    @Override
-//    public void addFacilityTypes(List<FacilityType> types, Long facId) {
-//        System.out.println("try to add facility types ( types = " + types + " ) ; facId = " + facId);
-//        Facility fac = em.find(Facility.class, facId);
-//        fac.setFacilityTypes(types);
-//        Facility merge = em.merge(fac);
-//    }
-//    @Override
-//    public void addFacilityTypesByTheirId(List<Long> typesId, Long facId) {
-//        Facility fac = em.find(Facility.class, facId);
-//        List<FacilityType> list = new ArrayList();
-//        for (Long l : typesId) {
-//            FacilityType t = em.find(FacilityType.class, l);
-//            list.add(t);
-//        }
-//        fac.setFacilityTypes(list);
-//        Facility merge = em.merge(fac);
-//    }
+
     @Override
     public List<Facility> getAllFacilities() {
         Query q = em.createQuery("select f from Facility f");
         return q.getResultList();
     }
 
-    // if there is no compliance in location then fuck this facility (it means that result is -1)
     private int calculateСompatibility(List<Long> featuresId, Long facId) {
         List<ExtendedFeature> list = getExtendedFeaturesByFacilityId(facId);
         int result = 0;
@@ -191,12 +134,11 @@ public class FacilityManager implements FacilityManagerLocal {
         if (k == featuresId.size()) {
             result = result + FacilityManager.INFINITE_RATING;
         }
-        System.out.println("id ; k/list.size / rating : " + facId + " ; " + k + " / " + featuresId.size() + " / " + result);
+//        System.out.println("id ; k/list.size / rating : " + facId + " ; " + k + " / " + featuresId.size() + " / " + result);
 
         return result;
     }
 
-//    private boolean
     @Override
     public List<Long> getFilteredFacilitiesId(List<Long> featuresId) {
         List<Long> list = new ArrayList();
@@ -221,7 +163,6 @@ public class FacilityManager implements FacilityManagerLocal {
 
     @Override
     public String getAvatarSrc(Long facId) {
-//        Facility fac = em.find(Facility.class, facId);
         try {
             List<String> imgs = em.createQuery("select i.src from Image i where i.ownerFacilityId = " + facId).getResultList();
             return imgs.get(0);
@@ -270,7 +211,6 @@ public class FacilityManager implements FacilityManagerLocal {
 
     @Override
     public List<Feature> getFeaturesByFacilityIdAndType(Long facId, int type) {
-//        throw new UnsupportedOperationException("Not supported yet.");
         List<ExtendedFeature> elist = getExtendedFeaturesByFacilityId(facId);
         List<Feature> list = new ArrayList();
         for (ExtendedFeature ef : elist) {
@@ -315,7 +255,6 @@ public class FacilityManager implements FacilityManagerLocal {
             rlist.add(f);
         }
         return rlist;
-//        return q.getResultList();
     }
 
     private boolean isCorrespondent(Long facId, List<Long> featuresList) {

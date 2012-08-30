@@ -11,32 +11,32 @@ import xml.entity.XMLFacility;
 import xml.entity.XMLFeature;
 
 /**
- *
  * @author rogvold
  */
 @Stateless
 public class XMLManager implements XMLManagerLocal {
-
     @PersistenceContext(unitName = "OrskRestaurantCorePU")
     EntityManager em;
 
     private void deleteAllDataFromDatabase() {
-        Query q = em.createNativeQuery("delete from facility_facilitytype ");
-        q.executeUpdate();
-        q = em.createNativeQuery("delete from extendedfeature ");
-        q.executeUpdate();
+        Query q;
+        try {
+            q = em.createNativeQuery("delete from extendedfeature ");
+            q.executeUpdate();
 
-        q = em.createNativeQuery("delete from facilitytype ");
-        q.executeUpdate();
+            q = em.createNativeQuery("delete from feature ");
+            q.executeUpdate();
 
-        q = em.createNativeQuery("delete from feature ");
-        q.executeUpdate();
+            q = em.createNativeQuery("delete from facility ");
+            q.executeUpdate();
 
-        q = em.createNativeQuery("delete from facility ");
-        q.executeUpdate();
+            q = em.createNativeQuery("delete from image ");
+            q.executeUpdate();
+        } catch (Exception e) {
+            System.out.println("Exception occured while deleting all data from database... exc = " + e.toString() );
+        }
 
-        q = em.createNativeQuery("delete from image ");
-        q.executeUpdate();
+
     }
 
     private Long getFacilityId(String name, String phone, String site, String description, String schedule, String address, String coordinates) {
@@ -80,36 +80,6 @@ public class XMLManager implements XMLManagerLocal {
             addFeatureToFacility(facId, xf.getName(), xf.getType(), xf.getRating());
         }
     }
-
-//    private FacilityType getFacilityType(String name) {
-//        Query q = em.createQuery("select f from FacilityType f where f.name = '" + name + "'");
-//        try {
-//            FacilityType f = (FacilityType) q.getSingleResult();
-//            return f;
-//        } catch (NoResultException nex) {
-//            FacilityType ftype = new FacilityType(name);
-//            return em.merge(ftype);
-//        } catch (NonUniqueResultException aex) {
-//            System.out.println(aex.toString());
-//        } catch (IllegalStateException ewq) {
-//            System.out.println(ewq.toString());
-//        }
-//        return null;
-//    }
-
-//    private void addTypesToFacility(Long facId, List<String> types) {
-//        if (types == null) {
-//            return;
-//        }
-//        Facility fac = em.find(Facility.class, facId);
-//        List<FacilityType> ftList = new ArrayList();
-//        for (String tname : types) {
-//            FacilityType ft = getFacilityType(tname);
-//            ftList.add(ft);
-//        }
-//        fac.setFacilityTypes(ftList);
-//        em.merge(fac);
-//    }
 
     private void addOneImageToFacility(Long facId, String imageSrc) {
         Image img = new Image(imageSrc, facId);

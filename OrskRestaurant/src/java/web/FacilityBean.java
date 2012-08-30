@@ -1,13 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package web;
 
 import ejb.FacilityManagerLocal;
 import ejb.FeatureManagerLocal;
 import entity.Facility;
-//import entity.FacilityType;
 import entity.Feature;
 import entity.Image;
 import java.io.Serializable;
@@ -18,10 +13,9 @@ import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-//import javax.faces.bean.ViewScoped;
 
 /**
- *
+ * 
  * @author rogvold
  */
 @ManagedBean
@@ -33,7 +27,6 @@ public class FacilityBean implements Serializable {
     @EJB
     FeatureManagerLocal feaMan;
     private List<Feature> selectedFeatures;
-//    private List<FacilityType> selectedTypes;
     private List<Long> selectedFeaturesId;
     private List<Long> selectedTypesId;
     private Facility newFacility;
@@ -46,7 +39,6 @@ public class FacilityBean implements Serializable {
     @PostConstruct
     private void init() {
         FeatureConverter.featureMan = feaMan;
-//        FacilityTypeConverter.facMan = facMan;
     }
 
     public String getImageStr() {
@@ -89,32 +81,17 @@ public class FacilityBean implements Serializable {
         this.selectedTypesId = selectedTypesId;
     }
 
-//    public List<FacilityType> getSelectedTypes() {
-//        return selectedTypes;
-//    }
-//
-//    public void setSelectedTypes(List<FacilityType> selectedTypes) {
-//        this.selectedTypes = selectedTypes;
-//    }
 
     public void createNewFacility() {
         System.out.println("createNewFacility() occured");
         facMan.addFacility(newFacility, selectedFeatures, extractImages(imageStr));
     }
 
-    public void createNewFuckingFacility() {
-        System.out.println("createNewFacility() occured");
-        facMan.addFacilityByFuckingFeaturesAndFacilityTypeId(newFacility, selectedFeaturesId, extractImages(imageStr), selectedTypesId);
-    }
 
     public void test() {
         System.out.println("list = " + selectedFeatures);
     }
 
-    public void makeCheat() {
-        System.out.println("cheating....");
-        facMan.cheat();
-    }
 
     private List<Image> extractImages(String text) {
         System.out.println("extracting images...");
@@ -132,8 +109,6 @@ public class FacilityBean implements Serializable {
         return list;
     }
     
-
-
     public List<Facility> getAllFacilities() {
         return facMan.getAllFacilities();
     }

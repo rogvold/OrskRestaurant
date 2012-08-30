@@ -6,7 +6,11 @@
                 Тамерлан
             </name>
             <description>
-                Русско-азиатские мотивы, задающие тон в меню, — Орск.
+                Отель “Фортеция Степь” с радостью предлагает вам посетить ресторан колониальной кухни «Тамерлан», который находится на первом этаже. «Тамерлан» подчеркивает особенности пограничного города, его близость к Бухаре, Самарканду, Индии и Китаю.
+
+                Русско-азиатские мотивы, задающие тон в меню, — вот что будет напоминать о воротах в среднюю Азию, которыми и является наш город Орск.
+ 
+                Терракотово-розовые теплые тона стен, массивные рамы зеркал, восточные светильники, бухарская керамика — все словно привкус восточных пряностей.
             </description>
             <address>
                 г.Орск, ул.Станиславского 52в
@@ -18,10 +22,10 @@
                 8(3537)212232
             </phone>
             <site>
-                www.tamerlan.ru
+                http://fortecia.ru
             </site>
             <schedule>
-                /08:30-20:00/x/09:00-21:00/09:00-21:00/09:00-22:30/09:00-21:00/k/
+                /07:00-24:00/07:00-24:00/07:00-24:00/07:00-24:00/07:00-24:00/07:00-24:00/07:00-24:00/
             </schedule>
             <images>
                 <item>
@@ -656,192 +660,24 @@
                         3
                     </rating>
                 </feature>
+                
+                <feature>
+                    <name>
+                        ДС "Юбилейный"
+                    </name>
+                    <type>
+                        3
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
             </features>
             
         </facility> 
-        <facility>
-            <name>
-                Островок
-            </name>
-            <description>
-                Островок развлечений на Урале
-            </description>
-            <address>
-                г.Орск, недалеко от уральского моста
-            </address>
-            <coordinates>
-                51.236248,58.480487
-            </coordinates>
-            <phone>
-                8(3537)242122
-            </phone>
-            <site>
-                www.ostrovok.ru
-            </site>
-            <schedule>
-                /x/x/09:00-21:00/k/09:00-22:30/09:00-21:00/k/
-            </schedule>
-            <images>
-                <item>
-                    http://orsk.ru/images/recreation/8dd1108d53efebb128735af6d67ab281.jpg 
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/2424bf52c777503f07b50ac3883a625a.jpg 
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/64772ea75f821e76305871b2baeef1ee.jpg 
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/61001529bf4768469fb5d201d5d1a241.jpg 
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/42719bdc09a15391fa09813d56554c48.jpg
-                </item>
-            </images>
-            <types>
-                <item>
-                    Бар
-                </item>
-                <item>
-                    Ресторан
-                </item>
-            </types>
-        
-            <features>
-                <feature>
-                    <name>
-                        Позавтракать
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Бизнес-ланч
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Покурить кальян
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Деловая встреча
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Поработать с компом
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Поесть суши
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Поесть мяса
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Пообщаться спокойно
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Бильярд
-                    </name>
-                    <type>
-                        2
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Караоке
-                    </name>
-                    <type>
-                        2
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Вид из окна
-                    </name>
-                    <type>
-                        2
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Авангард
-                    </name>
-                    <type>
-                        3
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-            </features>
-        </facility> 
+       
+
         
         <facility>
             <name>
@@ -1036,6 +872,19 @@
                         3
                     </rating>
                 </feature>
+                
+                <feature>
+                    <name>
+                        ДК "Нефтяников"
+                    </name>
+                    <type>
+                        3
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
             </features>
         </facility>
         
@@ -1101,6 +950,20 @@
                         3
                     </rating>
                 </feature>
+                
+                
+                <feature>
+                    <name>
+                        Парк машиностроителей
+                    </name>
+                    <type>
+                        3
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
             </features>
         </facility>
 
@@ -1160,6 +1023,19 @@
                         3
                     </rating>
                 </feature>
+                <feature>
+                    <name>
+                        Комсомольская пл.
+                    </name>
+                    <type>
+                        3
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                
             </features>
         </facility>
 
@@ -1401,6 +1277,17 @@
                         3
                     </rating>
                 </feature>
+                <feature>
+                    <name>
+                        СК "Зенит"
+                    </name>
+                    <type>
+                        3
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
             </features>
         </facility>
         <facility>
@@ -1454,6 +1341,785 @@
                         3
                     </rating>
                 </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Ковчег
+            </name>
+            <description>
+                Cамое красивое в городе летнее кафе  - «Ковчег»! Отдельные части обширной территории летнего кафе составляют весьма разнообразную картину. Ее сердцем является великолепные фонтаны, в сумерках величаво сверкающие разноцветными огнями. Выстеленные камнем витиеватые дорожки уводят гостей к беседкам, уютно укрывшимся в прохладной тени ветвистой зелени!
+            </description>
+            <address>
+                г.Орск, ул.Московская 3а
+            </address>
+            <coordinates>
+                51.233061,58.477006
+            </coordinates>
+            <phone>
+                8(3537)355776		
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /10:30-01:00/10:30-01:00/10:30-01:00/10:30-01:00/10:30-01:00/10:30-01:00/10:30-01:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/134408489989545.jpg 
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134408490782905.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134408491183761.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134408490220288.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134408506790110.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134408505871434.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134503716959759.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134408506945541.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134408490653835.jpg
+                </item>
+            </images>
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+            
+        </facility>
+        <facility>
+            <name>
+                Джек Pizza
+            </name>
+            <description>
+                «Jack pizza» - это пиццерия где собранно много кусочков вкусного со всего мира:
+                - с Италии - настоящая, вкусная пицца на тонком тесте с щедрой горстью ароматных сыров,
+                - с Японии- роллы и суши,
+                - с России – сытные блюда из традиционной домашней кухни на бизнес- ланч по самым приемлемым ценам.
+            </description>
+            <address>
+                г.Орск, пр-д Металлургов 6а
+            </address>
+            <coordinates>
+                51.2323,58.476498
+            </coordinates>
+            <phone>
+                8(3537) 25-07-86
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/134364737991877.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134364739646758.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134364739121523.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134364739286297.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134311151615416.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134311155228910.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Бистро
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Трюм
+            </name>
+            <description>
+                Вы когда-нибудь спускались в трюм — настоящий кладезь сокровищ, во все времена будораживший воображение авантюристов? У Вас есть такая возможность! Чтобы почувствовать себя первооткрывателем, достаточно посетить одно из самых концептуальных заведений Орска — бар «Трюм». Здесь можно открыть для себя целую палитру потрясающих вкусов, ощущений и эмоций!
+            </description>
+            <address>
+                г.Орск,ул. Беляева 2 б
+            </address>
+            <coordinates>
+                51.2592,58.435301
+            </coordinates>
+            <phone>
+                8(3537)274108
+            </phone>
+            <site>
+                http://bar-trum.ru/
+            </site>
+            <schedule>
+                /12:00-24:00/12:00-24:00/12:00-24:00/12:00-24:00/12:00-24:00/12:00-24:00/12:00-24:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/134518680961105.jpg
+                </item>
+                <item>
+                    http://bar-trum.ru/sites/all/themes/bar-trum.ru/images/interier/interier01.jpg
+                </item>
+                <item>
+                    http://bar-trum.ru/sites/all/themes/bar-trum.ru/images/interier/interier03.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134518602112518.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134277253129520.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134518602662565.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Ресторан
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Бар
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Позитиff
+            </name>
+            <description>
+                Наше кафе предлагает Вам лучшие варианты проведения любых торжественных мероприятий. Кроме современного интерьера и прекрасной кухни мы имеем все необходимое для проведения любых презентаций, которые можно устроить как сами по себе, так и объединить вместе с любым другим торжеством!
+            </description>
+            <address>
+                г.Орск, Краматорская 43
+            </address>
+            <coordinates>
+                51.219203,58.474702
+            </coordinates>
+            <phone>
+                8(3537)307300
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/9f5fd50bb661217f7b4d7bd503a7c6a4.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/58037fce49c22da7e1ff7c2738def329.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/18a19b9cdab9f2b39c4a1b2904985d31.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/cfe42ea67477a8d52680cb39bcb46708.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/af3eaa48f8ce4dec4e0a0fa7dec4b5a8.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/2898af34e746fa851bb9c6df0cfb3229.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Ресторан
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Le Jardin   
+            </name>
+            <description>
+                Кофейня ‹‹Le Jardin›› - самое уютное и элегантное место в ТЦ Яшма. Здесь хорошо выпить чашку капучинно с домашним тортом Наполеон и полюбоваться панорамным видом на парадный сталинский фасад проспекта Мира. Ближе к вечеру с этим видом будет идеально гармонировать рюмка коньяка или ликера. Все кондитерские изделия в кофейне- только собственного производства!
+            </description>
+            <address>
+                г.Орск, пр-кт Мира 15д к13 - 2 этаж
+            </address>
+            <coordinates>
+                51.230501,58.485499
+            </coordinates>
+            <phone>
+                8(3537) 340075
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /10:00-20:00/10:00-20:00/10:00-20:00/10:00-20:00/10:00-20:00/10:00-20:00/10:00-20:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/4232ddbf7417946f980019ec75913271.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/2ae172a0f5c3b39ea76863c799f8ed70.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/3b7cd21c78c8fde7e4207d3b1132a3c6.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/d3ad98c6d0f605bd2739042808d5d45b.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/10899eeecf115d538543b67ef4d2d707.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Кофейня
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Милано
+            </name>
+            <description>
+                Всем, кому необходимо подзарядиться вкусной, здоровой и необычной для нашего края пищей, а также подпитать себя духовно, спешите в суши – бар «Милано»!
+            </description>
+            <address>
+                г.Орск, пр-кт Мира 17
+            </address>
+            <coordinates>
+                51.229999,58.479804
+            </coordinates>
+            <phone>
+                8(3537)212200
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/ 11:00-23:00/ 11:00-23:00/ 11:00-23:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/96ba10ed7f97c2ea8ed4de137a45f818.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/4acd538466199d2d2e085a2143ca4856.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/e88485462d995f8bc4cbad1ec3e68906.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/24d0b718bb429afa20960f3dbeb21f0d.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/3b6f96fc72ff5fbcc51d6f5ed6c6b6ef.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/a46399153de9f877709bbfe2ff54a023.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Суши-бар
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Зеленая дача
+            </name>
+            <description>
+                Летнее кафе "Зеленая дача" притягивает как магнит! Большая зона отдыха с автостоянкой, включающая в себя две VIP-кабины с достарханом, необычный дизайн, оригинальное световое оформление иуютная обстановка, дополненная спокойной музыкой, мягкими подушками и пледами. В вечернее время к вашим услугам просмотр фильмов из огромной коллекции, трансляция спортивных матчей и популярных программ!
+            </description>
+            <address>
+                г.Орск, пр-кт Ленина 54а
+            </address>
+            <coordinates>
+                51.238898,58.472896
+            </coordinates>
+            <phone>
+                8(3537)39-15-28
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /14:00-04:00/14:00-04:00/14:00-04:00/14:00-04:00/14:00-04:00/14:00-04:00/14:00-04:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/134596175959249.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134596177036305.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134596176267868.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134596176422509.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134596176595157.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134596176788248.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Диана
+            </name>
+            <description>
+                Самые вкусные шашлыки города от Нахида!
+            </description>
+            <address>
+                Оренбургская трасса, поворот на Круторожино
+            </address>
+        
+            <phone>
+                89619402120
+            </phone>
+            <coordinates>
+            
+            </coordinates>
+            
+            <site>
+                -
+            </site>
+            <schedule>
+                /00:00-24:00/00:00-24:00/00:00-24:00/00:00-24:00/00:00-24:00/00:00-24:00/00:00-24:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/134491567042854.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134491567270987.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134491567898243.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Никола
+            </name>
+            <description>
+                Если Вы не знаете где провести романтический вечер с любимым человеком или собраться с друзьями, приглашаем Вас в бар «Никола». Здесь можно отдохнуть в уютной обстановке, выпить чашечку кофе, заказать легкие закуски или сладкий десерт.
+            </description>
+            <address>
+                г.Орск,пр-кт Ленина 54 а
+            </address>
+            <coordinates>
+                51.238898,58.472896
+            </coordinates>
+            <phone>
+                8(3537)255580
+            </phone>
+            <site>
+                http://ubiley-orsk.ru/bar-nikola
+            </site>
+            <schedule>
+                /00:01-23:59/00:01-23:59/00:01-23:59/00:01-23:59/00:01-23:59/00:01-23:59/00:01-23:59/
+            </schedule>
+            <images>
+                <item>
+                    http://www.ubiley-orsk.ru/assets/images/gallery/02-12/nikola/2.jpg
+                </item>
+                <item>
+                    http://www.ubiley-orsk.ru/assets/images/gallery/02-12/nikola/4.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/05035585058d408dcfdd88248042a0a5.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Бар
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Амиго
+            </name>
+            <description>
+                Мексика – страна чувственности и экспрессии, наследница утонченных испанских конкистадоров и жестоких ацтеков, мир ярких природных красок и величественных творений человека. Все это нашло свое отражение в дизайне и характере нового бара «Амиго»!
+            </description>
+            <address>
+                г.Орск, пр-кт Ленина 54 а
+            </address>
+            <coordinates>
+                51.238898,58.472896
+            </coordinates>
+            <phone>
+                8(3537)393609
+            </phone>
+            <site>
+                http://www.ubiley-orsk.ru/bar-amigo
+            </site>
+            <schedule>
+                /14:00-04:00/14:00-04:00/14:00-04:00/14:00-04:00/14:00-04:00/14:00-04:00/14:00-04:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/eaea4f30ac52dc9dc47e8cfadaec3479.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/511486b7538e4e89e0b32d34fd0b9cf5.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/fc1e44c4655c7b337ef3bdf1b5d77686.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/4caafaadbbe5807ecede049af518a182.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/88f2276253ca718656ff33090f5fc460.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/51f0117f78222bdadeb3c3d9cd1b8cf8.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/f4900fcdec3d04eba876c69479a393b4.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/e7c775212d0a1ed608afff77b910ae33.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/d541c69eef6e6b0e2f9e25a1dbddd3b7.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Бар
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Сакура
+            </name>
+            <description>
+                Суши-бар "Сакура" в Орске появились давно и уже многие жители города смогли по достоинству оценить всю прелесть японской кухни! Мы ценим японскую кухню за её оригинальность, необыкновенный вкус, а также за пользу для здоровья и фигуры.
+                Для приготовления всех блюд японской кухни мы используем исключительно японский рис «Nishiki» без добавления риса других сортов; наши суши легко есть палочками - они никогда не развалятся. 
+            </description>
+            <address>
+                пер. Музыкальный, 7
+            </address>
+            <coordinates>
+                51.232613,58.477458
+            </coordinates>
+            <phone>
+                8(3537) 302-226
+            </phone>
+            <site>
+                http://www.sacuraorsk.ru/
+            </site>
+            <schedule>
+                /13:00-01:00/13:00-01:00/13:00-01:00/13:00-01:00/16:00-04:00/16:00-04:00/16:00-02:00/
+            </schedule>
+            <images>
+                <item>
+                    http://www.sacuraorsk.ru/images/interier/1.jpg
+                </item>
+                <item>
+                    http://www.sacuraorsk.ru/images/interier/6.jpg
+                </item>
+                <item>
+                    http://www.sacuraorsk.ru/images/interier/9.jpg
+                </item>
+                <item>
+                    http://www.sacuraorsk.ru/images/interier/2.jpg
+                </item>
+                <item>
+                    http://www.sacuraorsk.ru/images/interier/4.jpg
+                </item>
+                <item>
+                    http://www.sacuraorsk.ru/images/interier/10.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Суши-бар
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Танго Pizza
+            </name>
+            <description>
+                Интерьер ресторана «Танго пицца»  выполнен в европейском стиле,  ему присуща лёгкая гармоничная атмосфера. Это идеальное место для деловых и романтических встреч, и конечно для семейных обедов и праздников! Зал ресторана «Танго пицца» рассчитан на 120 мест.
+                Ресторан «Танго пицца» очень демократичен, Вы спросите кто наш потенциальный ГОСТЬ? Мы ответим ВСЕ. Да, да именно все, мы рады - детям, школьникам, студентам, деловым людям, родителям, и конечно, бабушкам и дедушкам!
+            </description>
+            <address>
+                г.Орск, ул.Краматорская 19 б
+            </address>
+            <coordinates>
+                51.223535,58.496982
+            </coordinates>
+            <phone>
+                8(3537)351111
+            </phone>
+            <site>
+                http://pizzatango.ru/
+            </site>
+            <schedule>
+                /11:00-24:00/11:00-24:00/11:00-24:00/11:00-24:00/11:00-24:00/11:00-24:00/11:00-24:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/970aafe4a8003dc4d0d9418b02f402e2.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/07607167bca822795e145b093f2324c1.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/abb9d73e7732dfa7eed0a17b064adb0e.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/55077f9f77f78e875d050112a4e44a83.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/c4f044c040083c4acbb89affcbeba389.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/e4dd67db104f9907dbd46449502b7f07.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Пиццерия
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Ресторан
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        <facility>
+            <name>
+                Звездная кошка
+            </name>
+            <description>
+                Кафе–Клуб “Звёздная Кошка” города Орска – это новый взгляд и индивидуальный подход к самым счастливым дням в вашей жизни!
+            </description>
+            <address>
+                г.Орск, ул.Краматорская 35 Т.Д. Орск
+            </address>
+            <coordinates>
+                51.221049,58.479467
+            </coordinates>
+            <phone>
+                8(3537)301105; 8(3537)313591
+            </phone>
+            <site>
+                http:\\кошка56.рф
+            </site>
+            <schedule>
+                /16:00-04:00/16:00-04:00/16:00-04:00/16:00-04:00/16:00-04:00/16:00-04:00/16:00-04:00/
+            </schedule>
+            <images>
+                <item>
+                    http://кошка56.рф/img/d4ce9877506d4b396c906d380a7ecda2.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/loaded/Kafe/Koshka/ViP%20.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/loaded/Kafe/Koshka/Zal2.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/4f1bbf4f4f99e1808cb1c05426090952.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/d9e698310ef04a0ceab4cf2c173f38e3.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/1e5e443ddf0fa70fbfcd0ca198c59450.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Клуб
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            
             </features>
         </facility>
         

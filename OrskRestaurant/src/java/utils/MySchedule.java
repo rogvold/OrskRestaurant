@@ -1,16 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package utils;
 
 import java.util.*;
 
 /**
- *
  * @author rogvold
- *
- *
  */
 public class MySchedule {
 
@@ -21,7 +15,6 @@ public class MySchedule {
      * format is following: /hh:mm-hh:mm/x/o/hh:mm-hh:mm/
      */
     private String input;
-//    private List<String> schedule;
 
     public MySchedule(String input) {
         this.input = input;
