@@ -8,5 +8,8 @@ import javax.ejb.Local;
  */
 @Local
 public interface XMLManagerLocal {
+
     public void updateDB(String xml);
+
+    public void updateDB(String xml, String password);
 }

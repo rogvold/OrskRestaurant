@@ -15,8 +15,10 @@ import xml.entity.XMLFeature;
  */
 @Stateless
 public class XMLManager implements XMLManagerLocal {
+
     @PersistenceContext(unitName = "OrskRestaurantCorePU")
     EntityManager em;
+    private static final String HARDCODED_PASSWORD = "hardcode";
 
     private void deleteAllDataFromDatabase() {
         Query q;
@@ -33,7 +35,7 @@ public class XMLManager implements XMLManagerLocal {
             q = em.createNativeQuery("delete from image ");
             q.executeUpdate();
         } catch (Exception e) {
-            System.out.println("Exception occured while deleting all data from database... exc = " + e.toString() );
+            System.out.println("Exception occured while deleting all data from database... exc = " + e.toString());
         }
 
 
@@ -119,5 +121,14 @@ public class XMLManager implements XMLManagerLocal {
         XMLDatabase xdb = (XMLDatabase) xs.fromXML(xml);
         xdb.trimAllFacilities();
         addFacilities(xdb.getFacilities());
+    }
+
+    @Override
+    public void updateDB(String xml, String password) {
+        if (password.equals(HARDCODED_PASSWORD)) {
+            updateDB(xml);
+        } else {
+            System.out.println("invalid password.. (" + password + ")");
+        }
     }
 }

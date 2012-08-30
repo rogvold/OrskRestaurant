@@ -53,7 +53,12 @@
             <h:form>
                 <h:inputTextarea style="width: 70em; height: 40em;" value="#{xmlBean.xmlText}" />
                 <br/>
-                <ppctu:commandButton value="add" actionListener="#{xmlBean.updateDBFromXML()}" />
+                <h:panelGrid columns="2" >
+                    <h:outputLabel style="margin-right: 20px;" for="pw" value="Password"/>
+                    <h:inputText id="pw" value="#{xmlBean.password}"  />
+                </h:panelGrid>
+                <br/> <br/>
+                <ppctu:commandButton style="display: inline-block; width: 200px; height: 30px;" value="add" actionListener="#{xmlBean.updateDBFromXML()}" />
             </h:form>
 
             <div class="shell">

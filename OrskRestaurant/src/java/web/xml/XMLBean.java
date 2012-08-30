@@ -12,12 +12,13 @@ import javax.faces.bean.ManagedBean;
  *
  * @author rogvold
  */
-@ManagedBean(name="xmlBean")
+@ManagedBean(name = "xmlBean")
 public class XMLBean {
+
     @EJB
     XMLManagerLocal xmlMan;
-    
     private String xmlText;
+    private String password;
 
     public String getXmlText() {
         return xmlText;
@@ -26,11 +27,18 @@ public class XMLBean {
     public void setXmlText(String xmlText) {
         this.xmlText = xmlText;
     }
-    
-    public void updateDBFromXML(){
-        System.out.println("updating from xml....");
-        
-        xmlMan.updateDB(xmlText);
+
+    public String getPassword() {
+        return password;
     }
-    
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void updateDBFromXML() {
+        System.out.println("updating from xml....");
+
+        xmlMan.updateDB(xmlText, password);
+    }
 }
