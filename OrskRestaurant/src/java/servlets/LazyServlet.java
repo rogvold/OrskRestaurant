@@ -8,6 +8,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -46,12 +47,12 @@ public class LazyServlet extends HttpServlet {
                 + "     &lt;/span&gt;" + "\n"
                 + ""
                 + "     &lt;span style='width:400px; display: block; color: black; font-size: 14px; font-weight: bold;'&gt;" + "\n"
-                + "           &lt;img src='http://www.restosapiens.ru/img/icons/home.gif' style='width:16px; height:16px; ' /&gt;" + "\n"
+                + "           &lt;img src='/OrskRestaurant/files/home.png' style='width:16px; height:16px; ' /&gt;" + "\n"
                 + facility.getAddress() + "\n"
                 + "     &lt;/span&gt;" + "\n"
                 + "" + "\n"
                 + "     &lt;span style='width:400px; display: block; color: black; font-size: 14px; font-weight: bold;'&gt;" + "\n"
-                + "           &lt;img src='http://www.restosapiens.ru/img/icons/phone.gif' style='width:16px; height:16px; ' /&gt;" + "\n"
+                + "           &lt;img src='/OrskRestaurant/files/phone.png' style='width:16px; height:16px; ' /&gt;" + "\n"
                 + facility.getPhone() + "\n"
                 + "     &lt;/span&gt; &lt;br/&gt;" + "\n"
                 + "" + "\n"
@@ -73,7 +74,6 @@ public class LazyServlet extends HttpServlet {
 
         return html;
     }
-
 
     public String shortDescription(Long facId) {
         String s = facMan.getDescription(facId);
@@ -137,8 +137,9 @@ public class LazyServlet extends HttpServlet {
         return list;
     }
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String reqUri = request.getRequestURI().toString();
+        System.out.println("reqUri = " + reqUri);
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {

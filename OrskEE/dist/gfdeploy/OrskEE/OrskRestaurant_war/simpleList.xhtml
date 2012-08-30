@@ -17,11 +17,8 @@
                 
                 
                 var url = window.location.toString();
-                //get the parameters
                 url.match(/\?(.+)$/);
                 var params = RegExp.$1;
-                // split up the query string and store in an
-                // associative array
                 var params = params.split("&amp;");
                 var queryStringList = {};
                 var featuresList = "_";
@@ -29,21 +26,13 @@
                 for(var i=0;i &lt; params.length;i++)
                 {
                     var tmp = params[i].split("=");
-                    //                    alert(tmp[0]);
                     if (tmp[1] === 'd') {
                         featuresList += tmp[0] + "_";
                     }
                        
                     queryStringList[tmp[0]] = unescape(tmp[1]);
                 }
-                //                alert();
-                
-                
-                
-                
-                
-                
-                
+
                 $("#showcond").click(function(){
                     if ($("#cond").css('display')=='none'){
                         $("#cond").show('200');
@@ -83,20 +72,14 @@
         </script>
 
 
-
-        <!--    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>-->
     </head>
     <body class='mybody' style=" display:block; background:url('#{request.contextPath}/faces/files/background_.jpg') no-repeat top center fixed;  background-color: #FFFFFF; " >
 
 
 
         <div id="container"> 
-            <!-- Begin Header Wrapper -->
-
-            <!-- End Header Wrapper --> 
-
+            
             <div id="containerq" class="container_12" style="background: url('#{request.contextPath}/faces/files/divback2.jpg') repeat-y 0 0;"> 
-                <!-- Begin Header Wrapper -->
                 <ul id="nav" class="grid_9 alpha" style="padding: 0; margin-bottom:90px;">
                     <a href="#{request.contextPath}/faces/index.xhtml" class="logo">
                         <img src="#{request.contextPath}/faces/files/logo.png" class="logo" style="margin-left: 10px;" />
@@ -113,7 +96,6 @@
                 <div id="page-top">
 
                     <div id="header-wrapper1" > 
-                        <!-- Begin Header -->
                         <div id="header1">
 
                             <div id="menu-wrapper">
@@ -122,9 +104,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- End Menu -->
                         </div>
-                        <!-- End Header --> 
                     </div>
                 </div>
                 <div style="display: inline-block;width: 100%; height: 20px; margin-bottom: 30px;">
@@ -190,12 +170,12 @@
                                                 </span>
 
                                                 <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
-                                                    <img src="http://www.restosapiens.ru/img/icons/home.gif" style="width:16px; height:16px; " />
+                                                    <img src="#{request.contextPath}/files/home.png" style="width:16px; height:16px; " />
                                                     #{facility.address}
                                                 </span>
 
                                                 <span style="width:400px; display: block; color: black; font-size: 14px; font-weight: bold;">
-                                                    <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />
+                                                    <img src="#{request.contextPath}/files/phone.png" style="width:16px; height:16px;" />
                                                     #{facility.phone}
                                                 </span><br/>
 
@@ -214,16 +194,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--                                </span>-->
-
 
                             </c:forEach>
 
                         </div>
-
-
-
-
 
                     </div>
 
@@ -232,41 +206,22 @@
                 </div>
                 <div id="footer2" style="margin-top: 12px; display: none;">
 
-
-
-                    <!-- End Slider --> 
-                    <!--            <div style="display: block; width: 100%; background-color: grey; background-image: url(http://pritesh.info/connoisseur/images/noise.png);">-->
-                    <!-- Begin Wrapper -->
                     <div style="display: block; width: 100%; margin-top:12px; ">
 
 
                         <div id="wrapper2" style="top: 50px; width: 100%; padding-top: 20px;"> 
 
-                            <!-- Begin Intro -->
                             <div class="intro" style="background-color:#CAB387; text-align: center;  margin: 0 auto;  display: block; border-radius: 40px; padding-top: 12px; line-height:25px; width: 500px; height: 40px;">
                                 <h1 style="color: #AF130A;"> А можно выбрать по категории </h1>
                             </div>
-                            <!-- End Intro --> 
-
-                            <!-- Begin About -->
-
-                            <!-- End About --> 
 
                         </div>
                     </div>
 
-
-                    <!-- End Wrapper -->
-                    <!--            <div class="clearfix"></div>
-                                <div class="push"></div>-->
-
-
-                    <!-- Begin Footer -->
                     <div id="footer-wrapper" style="">
                         <div id="footer">
                             <div id="footer-content"> 
 
-                                <!-- Begin Copyright -->
                                 <div id="copyright">
                                     <p>© Copyright 2012 RestOrsk </p>
                                 </div>
@@ -299,29 +254,8 @@
                 </div>
 
             </div>
-
-
-            <!-- End Wrapper -->
-            <!--            <div class="clearfix"></div>
-                        <div class="push"></div>-->
         </div>
 
-        <!-- Begin Footer -->
-        <!--        <div id="footer-wrapper">
-                    <div id="footer">
-                        <div id="footer-content"> 
-        
-                             Begin Copyright 
-                            <div id="copyright">
-                                <p>© Copyright 2011 Delphic | Creative Portfolio Template</p>
-                            </div>
-                             End Copyright  
-        
-        
-                        </div>
-                    </div>
-                </div>-->
-        <!-- End Footer -->
 
     </body>
 </html>
