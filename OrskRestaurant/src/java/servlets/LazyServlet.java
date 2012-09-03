@@ -65,7 +65,7 @@ public class LazyServlet extends HttpServlet {
                 + shortDescription(facility.getId()) + "\n"
                 + "     &lt;/span&gt;" + "\n"
                 + "     &lt;span style='width:400px; display: block; color: black; font-size: 14px; text-align:  right;'&gt;" + "\n"
-                + "           &lt;a style='cursor: pointer;' href='info.xhtml?id=" + facility.getId() + "'&gt;Подробнее&lt;/a&gt;" + "\n"
+                + "           &lt;a style='cursor: pointer; color: #A12124; ' href='info.xhtml?id=" + facility.getId() + "'&gt;Подробнее...&lt;/a&gt;" + "\n"
                 + "     &lt;/span&gt;" + "\n"
                 + "   &lt;/p&gt;" + "\n"
                 + "  &lt;/div&gt;" + "\n"
@@ -78,7 +78,11 @@ public class LazyServlet extends HttpServlet {
     public String shortDescription(Long facId) {
         String s = facMan.getDescription(facId);
         if (s.length() >= FacilityViewBean.MAX_DESCRIPTION_LENGTH) {
-            s = s.substring(0, FacilityViewBean.MAX_DESCRIPTION_LENGTH) + " ...";
+            int t = FacilityViewBean.MAX_DESCRIPTION_LENGTH;
+            while ( (t<s.length())&&(s.charAt(t) != ' ')){
+                t++;
+            }
+            s = s.substring(0, t);
         }
         return s;
     }

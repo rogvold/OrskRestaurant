@@ -89,7 +89,11 @@ public class FacilityViewBean {
     public String shortDescription(Long facId) {
         String s = facMan.getDescription(facId);
         if (s.length() >= MAX_DESCRIPTION_LENGTH) {
-            s = s.substring(0, MAX_DESCRIPTION_LENGTH) + " ...";
+            int t = MAX_DESCRIPTION_LENGTH;
+            while ( (t<s.length())&&(s.charAt(t) != ' ')){
+                t++;
+            }
+            s = s.substring(0, t);
         }
         return s;
     }

@@ -363,9 +363,9 @@ em {
 table {
     width: 100%;
     font-size:13px;
-    border-ctableollapse: collapse;
-    border-bottom:1px solid #c1c1c1;
-    border-top:1px solid #c1c1c1;
+/*    border-ctableollapse: collapse;*/
+/*    border-bottom:1px solid #c1c1c1;*/
+/*    border-top:1px solid #c1c1c1;*/
     margin-bottom: 20px;
 }
 
@@ -378,9 +378,10 @@ table td {
      padding: 8px 10px;
 }
 
-table td:hover {
+.tableIndex td:hover {
     /*    background-color: #efefef;*/
     background-color: #DEC79D;
+    
     color: white;
     border-radius: 100px;
     -moz-border-radius:100px;/*Mozilla-FireFox*/
@@ -499,7 +500,7 @@ table td:hover {
     list-style: none;
     display: block;
     background: transparent url(style/images/bullet.jpg) no-repeat left 8px;
-    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #wrapper ul.check-list {
@@ -557,6 +558,19 @@ table td:hover {
     border-right-width: 1px;
 }
 
+.panelGridStyle td:hover {
+    /*    background-color: #efefef;*/
+    background-color: #DEC79D;
+    
+    color: white;
+    border-radius: 100px;
+    -moz-border-radius:100px;/*Mozilla-FireFox*/
+    -webkit-border-radius:100px; /* Safari and Chrome*/
+    -khtml-border-radius:100px; /* Linux browsers */
+        
+        color: black;
+    }
+
 #page-top {
     padding-bottom: 30px;
 }
@@ -587,7 +601,7 @@ table td:hover {
 
 #footer-content {
     width: 960px;
-    height: 45px;
+/*    height: 45px;*/
     margin: 0 auto;
     position: relative;
 }
@@ -2155,7 +2169,7 @@ h2.trigger.active {
 }
 
 .tab_content {
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px 0 0;
 }
 
 /*-----------------------------------------------------------------------------------*/

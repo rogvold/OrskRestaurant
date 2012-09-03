@@ -3,6 +3,337 @@
     <facilities>
         <facility>
             <name>
+                Джек Pizza
+            </name>
+            <description>
+                «Jack pizza» - это пиццерия где собранно много кусочков вкусного со всего мира:
+                - с Италии - настоящая, вкусная пицца на тонком тесте с щедрой горстью ароматных сыров,
+                - с Японии- роллы и суши,
+                - с России – сытные блюда из традиционной домашней кухни на бизнес- ланч по самым приемлемым ценам.
+            </description>
+            <address>
+                г.Орск, пр-д Металлургов 6а
+            </address>
+            <coordinates>
+                51.2323,58.476498
+            </coordinates>
+            <phone>
+                8(3537) 25-07-86
+            </phone>
+            <site>
+                -
+            </site>
+            <schedule>
+                /10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/134364737991877.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134364739646758.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134364739121523.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134364739286297.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134311151615416.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134311155228910.jpg
+                </item>
+            </images>
+
+            <features>
+                <feature>
+                    <name>
+                        до 300
+                    </name>
+                    <type>
+                        4
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                <feature>
+                    <name>
+                        Бистро
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        
+        <facility>
+            <name>
+                Фиеста
+            </name>
+            <description>
+                Как правило, тот, кто однажды зашел в «Фиесту» становится ее постоянным клиентом. Дарите себе каждый день несколько мгновений праздника!
+            </description>
+            <address>
+                г. Орск, ул.Рабоче-Крестьянская, 98
+            </address>
+            <coordinates>
+                51.209702,58.584997
+            </coordinates>
+            <phone>
+                8(3537) 20-31-20
+            </phone>
+            <site>
+               
+            </site>
+            <schedule>
+                /11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/134433962568555.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134354517311737.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134354530683264.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134433924833185.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134433937325510.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/134354529871298.jpg
+                </item> 
+            </images>
+            <features>
+                <feature>
+                    <name>
+                        300-500
+                    </name>
+                    <type>
+                        4
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Кафе
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        
+        <facility>
+            <name>
+                Русь
+            </name>
+            <description>
+                Кафе «Русь» в городе Орске - это место для встреч с добрыми друзьями, деловыми партнерами или с любимым человеком!
+            </description>
+            <address>
+                г.Орск, ул.Васнецова 23
+            </address>
+            <coordinates>
+                51.225002,58.493404
+            </coordinates>
+            <phone>
+                8(3537)230551
+            </phone>
+            <site>
+              
+            </site>
+            <schedule>
+                /11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/
+            </schedule>
+            <images>
+                <item>
+                    http://orsk.ru/images/recreation/a9fb706b8f2b70d2b4e0cdc54bd5c2b9.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/bc024f66c7ee7b2a280157b918531ca4.jpg 
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/9ace6ac4c72badea2d39f7898595b37c.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/57eadfd5ef0854ea82369f338877bade.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/09fb561cc517e9ba2deca9d40c5ac8be.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/0ab4fee2775729343c7362e184eec1f2.jpg
+                </item>
+                <item>
+                    http://orsk.ru/images/recreation/66e4f38302b6ae1247fc2928ecb07146.jpg
+                </item>
+            </images>
+            <features>
+                <feature>
+                    <name>
+                        500-1000
+                    </name>
+                    <type>
+                        4
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Спорт-трансляции
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                <feature>
+                    <name>
+                        Бар
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Ресторан
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+                
+        </facility>
+        
+        <facility>
+            <name>
+                Сакура
+            </name>
+            <description>
+                Суши-бар "Сакура" в Орске появились давно и уже многие жители города смогли по достоинству оценить всю прелесть японской кухни! Мы ценим японскую кухню за её оригинальность, необыкновенный вкус, а также за пользу для здоровья и фигуры.
+                Для приготовления всех блюд японской кухни мы используем исключительно японский рис «Nishiki» без добавления риса других сортов; наши суши легко есть палочками - они никогда не развалятся. 
+            </description>
+            <address>
+                пер. Музыкальный, 7
+            </address>
+            <coordinates>
+                51.232613,58.477458
+            </coordinates>
+            <phone>
+                8(3537) 302-226
+            </phone>
+            <site>
+                http://www.sacuraorsk.ru/
+            </site>
+            <schedule>
+                /13:00-01:00/13:00-01:00/13:00-01:00/13:00-01:00/16:00-04:00/16:00-04:00/16:00-02:00/
+            </schedule>
+            <images>
+                <item>
+                    http://cs319424.userapi.com/v319424992/b37/00RcsNCSm4Q.jpg
+                </item>
+                <item>
+                    http://cs319424.userapi.com/v319424992/b06/3s88OSrsV4M.jpg
+                </item>
+                <item>
+                    http://cs319424.userapi.com/v319424992/b0d/Fn5gjDKwqWY.jpg
+                </item>
+                <item>
+                    http://cs319424.userapi.com/v319424992/b1b/AyYly589zIc.jpg
+                </item>
+                <item>
+                    http://cs319424.userapi.com/v319424992/b22/ZAINEPTb2OM.jpg
+                </item>
+                <item>
+                    http://cs319424.userapi.com/v319424992/b29/i6VPV9yQvO8.jpg
+                </item>
+                
+                <item>
+                    http://cs319424.userapi.com/v319424992/b30/R9yRLug7kM0.jpg
+                </item>
+                <item>
+                    http://cs319424.userapi.com/v319424992/b3e/Zt_kOI57pI0.jpg
+                </item>
+                <item>
+                    http://cs319424.userapi.com/v319424992/aff/XyRtZY-Vg4w.jpg
+                </item>
+
+            </images>
+
+            <features>
+                
+                <feature>
+                    <name>
+                        1000-1500
+                    </name>
+                    <type>
+                        4
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                <feature>
+                    <name>
+                        японская
+                    </name>
+                    <type>
+                        5
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                <feature>
+                    <name>
+                        Суши-бар
+                    </name>
+                    <type>
+                        9
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+            </features>
+        </facility>
+        
+        <facility>
+            <name>
                 Тамерлан
             </name>
             <description>
@@ -71,28 +402,7 @@
                     </rating>
                 </feature>
                 
-                <feature>
-                    <name>
-                        Выйти в свет
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Отдохнуть от города
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
+               
                 <feature>
                     <name>
                         Романтичное свидание
@@ -104,28 +414,7 @@
                         3
                     </rating>
                 </feature>
-                <feature>
-                    <name>
-                        Попеть в караоке
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Отдохнуть с детьми
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
+               
                 <feature>
                     <name>
                         Поиграть в бильярд
@@ -161,7 +450,7 @@
                 </feature>
                 <feature>
                     <name>
-                        Набухаццо
+                        Напиться
                     </name>
                     <type>
                         1
@@ -214,28 +503,7 @@
                         3
                     </rating>
                 </feature>
-                <feature>
-                    <name>
-                        Выпить кофе, чаю
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Попить пива
-                    </name>
-                    <type>
-                        1
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
+
 
                 <feature>
                     <name>
@@ -393,28 +661,7 @@
                         3
                     </rating>
                 </feature>
-                <feature>
-                    <name>
-                        Бильярд
-                    </name>
-                    <type>
-                        2
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-                <feature>
-                    <name>
-                        Боулинг
-                    </name>
-                    <type>
-                        2
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
+
                 <feature>
                     <name>
                         Караоке
@@ -426,17 +673,7 @@
                         3
                     </rating>
                 </feature>
-                <feature>
-                    <name>
-                        Спорт-трансляции
-                    </name>
-                    <type>
-                        2
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
+
                 <feature>
                     <name>
                         Вид из окна
@@ -592,11 +829,32 @@
                     </rating>
                 </feature>
                 
-            
-            
                 <feature>
                     <name>
-                        500-1000
+                        европейская
+                    </name>
+                    <type>
+                        5
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        восточная
+                    </name>
+                    <type>
+                        5
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+
+                <feature>
+                    <name>
+                        1500-2000
                     </name>
                     <type>
                         4
@@ -649,17 +907,7 @@
                         3
                     </rating>
                 </feature>
-                <feature>
-                    <name>
-                        европейская
-                    </name>
-                    <type>
-                        5
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
+
                 
                 <feature>
                     <name>
@@ -677,65 +925,86 @@
             
         </facility> 
        
-
-        
         <facility>
             <name>
-                Русь
+                Позитиff
             </name>
             <description>
-                Кафе «Русь» в городе Орске - это место для встреч с добрыми друзьями, деловыми партнерами или с любимым человеком!
+                Наше кафе предлагает Вам лучшие варианты проведения любых торжественных мероприятий. Кроме современного интерьера и прекрасной кухни мы имеем все необходимое для проведения любых презентаций, которые можно устроить как сами по себе, так и объединить вместе с любым другим торжеством!
             </description>
             <address>
-                г.Орск, ул.Васнецова 23
+                г.Орск, Краматорская 43
             </address>
             <coordinates>
-                51.225002,58.493404
+                51.219203,58.474702
             </coordinates>
             <phone>
-                8(3537)230551
+                8(3537)307300
             </phone>
             <site>
-              
+                -
             </site>
             <schedule>
-                /11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/11:00-23:00/
+                /11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/
             </schedule>
             <images>
                 <item>
-                    http://orsk.ru/images/recreation/a9fb706b8f2b70d2b4e0cdc54bd5c2b9.jpg
+                    http://orsk.ru/images/recreation/9f5fd50bb661217f7b4d7bd503a7c6a4.jpg
                 </item>
                 <item>
-                    http://orsk.ru/images/recreation/bc024f66c7ee7b2a280157b918531ca4.jpg 
+                    http://orsk.ru/images/recreation/58037fce49c22da7e1ff7c2738def329.jpg
                 </item>
                 <item>
-                    http://orsk.ru/images/recreation/9ace6ac4c72badea2d39f7898595b37c.jpg
+                    http://orsk.ru/images/recreation/18a19b9cdab9f2b39c4a1b2904985d31.jpg
                 </item>
                 <item>
-                    http://orsk.ru/images/recreation/57eadfd5ef0854ea82369f338877bade.jpg
+                    http://orsk.ru/images/recreation/cfe42ea67477a8d52680cb39bcb46708.jpg
                 </item>
                 <item>
-                    http://orsk.ru/images/recreation/09fb561cc517e9ba2deca9d40c5ac8be.jpg
+                    http://orsk.ru/images/recreation/af3eaa48f8ce4dec4e0a0fa7dec4b5a8.jpg
                 </item>
                 <item>
-                    http://orsk.ru/images/recreation/0ab4fee2775729343c7362e184eec1f2.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/66e4f38302b6ae1247fc2928ecb07146.jpg
+                    http://orsk.ru/images/recreation/2898af34e746fa851bb9c6df0cfb3229.jpg
                 </item>
             </images>
+
             <features>
                 <feature>
                     <name>
-                        Бар
+                        Пообщаться спокойно
                     </name>
                     <type>
-                        9
+                        1
                     </type>
                     <rating>
                         3
                     </rating>
                 </feature>
+                <feature>
+                    <name>
+                        Романтическое свидание
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                
+                <feature>
+                    <name>
+                        более 2000
+                    </name>
+                    <type>
+                        4
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
                 <feature>
                     <name>
                         Ресторан
@@ -748,65 +1017,11 @@
                     </rating>
                 </feature>
             </features>
-                
         </facility>
         
-        <facility>
-            <name>
-                Фиеста
-            </name>
-            <description>
-                Как правило, тот, кто однажды зашел в «Фиесту» становится ее постоянным клиентом. Дарите себе каждый день несколько мгновений праздника!
-            </description>
-            <address>
-                г. Орск, ул.Рабоче-Крестьянская, 98
-            </address>
-            <coordinates>
-                51.209702,58.584997
-            </coordinates>
-            <phone>
-                8(3537) 20-31-20
-            </phone>
-            <site>
-               
-            </site>
-            <schedule>
-                /11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/11:00-16:00/
-            </schedule>
-            <images>
-                <item>
-                    http://orsk.ru/images/recreation/134433962568555.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/134354517311737.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/134354530683264.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/134433924833185.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/134433937325510.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/134354529871298.jpg
-                </item> 
-            </images>
-            <features>
-                <feature>
-                    <name>
-                        Кафе
-                    </name>
-                    <type>
-                        9
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-            </features>
-        </facility>
+  
+        
+
         <facility>
             <name>
                 Снежана
@@ -850,6 +1065,41 @@
                 </item>
             </images>
             <features>
+                
+                <feature>
+                    <name>
+                        Пообщаться спокойно
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Романтическое свидание
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                <feature>
+                    <name>
+                        300-500
+                    </name>
+                    <type>
+                        4
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
                 <feature>
                     <name>
                         Кафе
@@ -1001,6 +1251,30 @@
                 </item>
             </images>
             <features>
+                
+                <feature>
+                    <name>
+                        Пообщаться спокойно
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Романтическое свидание
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
                 <feature>
                     <name>
                         Кафе
@@ -1092,6 +1366,17 @@
                 </item>
             </images>
             <features>
+                <feature>
+                    <name>
+                        украинская
+                    </name>
+                    <type>
+                        5
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
                 <feature>
                     <name>
                         Кафе
@@ -1268,6 +1553,28 @@
             <features>
                 <feature>
                     <name>
+                        Выйти в свет
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Отдохнуть от города
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
                         Кафе
                     </name>
                     <type>
@@ -1395,6 +1702,30 @@
                 </item>
             </images>
             <features>
+                
+                <feature>
+                    <name>
+                        Пообщаться спокойно
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Романтическое свидание
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
                 <feature>
                     <name>
                         Кафе
@@ -1409,66 +1740,7 @@
             </features>
             
         </facility>
-        <facility>
-            <name>
-                Джек Pizza
-            </name>
-            <description>
-                «Jack pizza» - это пиццерия где собранно много кусочков вкусного со всего мира:
-                - с Италии - настоящая, вкусная пицца на тонком тесте с щедрой горстью ароматных сыров,
-                - с Японии- роллы и суши,
-                - с России – сытные блюда из традиционной домашней кухни на бизнес- ланч по самым приемлемым ценам.
-            </description>
-            <address>
-                г.Орск, пр-д Металлургов 6а
-            </address>
-            <coordinates>
-                51.2323,58.476498
-            </coordinates>
-            <phone>
-                8(3537) 25-07-86
-            </phone>
-            <site>
-                -
-            </site>
-            <schedule>
-                /10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/10:00-24:00/
-            </schedule>
-            <images>
-                <item>
-                    http://orsk.ru/images/recreation/134364737991877.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/134364739646758.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/134364739121523.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/134364739286297.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/134311151615416.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/134311155228910.jpg
-                </item>
-            </images>
-
-            <features>
-                <feature>
-                    <name>
-                        Бистро
-                    </name>
-                    <type>
-                        9
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-            </features>
-        </facility>
+       
         <facility>
             <name>
                 Трюм
@@ -1537,63 +1809,7 @@
                 </feature>
             </features>
         </facility>
-        <facility>
-            <name>
-                Позитиff
-            </name>
-            <description>
-                Наше кафе предлагает Вам лучшие варианты проведения любых торжественных мероприятий. Кроме современного интерьера и прекрасной кухни мы имеем все необходимое для проведения любых презентаций, которые можно устроить как сами по себе, так и объединить вместе с любым другим торжеством!
-            </description>
-            <address>
-                г.Орск, Краматорская 43
-            </address>
-            <coordinates>
-                51.219203,58.474702
-            </coordinates>
-            <phone>
-                8(3537)307300
-            </phone>
-            <site>
-                -
-            </site>
-            <schedule>
-                /11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/11:00-03:00/
-            </schedule>
-            <images>
-                <item>
-                    http://orsk.ru/images/recreation/9f5fd50bb661217f7b4d7bd503a7c6a4.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/58037fce49c22da7e1ff7c2738def329.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/18a19b9cdab9f2b39c4a1b2904985d31.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/cfe42ea67477a8d52680cb39bcb46708.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/af3eaa48f8ce4dec4e0a0fa7dec4b5a8.jpg
-                </item>
-                <item>
-                    http://orsk.ru/images/recreation/2898af34e746fa851bb9c6df0cfb3229.jpg
-                </item>
-            </images>
 
-            <features>
-                <feature>
-                    <name>
-                        Ресторан
-                    </name>
-                    <type>
-                        9
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-            </features>
-        </facility>
         <facility>
             <name>
                 Le Jardin   
@@ -1635,6 +1851,29 @@
             </images>
 
             <features>
+                <feature>
+                    <name>
+                        Пообщаться спокойно
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Романтическое свидание
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
                 <feature>
                     <name>
                         Кофейня
@@ -1692,6 +1931,54 @@
             </images>
 
             <features>
+                
+                
+                <feature>
+                    <name>
+                        Пообщаться спокойно
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Романтическое свидание
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                <feature>
+                    <name>
+                        Бильярд
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Боулинг
+                    </name>
+                    <type>
+                        2
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
                 <feature>
                     <name>
                         Суши-бар
@@ -1801,6 +2088,29 @@
             <features>
                 <feature>
                     <name>
+                        Выпить кофе, чаю
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Попить пива
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                <feature>
+                    <name>
                         Кафе
                     </name>
                     <type>
@@ -1847,6 +2157,30 @@
             </images>
 
             <features>
+                
+                <feature>
+                    <name>
+                        Пообщаться спокойно
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Романтическое свидание
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
                 <feature>
                     <name>
                         Бар
@@ -1926,64 +2260,7 @@
                 </feature>
             </features>
         </facility>
-        <facility>
-            <name>
-                Сакура
-            </name>
-            <description>
-                Суши-бар "Сакура" в Орске появились давно и уже многие жители города смогли по достоинству оценить всю прелесть японской кухни! Мы ценим японскую кухню за её оригинальность, необыкновенный вкус, а также за пользу для здоровья и фигуры.
-                Для приготовления всех блюд японской кухни мы используем исключительно японский рис «Nishiki» без добавления риса других сортов; наши суши легко есть палочками - они никогда не развалятся. 
-            </description>
-            <address>
-                пер. Музыкальный, 7
-            </address>
-            <coordinates>
-                51.232613,58.477458
-            </coordinates>
-            <phone>
-                8(3537) 302-226
-            </phone>
-            <site>
-                http://www.sacuraorsk.ru/
-            </site>
-            <schedule>
-                /13:00-01:00/13:00-01:00/13:00-01:00/13:00-01:00/16:00-04:00/16:00-04:00/16:00-02:00/
-            </schedule>
-            <images>
-                <item>
-                    http://www.sacuraorsk.ru/images/interier/1.jpg
-                </item>
-                <item>
-                    http://www.sacuraorsk.ru/images/interier/6.jpg
-                </item>
-                <item>
-                    http://www.sacuraorsk.ru/images/interier/9.jpg
-                </item>
-                <item>
-                    http://www.sacuraorsk.ru/images/interier/2.jpg
-                </item>
-                <item>
-                    http://www.sacuraorsk.ru/images/interier/4.jpg
-                </item>
-                <item>
-                    http://www.sacuraorsk.ru/images/interier/10.jpg
-                </item>
-            </images>
 
-            <features>
-                <feature>
-                    <name>
-                        Суши-бар
-                    </name>
-                    <type>
-                        9
-                    </type>
-                    <rating>
-                        3
-                    </rating>
-                </feature>
-            </features>
-        </facility>
         <facility>
             <name>
                 Танго Pizza
@@ -2029,6 +2306,42 @@
             </images>
 
             <features>
+                
+                <feature>
+                    <name>
+                        Пообщаться спокойно
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Романтическое свидание
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
+                <feature>
+                    <name>
+                        итальянская
+                    </name>
+                    <type>
+                        5
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                
                 <feature>
                     <name>
                         Пиццерия
@@ -2097,6 +2410,29 @@
             </images>
 
             <features>
+                
+                <feature>
+                    <name>
+                        Попеть в караоке
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
+                <feature>
+                    <name>
+                        Отдохнуть с детьми
+                    </name>
+                    <type>
+                        1
+                    </type>
+                    <rating>
+                        3
+                    </rating>
+                </feature>
                 <feature>
                     <name>
                         Кафе

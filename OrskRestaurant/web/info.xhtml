@@ -6,13 +6,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="description" content="Система подбора заведений г. Орска" />
         <title>ORSK.IN</title>
-        <link rel="image_src" href="#{request.contextPath}/faces/files/logo.png" />
+        <link rel="image_src" href="#{request.contextPath}/faces/files/logo_v.png" />
 
         <link rel="shortcut icon" type="image/png" href="#{request.contextPath}/faces/files/logo.png" />
         <link rel="stylesheet" type="text/css" href="./files/style.css" media="all"/>
         <script type="text/javascript" src="./files/jquery-1.6.1.min.js"></script>
         <script type="text/javascript" src="./files/jquery.prettyPhoto.js"></script>
         <link rel="stylesheet" type="text/css" href="./files/prettyPhoto.css" />
+
         <!-- Yandex Map-->
         <script src="http://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU"
         type="text/javascript"></script>
@@ -64,7 +65,6 @@
         <script type="text/javascript" src="./files/ddsmoothmenu.js"></script>
         <script type="text/javascript" src="./files/scripts.js"></script>
 
-        <!--    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>-->
     </head>
     <body class='mybody' style=" display:block; background:url('#{request.contextPath}/faces/files/background_.jpg') no-repeat top center fixed;  background-color: #FFFFFF; " >
         <div id="container"> 
@@ -87,7 +87,6 @@
                 <div id="page-top">
 
                     <div id="header-wrapper1" > 
-                        <!-- Begin Header -->
                         <div id="header1">
 
                             <div id="menu-wrapper">
@@ -96,16 +95,12 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- End Menu -->
                         </div>
-                        <!-- End Header --> 
                     </div>
                 </div>
                 <div style="display: inline-block;width: 100%; height: 20px; margin-bottom: 30px;">
                     <span style="display: inline-block; margin-left: 2%; width: 96%; height: 20px; background-image: url('#{request.contextPath}/faces/files/slider-bottom.jpg')"/>
                 </div>
-
-                <!-- Begin Header Wrapper -->
                 <div id="page-top">
 
                     <div id="header-wrapper1"> 
@@ -119,17 +114,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Header Wrapper --> 
-
-
-
-                <!-- Begin Wrapper -->
-                <div id="wrapper" style="width: 820px;"> 
+                <div id="wrapper" style="width: 700px;"> 
                     <div class="content1" >
                         <div class="tabbed-content" id="mytabs">
                             <h3 style="color: #A12124; font-size: 30px;">#{facilityInfoBean.facility.name} <span style="font-style: italic;
                                                                                                                  font-family: Georgia, 'Times New Roman', Times, serif;
-                                                                                                                 font-size: 20px;
+                                                                                                                 font-size: 16px;
                                                                                                                  color: #7D7661;
                                                                                                                  padding-left: 5px;">#{facilityInfoBean.stringOfFacilityTypes(facilityInfoBean.facility.id)}</span></h3>
                             <span style="width:400px;  display: block; color: #4A0D09; font-size: 18px; font-weight: bold;">
@@ -143,7 +133,7 @@
                             </span>
 
                             <h:panelGroup rendered="#{facilityInfoBean.siteExists(facilityInfoBean.facility.id)}" style= " margin-top: 10px; width:400px; display: block; color: black; font-size: 18px; font-weight: bold;">
-                                <!--                            <img src="http://www.restosapiens.ru/img/icons/phone.gif" style="width:16px; height:16px;" />-->
+                                <img src="#{request.contextPath}/files/internet.png" style="width:16px; height:16px;" />
                                 <a href="#{facilityInfoBean.facility.site}" style="text-decoration-line: underline; color: #4A0D09;">
                                     #{facilityInfoBean.facility.site}
                                 </a>
@@ -186,97 +176,102 @@
                                     <p>#{facilityInfoBean.facility.description}</p>
 
                                     <div style="display: block; width: 100%; margin-bottom: 20px;">
-                                        <div style="display:  inline-block; margin-right: 30px; color: black;  border-radius: 5px; padding: 5px;">
-                                            <h4>Режим работы</h4>
-                                            <c:forEach varStatus="status" items="#{facilityInfoBean.prettySchedule}" var="day">
-                                                <h:panelGroup style="color: red;" rendered="#{status.count &gt; 5}">
-                                                    #{day} <br/>
-                                                </h:panelGroup>
-                                                <h:panelGroup style="color: black;" rendered="#{status.count &lt; 6}">
-                                                    #{day} <br/>
-                                                </h:panelGroup>
+                                        <table>
+                                            <tr>
+                                                <td style="vertical-align: top;">
+                                                    <div style="display:  inline-block; margin-right: 30px;  border-radius: 5px; padding: 5px;">
+                                                        <h4 style="font-weight: bold;">Режим работы</h4>
+                                                        <c:forEach varStatus="status" items="#{facilityInfoBean.prettySchedule}" var="day">
+                                                            <h:panelGroup style="color: red;" rendered="#{status.count &gt; 5}">
+                                                                #{day} <br/>
+                                                            </h:panelGroup>
+                                                            <h:panelGroup style="color: #966F33;" rendered="#{status.count &lt; 6}">
+                                                                #{day} <br/>
+                                                            </h:panelGroup>
 
-                                            </c:forEach>
-                                        </div>
-                                        <!--                                    <div style="display: inline-block; height: 150px; ">-->
-                                        <div style=" height: 100%; position: relative; margin-right: 30px; display:  inline-block; color: black;  border-radius: 5px; padding: 5px;">
-                                            <span style="display: inline-block; ">
-                                                <span style="font-weight: bold;">Кухня:</span>
+                                                        </c:forEach>
+                                                    </div>
+                                                </td>
+                                                <td style="vertical-align: top;">
+                                                    <!--                                    <div style="display: inline-block; height: 150px; ">-->
+                                                    <div style=" height: 100%; position: relative; margin-right: 30px; display:  inline-block; color: #966F33;  border-radius: 5px; padding: 5px;">
+                                                        <span style="display: inline-block; ">
+                                                            <span style="font-weight: bold; color: black;">Кухня:</span>
 
-
-                                                <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 5)}">
-                                                    <c:if test="#{status.count > 1}">
-                                                        ,
-                                                    </c:if>
-                                                    #{item.name}
-                                                </c:forEach>
-                                                <!--                                                Европейская-->
-                                            </span><br/>
-                                            <span style="display:   block; ">
-                                                <span style="font-weight: bold; ">Алкоголь:</span> 
-                                                <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 6)}">
-                                                    <c:if test="#{status.count > 1}">
-                                                        ,
-                                                    </c:if>                                               
-                                                    #{item.name}
-                                                </c:forEach>
-                                                <!--                                                вино, коктейли, крепкие напитки-->
-                                            </span>
-                                            <span style="display: block; ">
-                                                <span style="font-weight: bold;">Средний чек:</span>
-                                                <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 4)}">
-                                                    #{item.name}
-                                                </c:forEach>
-                                                <!--                                                500-1000 р.-->
-                                            </span>
-                                            <span style="display: block; ">
-                                                <span style="font-weight: bold;">Кредитки:</span>
-                                                <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 7)}">
-                                                    <c:if test="#{status.count > 1}">
-                                                        ,
-                                                    </c:if>                                               
-                                                    #{item.name}
-                                                </c:forEach>
-                                                <!--                                            Мастеркдард, Виза-->
-                                            </span>
-
-
-                                        </div>
-                                        <!--                                    </div>-->
+                                                            <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 5)}">
+                                                                <c:if test="#{status.count > 1}">
+                                                                    ,
+                                                                </c:if>
+                                                                #{item.name}
+                                                            </c:forEach>
+                                                        </span><br/>
+                                                        <span style="display:   block; ">
+                                                            <span style="font-weight: bold;color: black; ">Алкоголь:</span> 
+                                                            <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 6)}">
+                                                                <c:if test="#{status.count > 1}">
+                                                                    ,
+                                                                </c:if>                                               
+                                                                #{item.name}
+                                                            </c:forEach>
+                                                            <!--                                                вино, коктейли, крепкие напитки-->
+                                                        </span>
+                                                        <span style="display: block; ">
+                                                            <span style="font-weight: bold;color: black;">Средний чек:</span>
+                                                            <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 4)}">
+                                                                #{item.name}
+                                                            </c:forEach>
+                                                        </span>
+                                                        <span style="display: block; ">
+                                                            <span style="font-weight: bold; color: black;">Кредитки:</span>
+                                                            <c:forEach var="item" varStatus="status" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 7)}">
+                                                                <c:if test="#{status.count > 1}">
+                                                                    ,
+                                                                </c:if>                                               
+                                                                #{item.name}
+                                                            </c:forEach>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </div>
 
                                     <div style="display: block; width: 500px;">
-                                        <!--                                    <h:panelGrid columns="2">-->
-                                        <span style="display: inline-block; width: 200px;" >
-                                            <h4>Особенности</h4>
-                                            <!--                                        <h:panelGrid columns="1">-->
-                                            <c:forEach varStatus="statusq" var="feature" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 1)}">
-                                                <span style="display: inline-block">
+                                        <table>
+                                            <tr>
+                                                <td style="padding: 0 10px 0 0; vertical-align: top;">
+                                                    <span style="display: inline-block; width: 200px;" >
+                                                        <h4 style="font-weight: bold;">Особенности</h4>
+                                                        <!--                                        <h:panelGrid columns="1">-->
+                                                        <c:forEach varStatus="statusq" var="feature" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 1)}">
+                                                            <span style="display: inline-block">
 
-                                                    #{feature.name}
-                                                    <!--                                                    </span>
-                                                                                                    </c:if>-->
+                                                                #{feature.name}
 
-                                                </span><br/>
-                                            </c:forEach>
-                                            <!--                                        </h:panelGrid>-->
-                                        </span>
-                                        <span style="display: inline-block; width: 200px; top: 2px;" >
-                                            <h4>Настроения</h4>
-                                            <c:forEach var="feature" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 2)}">
-                                                <span style="display: inline-block">
-                                                    #{feature.name}
-                                                </span><br/>
-                                            </c:forEach>
+                                                            </span><br/>
+                                                        </c:forEach>
+                                                        <!--                                        </h:panelGrid>-->
+                                                    </span>
+                                                </td>
+                                                <td style="padding: 0 10px 0 0; vertical-align: top;">
+                                                    <span style="display: inline-block; width: 200px; top: 2px;" >
+                                                        <h4 style="font-weight: bold;">Настроения</h4>
+                                                        <c:forEach var="feature" items="#{facilityInfoBean.featuresByIdAndType(facilityInfoBean.facility.id, 2)}">
+                                                            <span style="display: inline-block">
+                                                                #{feature.name}
+                                                            </span><br/>
+                                                        </c:forEach>
 
-                                        </span>
-
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </table>
                                         <!--                                    </h:panelGrid>-->
                                     </div>
 
                                 </div>
                                 <div style="width: 550px;" id="tab3" class="tab_content">
-                                    <h3>Карта</h3>
+                                   
                                     <div id="tab31" style="width:740px; height:500px; margin-bottom: 20px;"></div>
                                 </div>
                                 <div style="display: none; " id="tab4" class="tab_content">
@@ -284,17 +279,15 @@
                                     <div>
                                         <div id="vk_comments"></div>
                                         <script type="text/javascript">
-                                            VK.Widgets.Comments("vk_comments", {limit: 10, width: "720", attach: "*"});
+                                            VK.Widgets.Comments("vk_comments", {limit: 10, width: "700", attach: "*"});
                                         </script>
                                     </div>
-                                    <div id="fee" style="width:740px; height:300px; margin-bottom: 20px;"></div>
+                                    <div id="fee" style="width:700px; height:300px; margin-bottom: 20px;"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-
-                    <!--                    <div class="clear"></div>-->
 
                 </div>
 
@@ -309,7 +302,8 @@
                                 <!-- Begin Copyright -->
                                 <div id="copyright" style="color: #4A0D09; margin: 0 auto; ">
                                     <p>Copyright © 2012 - Cистема подбора заведений г. Орска </p>
-                                    <p>Сделано орчанами для орчан</p>
+                                    <p>По всем вопросам обращайтесь по адресу orskin@mail.ru</p>
+                                    <!--                                    <p>Сделано орчанами для орчан</p>-->
                                 </div>
 
                             </div>
@@ -352,26 +346,41 @@
             </script>
             <!-- End Footer -->
         </div>
-        
+
         <script type="text/javascript">
-    var reformalOptions = {
-        project_id: 71036,
-        project_host: "orskin.reformal.ru",
-        force_new_window: true,
-        tab_orientation: "left",
-        tab_indent: "50%",
-        tab_bg_color: "#cab287",
-        tab_border_color: "#4a0d09",
-        tab_image_url: "http://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/4a0d09/9237214ff8ffd5e30c54623e1b0132da/left/1/tab.png",
-        tab_border_width: 2
-    };
+            var reformalOptions = {
+                project_id: 71036,
+                project_host: "orskin.reformal.ru",
+                force_new_window: true,
+                tab_orientation: "left",
+                tab_indent: "50%",
+                tab_bg_color: "#cab287",
+                tab_border_color: "#4a0d09",
+                tab_image_url: "http://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/4a0d09/9237214ff8ffd5e30c54623e1b0132da/left/1/tab.png",
+                tab_border_width: 2
+            };
     
-    (function() {
-        var script = document.createElement('script');
-        script.type = 'text/javascript'; script.async = true;
-        script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-    })();
-</script><noscript><a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png" /></a><a href="http://orskin.reformal.ru">Oтзывы и предложения для www.orsk.in</a></noscript>
+            (function() {
+                var script = document.createElement('script');
+                script.type = 'text/javascript'; script.async = true;
+                script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
+                document.getElementsByTagName('head')[0].appendChild(script);
+            })();
+        </script><noscript><a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png" /></a><a href="http://orskin.reformal.ru">Oтзывы и предложения для www.orsk.in</a></noscript>
+
+
+        <div style="display: none;">
+            <script type="text/javascript"><!--
+                document.write("<a href='http://www.liveinternet.ru/click' "+
+                    "target=_blank><img src='//counter.yadro.ru/hit?t11.6;r"+
+                    escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                    ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                    screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                    ";"+Math.random()+
+                    "' alt='' title='LiveInternet: number of pageviews for 24 hours,"+
+                    " of visitors for 24 hours and for today is shown' "+
+                    "border='0' width='88' height='31'><\/a>")
+                //--></script><!--/LiveInternet-->
+        </div>
     </body>
 </html>

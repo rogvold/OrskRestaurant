@@ -28,7 +28,7 @@ public class FacilityManager implements FacilityManagerLocal {
         if (facId == null) {
             return null;
         }
-        Query q = em.createQuery("select i from Image i where i.ownerFacilityId = " + facId);
+        Query q = em.createQuery("select i from Image i where i.ownerFacilityId = " + facId + " order by i.id");
         return q.getResultList();
     }
 
